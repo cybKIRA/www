@@ -1,15 +1,15 @@
-<?php
+ï»¿<?php
 require_once('api/Simpla.php');
 /*
-Ôóíêöèÿ âîçâğàùàåò ñòğîêó âûãğóçêè
+Ğ¤ÑƒĞ½ĞºÑ†Ğ¸Ñ Ğ²Ğ¾Ğ·Ğ²Ñ€Ğ°Ñ‰Ğ°ĞµÑ‚ ÑÑ‚Ñ€Ğ¾ĞºÑƒ Ğ²Ñ‹Ğ³Ñ€ÑƒĞ·ĞºĞ¸
 
-code Óíèêàëüíûé àğòèêóë òîâàğà
-folder_id ID ïàïêè òîâàğà name Íàèìåíîâàíèå òîâàğà
-size Ğàçìåğ ÷àñîâ photo Ññûëêà íà ôîòîãğàôèş ñ âîäíûì çíàêîì price Îïòîâàÿ áàçîâàÿ öåíà
-url Àäğåñ òîâàğà íñ ñàéòå Àâàíãğàäà
-folder_alias Èåğàğõèÿ ñèíîíèìîâ ïàïêè (ğàçäåëèòåëü — "/")
-folder_name Èåğàğõèÿ èìåí ïàïêè (ğàçäåëèòåëü — "/")
-attributes Ñâîéñòâà òîâàğà â html-ôîğìàòå
+code Ğ£Ğ½Ğ¸ĞºĞ°Ğ»ÑŒĞ½Ñ‹Ğ¹ Ğ°Ñ€Ñ‚Ğ¸ĞºÑƒĞ» Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ°
+folder_id ID Ğ¿Ğ°Ğ¿ĞºĞ¸ Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ° name ĞĞ°Ğ¸Ğ¼ĞµĞ½Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ°
+size Ğ Ğ°Ğ·Ğ¼ĞµÑ€ Ñ‡Ğ°ÑĞ¾Ğ² photo Ğ¡ÑÑ‹Ğ»ĞºĞ° Ğ½Ğ° Ñ„Ğ¾Ñ‚Ğ¾Ğ³Ñ€Ğ°Ñ„Ğ¸Ñ Ñ Ğ²Ğ¾Ğ´Ğ½Ñ‹Ğ¼ Ğ·Ğ½Ğ°ĞºĞ¾Ğ¼ price ĞĞ¿Ñ‚Ğ¾Ğ²Ğ°Ñ Ğ±Ğ°Ğ·Ğ¾Ğ²Ğ°Ñ Ñ†ĞµĞ½Ğ°
+url ĞĞ´Ñ€ĞµÑ Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ° Ğ½Ñ ÑĞ°Ğ¹Ñ‚Ğµ ĞĞ²Ğ°Ğ½Ğ³Ñ€Ğ°Ğ´Ğ°
+folder_alias Ğ˜ĞµÑ€Ğ°Ñ€Ñ…Ğ¸Ñ ÑĞ¸Ğ½Ğ¾Ğ½Ğ¸Ğ¼Ğ¾Ğ² Ğ¿Ğ°Ğ¿ĞºĞ¸ (Ñ€Ğ°Ğ·Ğ´ĞµĞ»Ğ¸Ñ‚ĞµĞ»ÑŒ â€” "/")
+folder_name Ğ˜ĞµÑ€Ğ°Ñ€Ñ…Ğ¸Ñ Ğ¸Ğ¼ĞµĞ½ Ğ¿Ğ°Ğ¿ĞºĞ¸ (Ñ€Ğ°Ğ·Ğ´ĞµĞ»Ğ¸Ñ‚ĞµĞ»ÑŒ â€” "/")
+attributes Ğ¡Ğ²Ğ¾Ğ¹ÑÑ‚Ğ²Ğ° Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ° Ğ² html-Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ‚Ğµ
 */
 
 function get_avangard_products($login, $password) {
@@ -73,8 +73,8 @@ function get_avangard_products($login, $password) {
 	return substr($response, $body_at+strlen($crlf)*2);
 }
 
-/*ïğèíèìàåò ğåñïîíñ àâàíãàğäà è ìàññèâ ñïèñêà ñîâïàäåíèÿ ïî êàòàëîãàì, íàïğèìåğ "naruchnie_chasi/casio"
-âîçâğàùàåò äâóìåğíûé ìàññèâ
+/*Ğ¿Ñ€Ğ¸Ğ½Ğ¸Ğ¼Ğ°ĞµÑ‚ Ñ€ĞµÑĞ¿Ğ¾Ğ½Ñ Ğ°Ğ²Ğ°Ğ½Ğ³Ğ°Ñ€Ğ´Ğ° Ğ¸ Ğ¼Ğ°ÑÑĞ¸Ğ² ÑĞ¿Ğ¸ÑĞºĞ° ÑĞ¾Ğ²Ğ¿Ğ°Ğ´ĞµĞ½Ğ¸Ñ Ğ¿Ğ¾ ĞºĞ°Ñ‚Ğ°Ğ»Ğ¾Ğ³Ğ°Ğ¼, Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€ "naruchnie_chasi/casio"
+Ğ²Ğ¾Ğ·Ğ²Ñ€Ğ°Ñ‰Ğ°ĞµÑ‚ Ğ´Ğ²ÑƒĞ¼ĞµÑ€Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²
 */
 
 
@@ -97,9 +97,9 @@ function avangard_filter_and_pars($output,$list_cat) {
 	
 	if ($insert) {
 		
-		$product['id_post'] = ltrim($array_str[0], '0');; //id ïîñòàâùèêà
-		$product['brand'] = strtoupper($brand[1]); //Áğåíä
-		// ôèêñ Q&Q
+		$product['id_post'] = ltrim($array_str[0], '0');; //id Ğ¿Ğ¾ÑÑ‚Ğ°Ğ²Ñ‰Ğ¸ĞºĞ°
+		$product['brand'] = strtoupper($brand[1]); //Ğ‘Ñ€ĞµĞ½Ğ´
+		// Ñ„Ğ¸ĞºÑ Q&Q
 		if ($product['brand'] == 'Q_AMP_Q') {
 			$product['categories'][0] = 16;
 			$product['brand'] = 'Q&Q';
@@ -111,11 +111,11 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['id_brand'] = 31;
 		}
 		
-        $product['brand_s'] = strtoupper($brand[2]); //Ñåğèÿ
+        $product['brand_s'] = strtoupper($brand[2]); //Ğ¡ĞµÑ€Ğ¸Ñ
 	
 		
 		if  ($product['brand'] == "CASIO") {
-			$product['categories'][0] = 16; //Âñå Êàñèî â êàòåãîğèè ßïîñíêèå ÷àñû
+			$product['categories'][0] = 16; //Ğ’ÑĞµ ĞšĞ°ÑĞ¸Ğ¾ Ğ² ĞºĞ°Ñ‚ĞµĞ³Ğ¾Ñ€Ğ¸Ğ¸ Ğ¯Ğ¿Ğ¾ÑĞ½ĞºĞ¸Ğµ Ñ‡Ğ°ÑÑ‹
 			
 			$product['brand'] = "Casio";
 			$product['id_brand'] = 32;
@@ -154,7 +154,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['name'] = $product['brand'] . " " . $str_arr[0];
 		} else
 		{
-			$iskl = array('GMA','GMD'); //Äëÿ ôèêñà ãäå â êîíöå íå ñòîèò Áğåíä
+			$iskl = array('GMA','GMD'); //Ğ”Ğ»Ñ Ñ„Ğ¸ĞºÑĞ° Ğ³Ğ´Ğµ Ğ² ĞºĞ¾Ğ½Ñ†Ğµ Ğ½Ğµ ÑÑ‚Ğ¾Ğ¸Ñ‚ Ğ‘Ñ€ĞµĞ½Ğ´
 			
 			if (!in_array($product['brand_s'],array('GMA','GMD') ) ) {
 				$str_arr = explode(" ",$array_str[2]);
@@ -162,7 +162,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 				array_unshift($str_arr,$product['brand']);
 				$product['name'] = implode(' ',$str_arr);
 			}
-			//ôèêñ ãäå â êîíöå íå ñòîèò Áğåíä
+			//Ñ„Ğ¸ĞºÑ Ğ³Ğ´Ğµ Ğ² ĞºĞ¾Ğ½Ñ†Ğµ Ğ½Ğµ ÑÑ‚Ğ¾Ğ¸Ñ‚ Ğ‘Ñ€ĞµĞ½Ğ´
 			if (in_array($product['brand_s'],array('GMA','GMD') ) ) {
 				$product['name'] = $product['brand'] . ' ' .$array_str[2];
 			}
@@ -172,108 +172,108 @@ function avangard_filter_and_pars($output,$list_cat) {
 		
 		$name_pars = preg_replace("/[&()]+/ui", '', $product['name']);	
 		$name_pars = preg_replace("/[\s]+/ui", '-', $name_pars);	
-		$product['name_pars'] = $name_pars; //Èìÿ áåç ïğîáåëîâ è ñïåö. ñèìâîëîâ
+		$product['name_pars'] = $name_pars; //Ğ˜Ğ¼Ñ Ğ±ĞµĞ· Ğ¿Ñ€Ğ¾Ğ±ĞµĞ»Ğ¾Ğ² Ğ¸ ÑĞ¿ĞµÑ†. ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²
 		
-		// ìåíÿåì èìÿ ïîñëå ôîğìèğîâàíèå ×ÏÓ äëÿ Âîñòî íà ğóññêîå
+		// Ğ¼ĞµĞ½ÑĞµĞ¼ Ğ¸Ğ¼Ñ Ğ¿Ğ¾ÑĞ»Ğµ Ñ„Ğ¾Ñ€Ğ¼Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ§ĞŸĞ£ Ğ´Ğ»Ñ Ğ’Ğ¾ÑÑ‚Ğ¾ Ğ½Ğ° Ñ€ÑƒÑÑĞºĞ¾Ğµ
 		if ( $product['brand'] == 'Vostok'){
-			$product['brand'] = mb_convert_encoding('Âîñòîê', 'utf-8', 'windows-1251');
+			$product['brand'] = mb_convert_encoding('Ğ’Ğ¾ÑÑ‚Ğ¾Ğº', 'utf-8', 'windows-1251');
 			$product['name'] = str_ireplace("Vostok",$product['brand'],$product['name']);
 		}
 		
-		//$product['url'] = $product['name_pars']; //×ÏÓ	
+		//$product['url'] = $product['name_pars']; //Ğ§ĞŸĞ£	
 		
-		$product['images'] = $product['name_pars'].'.jpg'; //èìÿ ôàéëà êàğòèíêè
-		$product['price_post'] = $array_str[5]; //öåíà ïîñòàâùèêà
+		$product['images'] = $product['name_pars'].'.jpg'; //Ğ¸Ğ¼Ñ Ñ„Ğ°Ğ¹Ğ»Ğ° ĞºĞ°Ñ€Ñ‚Ğ¸Ğ½ĞºĞ¸
+		$product['price_post'] = $array_str[5]; //Ñ†ĞµĞ½Ğ° Ğ¿Ğ¾ÑÑ‚Ğ°Ğ²Ñ‰Ğ¸ĞºĞ°
 		
-		$product['price'] = kw_good_price($product['price_post']); //Ğåêîìåíäóåìàÿ öåíà
+		$product['price'] = kw_good_price($product['price_post']); //Ğ ĞµĞºĞ¾Ğ¼ĞµĞ½Ğ´ÑƒĞµĞ¼Ğ°Ñ Ñ†ĞµĞ½Ğ°
 		
-		//Ñâîéñòâà òîâàğà
+		//Ğ¡Ğ²Ğ¾Ğ¹ÑÑ‚Ğ²Ğ° Ñ‚Ğ¾Ğ²Ğ°Ñ€Ğ°
 		$product['size'] = $array_str[3];
 		
-		$product['show_time'] = $array_str[10]; //Îòîáğàæåíèå âğåìåíè
-		//Äîáàâëÿåì ID ıëåìåíòà èç ÁÄ ñèìïëû + çíà÷åíèå. Äåëàåòñÿ ïîä Ñèìïëó.
+		$product['show_time'] = $array_str[10]; //ĞÑ‚Ğ¾Ğ±Ñ€Ğ°Ğ¶ĞµĞ½Ğ¸Ğµ Ğ²Ñ€ĞµĞ¼ĞµĞ½Ğ¸
+		//Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞµĞ¼ ID ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ¸Ğ· Ğ‘Ğ” ÑĞ¸Ğ¼Ğ¿Ğ»Ñ‹ + Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ. Ğ”ĞµĞ»Ğ°ĞµÑ‚ÑÑ Ğ¿Ğ¾Ğ´ Ğ¡Ğ¸Ğ¼Ğ¿Ğ»Ñƒ.
 		$product['options'][169] = $product['show_time'];
 		
 		$product['style'] = $array_str[11];
 		$product['options'][164] = $product['style'];
 		
-		$product['backlight'] = $array_str[12]; //Ïîäñâåòêà
+		$product['backlight'] = $array_str[12]; //ĞŸĞ¾Ğ´ÑĞ²ĞµÑ‚ĞºĞ°
 		$product['options'][170] = $product['backlight'];
 		
-		$product['shockproof'] = $array_str[13]; //Ïğîòèâîóäàğíûå
+		$product['shockproof'] = $array_str[13]; //ĞŸÑ€Ğ¾Ñ‚Ğ¸Ğ²Ğ¾ÑƒĞ´Ğ°Ñ€Ğ½Ñ‹Ğµ
 		$product['options'][163] = $product['shockproof'];
 		
-		$product['case'] = $array_str[14]; //Ôîğìà êîğïóñà
+		$product['case'] = $array_str[14]; //Ğ¤Ğ¾Ñ€Ğ¼Ğ° ĞºĞ¾Ñ€Ğ¿ÑƒÑĞ°
 		$product['options'][171] = $product['case'];
 		
-		$product['material_case'] = $array_str[27]; //Ìàòåğèàë êîğïóñà
+		$product['material_case'] = $array_str[27]; //ĞœĞ°Ñ‚ĞµÑ€Ğ¸Ğ°Ğ» ĞºĞ¾Ñ€Ğ¿ÑƒÑĞ°
 		$product['options'][166] = $product['material_case'];
 		
-		$product['color_case'] = $array_str[15]; //Öâåò êîğïóñà
+		$product['color_case'] = $array_str[15]; //Ğ¦Ğ²ĞµÑ‚ ĞºĞ¾Ñ€Ğ¿ÑƒÑĞ°
 		$product['options'][172] = $product['color_case'];
 		
-		$product['material_bracelet'] = $array_str[16]; //Ìàòåğèàë áğàñëåòà
+		$product['material_bracelet'] = $array_str[16]; //ĞœĞ°Ñ‚ĞµÑ€Ğ¸Ğ°Ğ» Ğ±Ñ€Ğ°ÑĞ»ĞµÑ‚Ğ°
 		$product['options'][168] = $product['material_bracelet'];
 		
-		$product['color_bracelet'] = $array_str[17]; //Öâåò áğàñëåòà
+		$product['color_bracelet'] = $array_str[17]; //Ğ¦Ğ²ĞµÑ‚ Ğ±Ñ€Ğ°ÑĞ»ĞµÑ‚Ğ°
 		$product['options'][173] = $product['color_bracelet'];
 		
-		$product['color_dial'] = $array_str[18]; //Öâåò öèôåğáëàòà
+		$product['color_dial'] = $array_str[18]; //Ğ¦Ğ²ĞµÑ‚ Ñ†Ğ¸Ñ„ĞµÑ€Ğ±Ğ»Ğ°Ñ‚Ğ°
 		$product['options'][174] = $product['color_dial'];
 		
-		$product['number'] = $array_str[19]; //Öèôğû
+		$product['number'] = $array_str[19]; //Ğ¦Ğ¸Ñ„Ñ€Ñ‹
 		$product['options'][175] = $product['number'];
 		
-		$product['strazy'] = $array_str[20]; //Ñòğàçû
+		$product['strazy'] = $array_str[20]; //Ğ¡Ñ‚Ñ€Ğ°Ğ·Ñ‹
 		//$product['options'][174] = $product['strazy'];
 		
 		$product['bluetooth'] = $array_str[22]; //bluetooth
 		//$product['options'][174] = $product['color_dial'];
 		
-		$product['additional'] = $array_str[23]; //Äîïîëíèòåëüíûå ôóíêöèè
+		$product['additional'] = $array_str[23]; //Ğ”Ğ¾Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğµ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¸
 		$product['options'][167] = $product['additional'];
 		
-		$product['diving'] = $array_str[24]; //Äëÿ äàéâèíãà è ğûáàëêè
+		$product['diving'] = $array_str[24]; //Ğ”Ğ»Ñ Ğ´Ğ°Ğ¹Ğ²Ğ¸Ğ½Ğ³Ğ° Ğ¸ Ñ€Ñ‹Ğ±Ğ°Ğ»ĞºĞ¸
 		//$product['options'][174] = $product['diving'];
 		
-		$product['mechanism'] = $array_str[25]; //Òèï ìåõàíèçìà
+		$product['mechanism'] = $array_str[25]; //Ğ¢Ğ¸Ğ¿ Ğ¼ĞµÑ…Ğ°Ğ½Ğ¸Ğ·Ğ¼Ğ°
 		$product['options'][160] = $product['mechanism'];
 		
-		$product['bracelet'] = $array_str[26]; //Ğåìåøîê/Áğàñëåò
+		$product['bracelet'] = $array_str[26]; //Ğ ĞµĞ¼ĞµÑˆĞ¾Ğº/Ğ‘Ñ€Ğ°ÑĞ»ĞµÑ‚
         $product['options'][176] = $product['bracelet'];
 		
-		$product['water_resist'] = $array_str[28]; //Âîäîçàùèòà
+		$product['water_resist'] = $array_str[28]; //Ğ’Ğ¾Ğ´Ğ¾Ğ·Ğ°Ñ‰Ğ¸Ñ‚Ğ°
 		$product['options'][161] = $product['water_resist'];
 		
-		$product['glass'] = $array_str[29]; //Ñòåêëî
+		$product['glass'] = $array_str[29]; //Ğ¡Ñ‚ĞµĞºĞ»Ğ¾
 		$product['options'][162] = $product['glass'];
 		
-		$product['hod'] = $array_str[30]; //Õîä
+		$product['hod'] = $array_str[30]; //Ğ¥Ğ¾Ğ´
 		$product['options'][177] = $product['hod'];
 		
-		$product['sex'] = $array_str[33]; //Ïîë
+		$product['sex'] = $array_str[33]; //ĞŸĞ¾Ğ»
 		$product['options'][159] = $product['sex'];
 
 		$str = $product['sex'];
-		$str2= mb_convert_encoding('ìóæñêèå', 'utf-8', 'windows-1251');
-		$str3= mb_convert_encoding('æåíñêèå', 'utf-8', 'windows-1251');
+		$str2= mb_convert_encoding('Ğ¼ÑƒĞ¶ÑĞºĞ¸Ğµ', 'utf-8', 'windows-1251');
+		$str3= mb_convert_encoding('Ğ¶ĞµĞ½ÑĞºĞ¸Ğµ', 'utf-8', 'windows-1251');
 		$str4= mb_convert_encoding('unisex', 'utf-8', 'windows-1251');
 		switch ($product['sex']) {
 			case $str2:
-				$product['categories'][1] = 21; //Äîáàâëÿåì êàòåãîğèş Ìóæñêèå ÷àñû
+				$product['categories'][1] = 21; //Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞµĞ¼ ĞºĞ°Ñ‚ĞµĞ³Ğ¾Ñ€Ğ¸Ñ ĞœÑƒĞ¶ÑĞºĞ¸Ğµ Ñ‡Ğ°ÑÑ‹
 				break;
 			case $str3:
-				$product['categories'][1] = 24; //Äîáàâëÿåì êàòåãîğèş Æåíñêèå ÷àñû
+				$product['categories'][1] = 24; //Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞµĞ¼ ĞºĞ°Ñ‚ĞµĞ³Ğ¾Ñ€Ğ¸Ñ Ğ–ĞµĞ½ÑĞºĞ¸Ğµ Ñ‡Ğ°ÑÑ‹
 				break;
 			case $str4:
-				$product['categories'][1] = 25; //Óíèñåêñ
+				$product['categories'][1] = 25; //Ğ£Ğ½Ğ¸ÑĞµĞºÑ
 				break;
 			}
 		
-		$product['country'] = $array_str[34]; //Ñòğàíà
+		$product['country'] = $array_str[34]; //Ğ¡Ñ‚Ñ€Ğ°Ğ½Ğ°
 		$product['options'][165] = $product['country'];
 		
-		$product['images_av'] = $array_str[4]; //url êàğòèíêè îò ïîñòàâùèêà
+		$product['images_av'] = $array_str[4]; //url ĞºĞ°Ñ€Ñ‚Ğ¸Ğ½ĞºĞ¸ Ğ¾Ñ‚ Ğ¿Ğ¾ÑÑ‚Ğ°Ğ²Ñ‰Ğ¸ĞºĞ°
 		//$product['name_post'] = $array_str[2];
 		
 		if ($product['price'] <= 12000) {
@@ -282,7 +282,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 		}
 		//copy($array_str[4],"photos/" . $product['photo'] );
 		
-		//if ($i>100) break; //Îãğàíè÷èòåëü îáúåìà âûâîäà
+		//if ($i>100) break; //ĞĞ³Ñ€Ğ°Ğ½Ğ¸Ñ‡Ğ¸Ñ‚ĞµĞ»ÑŒ Ğ¾Ğ±ÑŠĞµĞ¼Ğ° Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ°
 		}
 	}
 	
@@ -305,7 +305,7 @@ function kw_good_price($price) {
 }
 
 
-//îòäàåò çàãîëîâêè ìàññèâà
+//Ğ¾Ñ‚Ğ´Ğ°ĞµÑ‚ Ğ·Ğ°Ğ³Ğ¾Ğ»Ğ¾Ğ²ĞºĞ¸ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°
 function get_header_products($product) {
 	$header = array();
 	foreach ($product as $key=>$part) {
