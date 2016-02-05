@@ -61,6 +61,9 @@ switch ($object)
 			if ( $comment->type == 'product')
 				$simpla->products->increase_rate_product(intval($comment->object_id), intval($comment->rate));
 			$result = $simpla->comments->update_comment($id, $values);
+			//#Ник  вернем полученный полный объект
+			$comment = $simpla->comments->get_comment($id);
+			$result = $comment;
 		}
         break;
     case 'user':

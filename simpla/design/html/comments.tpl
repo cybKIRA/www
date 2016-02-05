@@ -64,7 +64,7 @@
 					{$comment->text|escape|nl2br}
 					</div>
 					<div class="comment_info">
-					Комментарий оставлен {$comment->date|date} {$comment->date|time}
+					Комментарий оставлен <span class="date">{$comment->date|date} {$comment->date|time}</span>
 					{if $comment->type == 'product'}
 					к <a target="_blank" href="{$config->root_url}/products/{$comment->product->url}#comment_{$comment->id}">{$comment->product->name}</a>
 					{elseif $comment->type == 'blog'}
@@ -161,8 +161,12 @@ $(function() {
 	$("a.approve").click(function() {
 		var line        = $(this).closest(".row");
 		var id          = line.find('input[type="checkbox"][name*="check"]').val();
+		
+		var dateTo = line.find('.date');
+		
 		var date = line.find('[name="date"]').val();
 		var time = line.find('[name="time"]').val();
+		
 		var date = date + " " + time;
 		$.ajax({
 			type: 'POST',
@@ -170,6 +174,13 @@ $(function() {
 			data: {'object': 'comment', 'id': id, 'values': {'approved': 0,'date':date}, 'session_id': '{/literal}{$smarty.session.id}{literal}'},
 			success: function(data){
 				line.removeClass('unapproved');
+				
+				var dateTime = data.date;
+
+                var dateTimeTo = new Date(dateTime.replace(/(\d+)-(\d+)-(\d+)/, '$2/$3/$1'));
+				console.log(dateTimeTo.toLocaleTimeString());
+				var DateTo = dateTimeTo.getDay();
+				dateTo.html(dateTimeTo.toLocaleDateString() + ' ' + dateTimeTo.toLocaleTimeString());
 			},
 			dataType: 'json'
 		});	
