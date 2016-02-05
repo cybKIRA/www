@@ -171,7 +171,7 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: 'ajax/update_object.php',
-			data: {'object': 'comment', 'id': id, 'values': {'approved': 0,'date':date}, 'session_id': '{/literal}{$smarty.session.id}{literal}'},
+			data: {'object': 'comment', 'id': id, 'values': {'approved': 1,'date':date}, 'session_id': '{/literal}{$smarty.session.id}{literal}'},
 			success: function(data){
 				line.removeClass('unapproved');
 				
