@@ -1,0 +1,1 @@
+{($variant->price*$amount)|convert|replace:' ':'&nbsp;'}&nbsp;{$currency->sign}

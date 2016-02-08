@@ -1,0 +1,5 @@
+AddType application/octet-stream csv
+AuthName "Simpla CMS"
+AuthType Basic
+AuthUserFile /var/www/p345450/data/www/kupi.watch/simpla/.passwd
+require valid-user

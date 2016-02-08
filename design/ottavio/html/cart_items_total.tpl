@@ -1,0 +1,1 @@
+{$cart->cart_price|convert|replace:' ':'&nbsp;'}&nbsp;{$currency->sign}
