@@ -176,7 +176,6 @@ function avangard_filter_and_pars($output,$list_cat) {
 		
 		// меняем имя после формирование ЧПУ для Восто на русское
 		if ( $product['brand'] == 'Vostok'){
-			$product['brand'] = mb_convert_encoding('Восток', 'utf-8', 'windows-1251');
 			$product['brand'] = 'Восток'; //mb_convert_encoding('Восток', 'utf-8', 'windows-1251');
 			$product['name'] = str_ireplace("Vostok",$product['brand'],$product['name']);
 		}
@@ -256,9 +255,6 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['options'][159] = $product['sex'];
 
 		$str = $product['sex'];
-		$str2= mb_convert_encoding('мужские', 'utf-8', 'windows-1251');
-		$str3= mb_convert_encoding('женские', 'utf-8', 'windows-1251');
-		$str4= mb_convert_encoding('unisex', 'utf-8', 'windows-1251');
 		$str2= 'мужские'; //mb_convert_encoding('мужские', 'utf-8', 'windows-1251');
 		$str3= 'женские'; //mb_convert_encoding('женские', 'utf-8', 'windows-1251');
 		$str4= 'unisex'; //mb_convert_encoding('unisex', 'utf-8', 'windows-1251');
