@@ -6,7 +6,7 @@
 <section itemscope itemtype="http://schema.org/Product">
 
 <section class="header-section fading-title parallax">
-	<div class="section-shade sep-top-3x sep-bottom-md">
+	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">
 			<div class="section-title light">
 				<ol class="breadcrumb">
@@ -22,8 +22,24 @@
 					{/if}
 				</ol>
 				
-				<h2 itemprop="name" class="small-space" data-product="{$product->id}">{$product->name|escape}</h2>
-			</div>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<h2 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">{$product->name|escape}</h2>
+						<br>
+						<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти в каталог</a>
+					</div>
+					<div class="col-sm-6">
+						<h4 class="small-space">100% оригинальные часы</h3>
+						<ul class="text-left">
+							<li>Доставим лично в руки по всей России за 50% от стоимости доставки.</li>
+							<li>Доставка до Вашей почты бесплатно.</li>
+							<li>На вторую покупку часов даем скидку 20%.</li>
+							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
+						</ul>
+					</div>
+				
+				</div>
 		</div>
 	</div>
 </section>

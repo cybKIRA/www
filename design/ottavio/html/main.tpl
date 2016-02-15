@@ -10,10 +10,16 @@
 
 
 <section style="background-image: url('design/{$settings->theme}/images/parallax/feedback.jpg');" class="header-section fading-title parallax">
-	<div class="section-shade sep-top-3x sep-bottom-md">
+	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">
 			<div class="section-title light">
-				<h2 class="small-space">Оригинальные часы по доступной цене</h2>
+				<h2 class="small-space">100% оригинальные часы по доступной цене</h2>
+				<ul class="text-left">
+					<li>Доставим лично в руки по всей России за 50% от стоимости доставки.</li>
+					<li>Доставка до Вашей почты бесплатно.</li>
+					<li>На вторую покупку часов даем скидку 20%.</li>
+					<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
+				</ul>
 			</div>
 		</div>
 	</div>
