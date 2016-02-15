@@ -21,7 +21,7 @@
 
 
 
-{include file = 'm_slider.tpl'}
+{*include file = 'm_slider.tpl'*}
 
 <section class="sep-bottom-md sep-top-md">
 	<div class="container">
