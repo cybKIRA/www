@@ -13,11 +13,10 @@
 	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">
 			<div class="section-title light">
-				<h2 class="small-space">100% оригинальные часы по доступной цене</h2>
+				<h2 class="small-space">100% оригинальные часы</h2>
 				<ul class="text-left">
-					<li>Доставим лично в руки по всей России за 50% от стоимости доставки.</li>
-					<li>Доставка до Вашей почты бесплатно.</li>
-					<li>На вторую покупку часов даем скидку 20%.</li>
+					<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
+					<li>На вторую покупку часов даем скидку 10%.</li>
 					<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
 				</ul>
 			</div>
@@ -89,7 +88,7 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="section-title text-center sep-bottom-lg">
 					<h2 class="upper">Каталог по брендам</h2>
-					<p class="lead">Выбери совой любимый бренд!</p>
+					<p class="lead">Выбери свой любимый бренд!</p>
 				</div>
 			</div>
 		</div>
@@ -113,7 +112,7 @@
 </section>
 {/if}
 
-		
+{*		
 <section class="sep-bottom-2x">
 	<div class="container">
 		<hr class="slim">
@@ -157,6 +156,26 @@
 		</div>
 	</div>
 </section>
+*}
+
+{*if $page->body}
+<section class="sep-bottom-2x">
+	<div class="container">
+		<hr class="slim">
+		<h2 class="upper">Официальный интернет магазин часов</h2>
+		<div class="row">
+			<div class="col-md-12 text-main">
+				{$page->body}
+			</div>
+			<div class="col-md-12 text-center">
+			<br>
+			<a id="a_text" href="#" >Раскрыть текст полностью</a>
+			</div>
+		</div>
+	</div>
+</section >
+{/if*}
+
 
 {*	
 <section id="parallax3" style="background-image: url(design/{$settings->theme}/images/parallax/podarki.jpg);" class="parallax">
@@ -232,7 +251,7 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="section-title text-center sep-top-2x sep-bottom-2x">
-					<h2 class="upper">Рекомендуемые товары</h2>
+					<h2 class="upper">Хиты продаж</h2>
 					<p class="lead"></p>
 				</div>
 			</div>

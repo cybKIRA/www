@@ -2608,3 +2608,8 @@ margin: 0 0 15px
 #name_product{
 	color:#f28500;
 }
+
+.text-main {
+	height:500px;
+	overflow:scroll;
+}

@@ -79,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	
+	{*
 	<div class="copyright sep-top-xs sep-bottom-xs">
 		<div class="container">
 			<div class="row">
@@ -88,4 +88,5 @@
 			</div>
 		</div>
 	</div>
+	*}
 </footer>

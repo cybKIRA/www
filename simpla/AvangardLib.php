@@ -292,8 +292,8 @@ function avangard_filter_and_pars($output,$list_cat) {
 
 function kw_good_price($price) {
 	
-	if ($price < 1200) {
-		$price = $price + 1200;
+	if ($price < 1000) {
+		$price = $price + 1000;
 	} else
 	{
 		$price = $price * 2;
