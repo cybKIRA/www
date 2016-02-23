@@ -158,23 +158,23 @@
 </section>
 *}
 
-{*if $page->body}
+{if $page->body}
 <section class="sep-bottom-2x">
 	<div class="container">
-		<hr class="slim">
+		<!--<hr class="slim">-->
 		<h2 class="upper">Официальный интернет магазин часов</h2>
 		<div class="row">
-			<div class="col-md-12 text-main">
+			<div style="height:295px;" class="col-md-12 text-main">
 				{$page->body}
 			</div>
 			<div class="col-md-12 text-center">
 			<br>
-			<a id="a_text" href="#" >Раскрыть текст полностью</a>
+			<a id="a_text" href="#a_text" onclick="return false;" >Показать текст полностью</a>
 			</div>
 		</div>
 	</div>
 </section >
-{/if*}
+{/if}
 
 
 {*	
@@ -394,3 +394,23 @@
 *}
 
 <br>
+
+<script type="text/javascript">
+	$(function(){
+		var a_text_hide = true;
+		var a_text_height = '';
+		$('#a_text').click(function() {
+			if( a_text_hide ){
+				a_text_height = $('.text-main').css("height");
+				$('.text-main').css("height","auto");
+				$('#a_text').text("Показать кратко");
+				a_text_hide = false;
+			} else {
+				$('.text-main').css("height",a_text_height);
+				$('#a_text').text("Показать текст полностью");
+				a_text_hide = true;
+			}			
+			
+		});
+	});
+</script>

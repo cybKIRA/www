@@ -2610,6 +2610,6 @@ margin: 0 0 15px
 }
 
 .text-main {
-	height:500px;
-	overflow:scroll;
+	overflow: hidden;
+	/*overflow:scroll;*/
 }
