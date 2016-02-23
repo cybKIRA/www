@@ -1,6 +1,7 @@
 <?PHP
 require_once('api/Simpla.php');
 require_once('simpla/AvangardLib.php');
+require_once('simpla/MyConf.php');
 
 class AvangardAdmin extends Simpla
 {	
@@ -8,9 +9,6 @@ class AvangardAdmin extends Simpla
 
 	public function fetch()
 	{
-		
-		$login = 'nick_@mail.ru';
-		$password = '27808808';
 		
 		//функция выгрузки от Авангарда
 		$output = get_avangard_products($login, $password);
