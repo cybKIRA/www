@@ -301,6 +301,11 @@ class AvangardAdmin extends Simpla
 					if ($prodBd['price_post'] != $prod['price_post'] )
 					{
 						$isChange = true;
+						$change_str = $change_str . 'prз|';
+					}
+					if ($prodBd['price'] != $prod['price'] )
+					{
+						$isChange = true;
 						$change_str = $change_str . 'pr|';
 					}
 					if ($prodBd['name'] != $prod['name'] )
