@@ -45,7 +45,8 @@
 						<i class="fa fa-star-o"></i>
 					{/if}
 				{else}
-					<i class="fa fa-star-o"></i>
+					{*<i class="fa fa-star-o"></i>*}
+					<i class="fa"></i>
 				{/if}
 			{/section}
 		{/strip}
