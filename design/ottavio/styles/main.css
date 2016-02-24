@@ -2613,3 +2613,8 @@ margin: 0 0 15px
 	overflow: hidden;
 	/*overflow:scroll; */
 }
+
+#a_text {
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+}

@@ -259,7 +259,7 @@
 		
 		<div class="row">
 			{foreach $featured_products as $product}
-				<div class="col-md-3 sep-bottom-lg">
+				<div class="col-sm-3 sep-bottom-lg">
 					{include file='product_item.tpl'}
 				</div>
 				{if $product@iteration is div by 4}<div class="clearfix"></div>{/if}

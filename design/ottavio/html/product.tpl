@@ -18,7 +18,7 @@
 					{/foreach}
 					
 					{if $brand}
-						<li><a href="catalog/{$cat->url}/{$brand->url}">{$brand->name|escape}</a></li>
+						<li>{$brand->name|escape}</li>
 					{/if}
 				</ol>
 				
@@ -32,9 +32,8 @@
 					<div class="col-sm-6">
 						<h4 class="small-space">100% оригинальные часы</h3>
 						<ul class="text-left">
-							<li>Доставим лично в руки по всей России за 50% от стоимости доставки.</li>
-							<li>Доставка до Вашей почты бесплатно.</li>
-							<li>На вторую покупку часов даем скидку 20%.</li>
+							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
+							<li>На вторую покупку часов даем скидку 10%.</li>
 							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
 						</ul>
 					</div>
@@ -71,12 +70,13 @@
 
 			<div class="col-md-7 sep-top-lg">
 				<div class="clearfix">
-					<div " content="3" class="rate pull-left sep-bottom-xs">
+					<div content="3" class="rate pull-left sep-bottom-xs">
 						{*
 						<meta itemprop="worstRating" content="1">
 						<meta itemprop="ratingValue" content="{$product->rating}">
 						<meta itemprop="bestRating" content="5">
 						*}
+
 						{strip}
 							{section name=rate start=0 loop=5 step=1}
 								{if $product->votes > 0}
@@ -100,7 +100,7 @@
 								{if $comments}
 									<span itemprop="ratingCount">{$comments|count}</span> {$comments|count|plural:'отзыв':'отзывов':'отзыва'}
 								{else}
-									Нет отзывов
+									{*Нет отзывов*}
 								{/if}
 							</a>
 						</small>
@@ -164,6 +164,7 @@
 		</div>
 	</div>
 </section>
+
 
 <div id="comments" class="container">
 	<div class="row">
