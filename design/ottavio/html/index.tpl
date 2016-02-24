@@ -5,7 +5,7 @@
 	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{$meta_title|escape}</title>
+	<title>{$meta_title|escape} {if $brand and !$product}{$brand->name|escape}{/if}</title>
 
 	{* Метатеги *}
 	<meta name="description" content="{$meta_description|escape}" />
