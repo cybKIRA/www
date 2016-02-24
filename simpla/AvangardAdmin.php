@@ -1,17 +1,18 @@
 <?PHP
 require_once('api/Simpla.php');
 require_once('simpla/AvangardLib.php');
-require_once('simpla/MyConf.php');
+require_once('simpla/AvangardConfig.php');
+
+
 
 class AvangardAdmin extends Simpla
 {	
-	private $login = '';
-
+	
 	public function fetch()
 	{
-		
+		$myLogin = new AvangardConfig;
 		//функция выгрузки от Авангарда
-		$output = get_avangard_products($login, $password);
+		$output = get_avangard_products($myLogin->login, $myLogin->password);
 			
 		$output = mb_convert_encoding($output, 'utf-8', 'windows-1251');
 		
