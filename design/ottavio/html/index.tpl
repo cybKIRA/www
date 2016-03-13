@@ -16,7 +16,7 @@
 	{if isset($canonical)}<link rel="canonical" href="{$config->root_url}{$canonical}"/>{/if}
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700%7COpen+Sans:400italic,300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700%7COpen+Sans:400italic,300,400,600,700">
 	<link rel="stylesheet" href="design/{$settings->theme}/styles/font-awesome.css">
     <link rel="stylesheet" href="design/{$settings->theme}/styles/owl.carousel.css">
     <link rel="stylesheet" href="design/{$settings->theme}/styles/owl.theme.css">
