@@ -1,4 +1,5 @@
 <div class="product-item-border outline-outward">
+
 <a href="products/{$product->url}" class="product-image">
 	{if $product->image}
 		<img src="{$product->image->filename|resize:510:600}" alt="{$product->name|escape}" class="img-responsive">
@@ -20,14 +21,15 @@
 		<span class="">{$product->category->name}</span>
 	{/if}
 	
-	<a href="products/{$product->url}" data-product="{$product->id}"><p>{$product->name|escape}</p></a>
+	<a href="products/{$product->url}" data-product="{$product->id}">{$product->name|escape}</a>
 </div>
 
 <div class="product-detail">
 	{if $product->variants|count > 0}
-	<div class="pull-right price-shop text-right">
+	<div class="price-shop text-left">
 		<ins>{$product->variant->price|convert} {$currency->sign|escape}</ins>
 		{if $product->variant->compare_price}<del>{$product->variant->compare_price|convert} {$currency->sign|escape}</del>{/if}
+		
 	</div>
 	{/if}
 	
@@ -56,4 +58,5 @@
 		<a href="products/{$product->url}/#comments">{$product->comments_count} {$product->comments_count|plural:'отзыв':'отзывов':'отзыва'}</a>
 	{/if}
 </div>
+
 </div>

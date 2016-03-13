@@ -57,21 +57,22 @@
 				{if $products}			
 					<div class=" filter-prod">
 						{* Сортировка *}
-						{if $products|count>0}
+						{*if $product->variants|count > 0*}
 						<div class="form-group pull-left sep-bottom-md">
 							<select id="products_sort" class="form-control input-lg rounded">
-								<option {if $sort=='position'}	selected="selected"{/if} value="{url sort=position page=null}">Сортировать по новизне</option>
+								<option {if $sort=='position'}	selected="selected"{/if} value="{url sort=position page=null}">Сортировать по новинкам</option>
 								<option {if $sort=='price'} 	selected="selected"{/if} value="{url sort=price page=null}">Сортировать по цене</option>
 								<option {if $sort=='name'}		selected="selected"{/if} value="{url sort=name page=null}">Сортировать по названию</option>
 							</select>
 						</div>
-						{/if}
+						{*/if*}
 						<br>
 						{include file='pagination_counter.tpl'}
 					</div>
 
 					<div class="row">
 						{foreach $products as $product}
+						{if $product->visible}
 							{if $category || $keyword}
 								<div class="col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
 								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
@@ -82,7 +83,7 @@
 								{if $product@iteration is div by 3}<div class="clearfix visible-sm"></div>{/if}
 								{if $product@iteration is div by 4}<div class="clearfix hidden-xs hidden-sm"></div>{/if}
 							{/if}
-
+						{/if}
 						{/foreach}
 					</div>
 					
@@ -101,8 +102,10 @@
 					<div class="sep-bottom-md">{$brand->description}</div>
 					<hr class="sep-bottom-xs">
 				{else}
+				{*
 					<div class="sep-bottom-xs">{$category->description}</div>
 					<hr class="sep-bottom-xs">
+				*}
 				{/if}
 				
 				{* тут выводился дескриптион, теперь он выше

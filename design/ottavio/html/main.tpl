@@ -26,14 +26,14 @@
 
 
 
-{*include file = 'm_slider.tpl'*}
+{include file = 'm_slider.tpl'}
 
 <section class="sep-bottom-md sep-top-md">
 	<div class="container">
         
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="section-title text-center sep-bottom-lg">
+				<div class="section-title text-center sep-bottom-lg sep-top-md">
 					<h2 class="upper">Каталог по всем часам</h2>
 					<p class="lead">Найдите часы своей мечты!</p>
 				</div>
@@ -49,7 +49,7 @@
 						{categories_grid categories=$c->subcategories}
 					{else}
 						{if $c->parent_id == 26}
-						<div class="col-md-4 col-sm-6 col-xs-12 sep-bottom-lg" style="text-align:center;">
+						<div class="col-md-4 col-sm-4 col-xs-6 sep-bottom-lg" style="text-align:center;">
 							
 							<a href="catalog/{$c->url}" class="outline-outward category-banner">
 								{if $c->thumb}
@@ -82,7 +82,7 @@
 {* Выбираем в переменную $all_brands все бренды *}
 {if $all_brands}
 
-<section class="sep-bottom-2x shop-content">
+<section class="shop-content">
 	<div class="container">
 	<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -96,10 +96,10 @@
         <div  class="row">
 			        {foreach $all_brands as $b}	
 
-			        <div style="text-align:center;" class="col-md-4 col-sm-6 col-xs-12 {*wow bounceInUp*} item sep-bottom-xs">
+			        <div style="text-align:center;" class="col-lg-3 col-md-4 col-sm-4 col-xs-6 {*wow bounceInUp*} item sep-bottom-xs">
 				        <a class="outline-outward category-banner" href="/catalog/{$b->url}/{$b->url_brand}">
 					        {if $b->image}
-						        <img src="{$config->brands_images_dir}{$b->image}" alt="{$b->name|escape}" class="img-responsive" style="max-width:300px">
+						        <img style="" src="{$config->brands_images_dir}{$b->image}" alt="{$b->name|escape}" class="img-responsive" style="max-width:300px">
 					        {else}
 						        {$b->name}
 					        {/if}
@@ -159,10 +159,11 @@
 *}
 
 {if $page->body}
-<section class="sep-bottom-2x">
+<section class="">
 	<div class="container">
 		<!--<hr class="slim">-->
 		<h2 class="upper">Официальный интернет магазин часов</h2>
+		<p class="lead"></p>
 		<div class="row">
 			<div style="height:295px;" class="col-md-12 text-main">
 				{$page->body}
@@ -207,7 +208,9 @@
 *}
 
 
-{* Акции
+
+
+	{* Акции
 <section class="sep-bottom-2x shop-content">
 	<div class="container">
 		<div class="row">
@@ -243,15 +246,20 @@
 				</div>
 			</div>
 		</div>
+</div>
+</div>
         *}
 
+		
+<section class="shop-content">
+	<div class="container">
 		{* Рекомендуемые товары *}
-		{get_featured_products var=featured_products}
+		{get_featured_products var=featured_products limit=12}
 		{if $featured_products}	
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="section-title text-center sep-top-2x sep-bottom-2x">
-					<h2 class="upper">Хиты продаж</h2>
+				<div class="section-title text-center sep-top-lg">
+					<h3 class="upper">Хиты продаж</h3>
 					<p class="lead"></p>
 				</div>
 			</div>
@@ -259,52 +267,86 @@
 		
 		<div class="row">
 			{foreach $featured_products as $product}
-				<div class="col-sm-3 sep-bottom-lg">
+				<div class="col-xs-6 col-sm-3 col-lg-2 sep-bottom-xs">
 					{include file='product_item.tpl'}
-				</div>
-				{if $product@iteration is div by 4}<div class="clearfix"></div>{/if}
+				</div>				
 			{/foreach}
 		</div>
 		{/if}
 	</div>
 </section>
 
-		
-<section class="widget_products sep-top-2x">
+<section class="shop-content">
 	<div class="container">
+		{get_new_products var=new_products limit=8}
+		{if $new_products}	
 		<div class="row">
-			{* Новинки *}
+			<div class="col-md-8 col-md-offset-2">
+				<div class="section-title text-center sep-top-xs">
+					<h3 class="upper">Новинки</h3>
+					<p class="lead"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			{foreach $new_products as $product}
+				<div class="col-xs-6 col-sm-3 col-lg-2 sep-bottom-xs">
+					{include file='product_item.tpl'}
+				</div>				
+			{/foreach}
+		</div>
+		{/if}
+	</div>
+</section>
+
+{*		
+<section class="widget_products sep-top-2x">
+	<div class="container">	
+		<div class="row">
 			{get_new_products var=new_products limit=6}
 			{if $new_products}
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<h5 class="widget-title-bordered upper">Новинки</h5>
+				
 				<div class="row">
-					<div class="col-md-6">
-						<ul class="widget widget-media sep-bottom-lg">
+					
+					
+						<div class="widget widget-media sep-bottom-lg">
 							{foreach $new_products as $product}
-							<li class="media media-bordered clearfix">
+							<div class="col-md-3 media media-bordered clearfix">
 								{include file='product_item_tiny.tpl'}
-							</li>
-						{if $product@iteration == 3 && !$product@last}	
-						</ul>
-					</div>
-					<div class="col-md-6">
-						<ul class="widget widget-media sep-bottom-lg">
-						{/if}
+							</div>
+							
+								{if $product@iteration == 4 && !$product@last}	
+								</div>
+						</div>
+							<div class="row">
+								<div class="widget widget-media sep-bottom-lg">
+								
+								{/if}
 							{/foreach}
-						</ul>
-					</div>
+
+								</div>
+							</div>
 				</div>
 			</div>
 			{/if}
-			
+		</div>
+	
+</section>
+*}
+
+<section class="widget_products sep-top-2x">
+	<div class="container">	
+		<div class="row">			
 			{* Акционные товары *}
 			{get_discounted_products var=discounted_products limit=6}
 			{if $discounted_products}
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<h5 class="widget-title-bordered upper">Акционные товары</h5>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<ul class="widget widget-media sep-bottom-lg">
 							{foreach $discounted_products as $product}
 							<li class="media media-bordered clearfix">
@@ -313,7 +355,7 @@
 						{if $product@iteration == 3 && !$product@last}	
 						</ul>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<ul class="widget widget-media sep-bottom-lg">
 						{/if}
 							{/foreach}
@@ -328,9 +370,9 @@
 		
 
 {* Выбираем в переменную $last_posts последние записи *}
-{get_posts var=last_posts limit=10}
+{get_posts var=last_posts limit=3}
 {if $last_posts}
-<section id="blog" class="sep-top-2x">
+<section id="blog" class="hidden-xs">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -343,10 +385,9 @@
 		</div>
 	
 		
-	<div class="blog-preview swiper-container">
-		<div class="swiper-wrapper sep-top-md">
+		<div class="row">
 			{foreach $last_posts as $post}
-			<article class="swiper-slide">
+			<div class="sep-top-2x col-xs-6 col-sm-4 col-lg-4">
 				{if $post->thumb}
 					<a href="blog/{$post->url}">
 						<img src="files/posts/thumbs/{$post->thumb}" alt="{$post->name|escape}" class="img-responsive" />
@@ -359,10 +400,9 @@
 					<small class="info-text pull-left text-left">{$post->date|date}</small>
 					<small class="info-text pull-right text-right"><a href="blog/{$post->url}#comments">{if $post->comments_count > 0}{$post->comments_count}&nbsp;{$post->comments_count|plural:'комментарий':'комментариев':'комментария'}{else}Нет&nbsp;комментариев{/if}</a></small>
 				</div>
-			</article>
+			</div>
 			{/foreach}
 		</div>
-	</div>
 
     </div>
 </section>

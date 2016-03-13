@@ -41,7 +41,7 @@
 						<div class="icon-content img-circle"><i class="fa fa-map-marker"></i></div>
 						<div class="icon-box-content">
 							<h3 >Адрес</h3>
-							<p>Москва<br>ул. Яблочкова, 21Вс1</p>
+							<p>Москва<br>ул. Яблочкова, д. 21В, стр. 1</p>
 						</div>
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 						<div class="icon-content img-circle"><i class="fa fa-clock-o"></i></div>
 						<div class="icon-box-content">
 							<h3>Работаем</h3>
-							<p>Ежедневно<br>10:00 - 20:00</p>
+							<p>Пн-Пт: <br>10:00 - 20:00</p>
 						</div>
 					</div>
 				</div>

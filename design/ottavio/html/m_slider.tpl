@@ -1,4 +1,4 @@
-<section class="demo-2">
+<section class="demo-2 hidden-xs">
 	<div id="slider" style="display:none;" class="sl-slider-wrapper">
 		<div class="sl-slider">
 			<div data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1" class="sl-slide">

@@ -16,7 +16,7 @@
 
 	<div class="container">
 		
-		<div class="navbar-header">
+		<div class="navbar-header hidden-sm">
 			<button type="button" class="navbar-toggle"><i class="fa fa-align-justify fa-lg"></i></button>
 			
 			<a href="./" class="navbar-brand">
@@ -32,7 +32,7 @@
 			<ul class="nav navbar-nav navbar-right service-nav">
 			<li>
 				<a href="tel:+74994040996" id="nav-phone">8 (499) 40 40 996</a>
-				<small id="nav-phone-bottom">Звоните! пн-вс: с 10:00 до 20:00</small>
+				<small id="nav-phone-bottom">Звоните! пн-пт: с 10:00 до 20:00</small>
 			</li>
 				<li>
 					{if $user}

@@ -92,7 +92,9 @@ function avangard_filter_and_pars($output,$list_cat) {
 	
 	$insert=false;
 	foreach ($list_cat as $cat) {
-		if (stripos($array_str[7],$cat)!== false) {$insert=true; $brand = explode("/",$array_str[7]);}
+		if (stripos($array_str[7],$cat)!== false /*and $array_str[5] > 1400*/) {
+			$insert=true; $brand = explode("/",$array_str[7]);
+		}
 	}
 	
 	if ($insert) {

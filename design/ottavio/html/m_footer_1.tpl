@@ -41,14 +41,14 @@
 						<h6 class="upper widget-title">Контактная информация</h6>
 						
 						<ul class="widget-address sep-top-xs">
-                         <li><i class="fa fa-map-marker fa-lg"></i><small>г. Москва <br>ул. Яблочкова, д. 21Вс1</small></li>
+                         <li><i class="fa fa-map-marker fa-lg"></i><small>г. Москва <br>ул. Яблочкова, д. 21В, стр. 1</small></li>
 						 	<li><i class=""></i><small>&nbsp;</small></li>
 						</ul>
 						<i class=""></i><strong>Отдел продаж:</strong>
 						<ul class="widget-address sep-top-xs">
 							<li><i class="fa fa-phone fa-lg"></i><small>+7 (499) 40 40 996</small></li>
 							<li><i class="fa fa-envelope fa-lg"></i><small><a href="#">info@kupi.watch</a></small></li>
-							<li><i class="fa fa-clock-o fa-lg"></i><small>Обработка заказов: <br>Пн-Вс c 10:00 до 20.00</small></li>
+							<li><i class="fa fa-clock-o fa-lg"></i><small>Обработка заказов: <br>пн-пт c 10:00 до 20.00</small></li>
 							<li><i class=""></i><small>Прием заказов: круглосуточно!</small></li>
 							<li><i class=""></i><small>&nbsp;</small></li>
 						</ul>
@@ -63,12 +63,13 @@
 				
 				<div class="col-md-3 col-sm-6">
 					<div class="widget sep-top-lg">
-						<h6 class="upper widget-title">Мы в соц. сетях. Подпишись!</h6>
+						<h6 class="upper widget-title sep-bottom-xs">Мы в соц. сетях. Подпишись!</h6>
 						
-						<ul class="">
-						<li><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-3x"></i> Вконтакте</a> </li>
-						<li><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-3x"></i> Фейсбук</a> </li>
-						<li><a href="https://ok.ru/kupi.watch"><i class="fa fa-odnoklassniki fa-3x"></i> Одноклассники</a> </li>
+						<ul>
+						<li class=sep-bottom-xs><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-3x" style="vertical-align: middle;"></i> Вконтакте</a> </li>
+						<li class=sep-bottom-xs><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-3x" style="vertical-align: middle;"></i> Фейсбук</a> </li>
+						<li class=sep-bottom-xs><a href="https://ok.ru/kupi.watch"><i class="fa fa-odnoklassniki fa-3x" style="vertical-align: middle;"></i> Одноклассники</a> </li>
+						<li class=sep-bottom-xs><a href="https://instagram.com/kupi.watch/"><i class="fa fa-instagram fa-3x" style="vertical-align: middle;"></i> Инстаграм</a> </li>
 						</ul>
 						
 					</div>

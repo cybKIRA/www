@@ -41,6 +41,7 @@
 							<li><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-lg"></i></a></li>							
 							<li><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-lg"></i> </a> </li>
 							<li><a href="https://ok.ru/kupi.watch"><i class="fa fa-odnoklassniki fa-lg"></i></a> </li>
+							<li><a href="https://instagram.com/kupi.watch/"><i class="fa fa-instagram fa-lg"></i></a> </li>
 						</ul>
 
 						<ul class="social-icon">
