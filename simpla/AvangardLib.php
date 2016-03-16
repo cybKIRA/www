@@ -208,9 +208,6 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['case'] = $array_str[14]; //Форма корпуса
 		$product['options'][171] = $product['case'];
 		
-		$product['material_case'] = $array_str[27]; //Материал корпуса
-		$product['options'][166] = $product['material_case'];
-		
 		$product['color_case'] = $array_str[15]; //Цвет корпуса
 		$product['options'][172] = $product['color_case'];
 		
@@ -238,22 +235,25 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['diving'] = $array_str[24]; //Для дайвинга и рыбалки
 		//$product['options'][174] = $product['diving'];
 		
-		$product['mechanism'] = $array_str[25]; //Тип механизма
+		$product['mechanism'] = $array_str[27]; //Тип механизма
 		$product['options'][160] = $product['mechanism'];
 		
-		$product['bracelet'] = $array_str[26]; //Ремешок/Браслет
+		$product['bracelet'] = $array_str[28]; //Ремешок/Браслет
         $product['options'][176] = $product['bracelet'];
 		
-		$product['water_resist'] = $array_str[28]; //Водозащита
+		$product['material_case'] = $array_str[29]; //Материал корпуса
+		$product['options'][166] = $product['material_case'];
+		
+		$product['water_resist'] = $array_str[30]; //Водозащита
 		$product['options'][161] = $product['water_resist'];
 		
-		$product['glass'] = $array_str[29]; //Стекло
+		$product['glass'] = $array_str[31]; //Стекло
 		$product['options'][162] = $product['glass'];
 		
-		$product['hod'] = $array_str[30]; //Ход
+		$product['hod'] = $array_str[32]; //Ход
 		$product['options'][177] = $product['hod'];
 		
-		$product['sex'] = $array_str[33]; //Пол
+		$product['sex'] = $array_str[35]; //Пол
 		$product['options'][159] = $product['sex'];
 
 		$str = $product['sex'];
@@ -272,7 +272,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 				break;
 			}
 		
-		$product['country'] = $array_str[34]; //Страна
+		$product['country'] = $array_str[36]; //Страна
 		$product['options'][165] = $product['country'];
 		
 		$product['images_av'] = $array_str[4]; //url картинки от поставщика
