@@ -40,6 +40,7 @@ class ProductsView extends View
 			
 		$filter = array();
 		$filter['visible'] = 1;	
+		$filter['in_stock'] = 1;
 		
 		$filter['min_price'] = $current_min_price / $rate_from * $rate_to;
 		$filter['max_price'] = $current_max_price / $rate_from * $rate_to;
