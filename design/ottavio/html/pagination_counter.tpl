@@ -1,4 +1,4 @@
-<div class="sep-bottom-2x pull-right">Показаны
+<div class="pull-right">Показаны
 {if $current_page_num==1}
 	1 - {$products|count}
 {elseif $current_page_num==$total_pages_num}

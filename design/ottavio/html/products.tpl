@@ -58,7 +58,7 @@
 					<div class=" filter-prod">
 						{* Сортировка *}
 						{*if $product->variants|count > 0*}
-						<div class="form-group pull-left sep-bottom-md">
+						<div class="form-group pull-left">
 							<select id="products_sort" class="form-control input-lg rounded">
 								<option {if $sort=='position'}	selected="selected"{/if} value="{url sort=position page=null}">Сортировать по новинкам</option>
 								<option {if $sort=='price'} 	selected="selected"{/if} value="{url sort=price page=null}">Сортировать по цене</option>
@@ -66,10 +66,12 @@
 							</select>
 						</div>
 						{*/if*}
-						<br>
+						
 						{include file='pagination_counter.tpl'}
 					</div>
-
+					<div class="sep-top-xs sep-bottom-xs">
+						{include file='pagination_circle.tpl'}
+					</div>
 					<div class="row">
 						{foreach $products as $product}
 						{if $product->visible}
