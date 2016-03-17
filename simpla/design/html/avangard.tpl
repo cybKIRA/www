@@ -207,7 +207,7 @@
 			{$product.url}
 		</td>
 		<td>
-			<input name="id_ch[{$product.id_post}]" value="{$product.id_post}" {*checked="checked"*} type="checkbox" />
+			<input name="id_ch[{$product.id_post}]" value="{$product.id_post}" checked="checked" type="checkbox" />
 		</td>
 	</tr>
 	</tr>

@@ -254,13 +254,6 @@ class AvangardAdmin extends Simpla
 									$options[$f_id]->value = $prod['hod'];
 								}
 								
-								if(in_array('hod', $change)){
-									$f_id = 177;
-									$options[$f_id] = new stdClass;
-									$options[$f_id]->feature_id = $f_id;
-									$options[$f_id]->value = $prod['hod'];
-								}
-								
 								if(in_array('mcase', $change)){
 									$f_id = 166;
 									$options[$f_id] = new stdClass;
@@ -283,6 +276,21 @@ class AvangardAdmin extends Simpla
 									$options[$f_id]->feature_id = $f_id;
 									$options[$f_id]->value = $prod['country'];
 								}
+								
+								if(in_array('gls', $change)){
+									$f_id = 162;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['glass'];
+								}
+								
+								if(in_array('brc', $change)){
+									$f_id = 176;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['bracelet'];
+								}
+								
 								
 								//Свойства текущей категории
 								$category_features = array();
