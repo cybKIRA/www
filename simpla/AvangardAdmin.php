@@ -10,6 +10,8 @@ class AvangardAdmin extends Simpla
 	
 	public function fetch()
 	{
+	    $dop_proverka = true; // Если нужно проверить свойства
+		
 		$myLogin = new AvangardConfig;
 		//функция выгрузки от Авангарда
 		$output = get_avangard_products($myLogin->login, $myLogin->password);
@@ -203,20 +205,102 @@ class AvangardAdmin extends Simpla
 			}
 		}
 		
+		//подготовим массив строк изменений
+		if ($this->request->post('change_str') ) {
+			$change_str_arr = $this->request->post('change_str');
+		}
 		if ($this->request->post('id_ch') ) { //если есть выбранные чекбоксы для Изменения
 			foreach ($this->request->post('id_ch') as $id_post) {
+
+				//получим строку кодов изменений свойств
+				$change_str = $change_str_arr[$id_post];
 				
 				$variants = $this->variants->get_variants(array('id_post'=>$id_post));
 
 				foreach ($variants as $var) {
 					
-					//найдем те продукты которыми полями будем менять
+					//найдем те поля которые будем менять
 					foreach ($products as $prod ) {
 						if ($var->id_post == $prod['id_post'])
-						{
-							
+						{						
+							$change = explode("|", $change_str);
+							array_pop($change);
+
+							$variants = $this->variants->get_variants(array('id_post'=>$id_post));
+							//пока апдейтим постоянно, потом можно проверку ввести
 							$this->products->update_product($var->product_id, array('name'=>$prod['name']));
 							$this->variants->update_variant($var->id, array('price'=>$prod['price'],'price_post'=>$prod['price_post']));
+							if ($dop_proverka) {
+								$options = array();
+								
+								if(in_array('sex', $change)){
+									$f_id = 159;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['sex'];						
+								}
+								
+								if(in_array('wtr', $change)){
+									$f_id = 161;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['water_resist'];
+								}
+								
+								if(in_array('hod', $change)){
+									$f_id = 177;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['hod'];
+								}
+								
+								if(in_array('hod', $change)){
+									$f_id = 177;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['hod'];
+								}
+								
+								if(in_array('mcase', $change)){
+									$f_id = 166;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['material_case'];
+								}
+								
+								
+								if(in_array('mech', $change)){
+									$f_id = 160;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['mechanism'];
+								}
+								
+								
+								if(in_array('count', $change)){
+									$f_id = 165;
+									$options[$f_id] = new stdClass;
+									$options[$f_id]->feature_id = $f_id;
+									$options[$f_id]->value = $prod['country'];
+								}
+								
+								//Свойства текущей категории
+								$category_features = array();
+								foreach($this->features->get_features(array('category_id'=>$product_categories[0])) as $f)
+								$category_features[] = $f->id;
+									
+								//Добавляем свойства
+								if(is_array($options))
+								foreach($options as $option)
+									{
+										if(in_array($option->feature_id, $category_features))
+										{
+											//echo "update:".$var->product_id." - ".$option->feature_id." - ".$option->value."<br>";
+											$this->features->update_option($var->product_id, $option->feature_id, $option->value);
+										}
+									}
+
+							}
 						}
 					}
 					
@@ -285,22 +369,25 @@ class AvangardAdmin extends Simpla
 						if($option->feature_id == 161 ) $opt['water_resist'] = $option->value;
 						if($option->feature_id == 162 ) $opt['glass'] = $option->value;
 						if($option->feature_id == 177 ) $opt['hod'] = $option->value;
-						if($option->feature_id == 159) $opt['sex'] = $option->value;					
+						if($option->feature_id == 159) $opt['sex'] = $option->value;
+						if($option->feature_id == 165) $opt['country'] = $option->value;						
 					}
 					
 					//Собираю строки что бы сравнить свойства в БД и выгрузке
-					$opt_str = $opt['show_time']. ' | ' . $opt['style']. ' | ' . $opt['backlight']. ' | ' . $opt['shockproof']. ' | ' . $opt['case']. ' | ' . $opt['material_case']. ' | ' . $opt['color_case']. ' | ' . $opt['material_bracelet']. ' | ' . $opt['color_bracelet']. ' | ' . $opt['color_dial']. ' | ' . $opt['number']. ' | ' . $opt['additional']. ' | ' . $opt['mechanism']. ' | ' . $opt['bracelet']. ' | ' . $opt['water_resist']. ' | ' . $opt['glass']. ' | ' . $opt['hod']. ' | ' . $opt['sex'];
-					$opt_str_prod = $prod['show_time']. ' | ' . $prod['style']. ' | ' . $prod['backlight']. ' | ' . $prod['shockproof']. ' | ' . $prod['case']. ' | ' . $prod['material_case']. ' | ' . $prod['color_case']. ' | ' . $prod['material_bracelet']. ' | ' . $prod['color_bracelet']. ' | ' . $prod['color_dial']. ' | ' . $prod['number']. ' | ' . $prod['additional']. ' | ' . $prod['mechanism']. ' | ' . $prod['bracelet']. ' | ' . $prod['water_resist']. ' | ' . $prod['glass']. ' | ' . $prod['hod']. ' | ' . $prod['sex'];
+					$opt_str = $opt['show_time']. ' | ' . $opt['style']. ' | ' . $opt['backlight']. ' | ' . $opt['shockproof']. ' | ' . $opt['case']. ' | ' . $opt['material_case']. ' | ' . $opt['color_case']. ' | ' . $opt['material_bracelet']. ' | ' . $opt['color_bracelet']. ' | ' . $opt['color_dial']. ' | ' . $opt['number']. ' | ' . $opt['additional']. ' | ' . $opt['mechanism']. ' | ' . $opt['bracelet']. ' | ' . $opt['water_resist']. ' | ' . $opt['glass']. ' | ' . $opt['hod']. ' | ' . $opt['sex'] . ' | ' . $opt['country'];
+					$opt_str_prod = $prod['show_time']. ' | ' . $prod['style']. ' | ' . $prod['backlight']. ' | ' . $prod['shockproof']. ' | ' . $prod['case']. ' | ' . $prod['material_case']. ' | ' . $prod['color_case']. ' | ' . $prod['material_bracelet']. ' | ' . $prod['color_bracelet']. ' | ' . $prod['color_dial']. ' | ' . $prod['number']. ' | ' . $prod['additional']. ' | ' . $prod['mechanism']. ' | ' . $prod['bracelet']. ' | ' . $prod['water_resist']. ' | ' . $prod['glass']. ' | ' . $prod['hod']. ' | ' . $prod['sex'] . ' | ' . $prod['country'];
 					
 					
 					//echo $var_visble->product_id." -  Есть: ".$opt['sex']."   -  Будет:".$prod['sex']."<br>";
 					
 					$change_str = ''; //Изменения
+					//$change_str  используется для вывода в кратком виде что поменялось, плюс потом передается по пост и обрабатывается, что бы понять какие именно свойства менять
+					//ниже задаются краткие описания
 					$isChange = false;
 					if ($prodBd['price_post'] != $prod['price_post'] )
 					{
 						$isChange = true;
-						$change_str = $change_str . 'prз|';
+						$change_str = $change_str . 'prp|';
 					}
 					if ($prodBd['price'] != $prod['price'] )
 					{
@@ -311,6 +398,55 @@ class AvangardAdmin extends Simpla
 					{
 						$isChange = true;
 						$change_str = $change_str . 'nm|';
+					}
+					
+					if ($dop_proverka) {
+						
+						if ($opt['water_resist'] != $prod['water_resist'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'wtr|';
+						}
+						
+						if ($opt['hod'] != $prod['hod'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'hod|';
+						}
+						
+						// Смотрим только было ли поле пустое, т.к. пол, могли поменять руками в админке
+						if ($opt['sex'] != $prod['sex'] && $opt['sex']=="")
+						{
+							$isChange = true;
+							$change_str = $change_str . 'sex|';
+						}
+						
+						if ($opt['material_case'] != $prod['material_case'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'mcase|';
+						}
+						if ($opt['mechanism'] != $prod['mechanism'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'mech|';
+						}
+						if ($opt['bracelet'] != $prod['bracelet'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'brc|';
+						}
+						if ($opt['glass'] != $prod['glass'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'gls|';
+						}
+						
+						if ($opt['country'] != $prod['country'] )
+						{
+							$isChange = true;
+							$change_str = $change_str . 'count|';
+						}
 					}
 					
 					/*

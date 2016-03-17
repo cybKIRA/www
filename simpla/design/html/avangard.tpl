@@ -207,7 +207,7 @@
 			{$product.url}
 		</td>
 		<td>
-			<input name="id_ch[]" value="{$product.id_post}" checked="checked" type="checkbox" />
+			<input name="id_ch[{$product.id_post}]" value="{$product.id_post}" {*checked="checked"*} type="checkbox" />
 		</td>
 	</tr>
 	</tr>
@@ -245,6 +245,8 @@
 	<tr style="color:#c0c0c0;">
 		<td colspan="8">
 			{$product.change.change_options_str}
+
+			<input name="change_str[{$product.id_post}]" type="hidden" value="{$product.change_str}" >
 		</td>
 	</tr>
 {/foreach}
