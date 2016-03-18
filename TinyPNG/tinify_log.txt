@@ -864,3 +864,1232 @@ Start: 01:01:01
 Найдено изображений в каталоге: 7740
 Файлов для квантования: 0
 End: 01:01:01
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7740
+Файлов для квантования: 0
+End: 09:01:08
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7740
+Файлов для квантования: 0
+End: 12:01:02
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160221_150101.csv
+End: 15:01:06
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 18:01:03
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2014
+Файлов для квантования: 0
+End: 00:01:08
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 01:01:02
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 09:01:09
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 12:01:01
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 15:01:02
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 18:01:02
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7741
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2014
+Файлов для квантования: 0
+End: 00:01:08
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7879
+Файлов для квантования: 138
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160223_010101.csv
+End: 01:03:23
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7894
+Файлов для квантования: 15
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160223_090101.csv
+End: 09:01:42
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7894
+Файлов для квантования: 0
+End: 12:01:02
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7894
+Файлов для квантования: 0
+End: 15:01:02
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7894
+Файлов для квантования: 0
+End: 18:01:02
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 7894
+Файлов для квантования: 0
+End: 21:01:02
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2149
+Файлов для квантования: 135
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160224_000101.csv
+End: 00:07:33
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8070
+Файлов для квантования: 176
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160224_010101.csv
+End: 01:04:40
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8086
+Файлов для квантования: 16
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160224_090101.csv
+End: 09:01:51
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8087
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160224_120101.csv
+End: 12:01:08
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8087
+Файлов для квантования: 0
+End: 15:01:01
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8087
+Файлов для квантования: 0
+End: 18:01:01
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8106
+Файлов для квантования: 19
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160224_210101.csv
+End: 21:01:54
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2149
+Файлов для квантования: 0
+End: 00:01:10
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8155
+Файлов для квантования: 49
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160225_010101.csv
+End: 01:02:56
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8155
+Файлов для квантования: 0
+End: 09:01:09
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8155
+Файлов для квантования: 0
+End: 12:01:01
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8181
+Файлов для квантования: 26
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160225_150101.csv
+End: 15:02:35
+
+Start: 18:01:02
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8185
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160225_180102.csv
+End: 18:01:18
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8186
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160225_210101.csv
+End: 21:01:06
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2149
+Файлов для квантования: 0
+End: 00:01:09
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8186
+Файлов для квантования: 0
+End: 01:01:10
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8190
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160226_090101.csv
+End: 09:01:26
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8191
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160226_120101.csv
+End: 12:01:18
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8191
+Файлов для квантования: 0
+End: 15:01:01
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8194
+Файлов для квантования: 3
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160226_180101.csv
+End: 18:01:17
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8196
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160226_210101.csv
+End: 21:01:17
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2149
+Файлов для квантования: 0
+End: 00:01:09
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8209
+Файлов для квантования: 13
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160227_010101.csv
+End: 01:01:34
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8477
+Файлов для квантования: 268
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160227_090101.csv
+End: 09:06:39
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8478
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160227_120101.csv
+End: 12:01:06
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8479
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160227_150101.csv
+End: 15:01:08
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8486
+Файлов для квантования: 7
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160227_180101.csv
+End: 18:01:19
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8488
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160227_210101.csv
+End: 21:01:08
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2400
+Файлов для квантования: 251
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_000101.csv
+End: 00:11:32
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8627
+Файлов для квантования: 139
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_010101.csv
+End: 01:03:16
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8629
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_090101.csv
+End: 09:01:17
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8729
+Файлов для квантования: 100
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_120101.csv
+End: 12:05:43
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8782
+Файлов для квантования: 53
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_150101.csv
+End: 15:03:50
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8793
+Файлов для квантования: 11
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_180101.csv
+End: 18:01:36
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8794
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160228_210101.csv
+End: 21:01:04
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2400
+Файлов для квантования: 0
+End: 00:01:09
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8807
+Файлов для квантования: 13
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160229_010101.csv
+End: 01:01:25
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8808
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160229_090101.csv
+End: 09:01:20
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8847
+Файлов для квантования: 39
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160229_120101.csv
+End: 12:03:12
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8895
+Файлов для квантования: 48
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160229_150101.csv
+End: 15:03:50
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8944
+Файлов для квантования: 49
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160229_180101.csv
+End: 18:03:12
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8944
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2401
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160301_000101.csv
+End: 00:01:17
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8944
+Файлов для квантования: 0
+End: 01:01:01
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8945
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160301_090101.csv
+End: 09:01:14
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8946
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160301_120101.csv
+End: 12:01:06
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8947
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160301_150101.csv
+End: 15:01:07
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8947
+Файлов для квантования: 0
+End: 18:01:02
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8949
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160301_210101.csv
+End: 21:01:08
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2401
+Файлов для квантования: 0
+End: 00:01:05
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8952
+Файлов для квантования: 3
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160302_010101.csv
+End: 01:01:12
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 8991
+Файлов для квантования: 39
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160302_090101.csv
+End: 09:03:13
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9008
+Файлов для квантования: 17
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160302_120101.csv
+End: 12:02:20
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9014
+Файлов для квантования: 6
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160302_150101.csv
+End: 15:01:34
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9021
+Файлов для квантования: 7
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160302_180101.csv
+End: 18:01:30
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9021
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2403
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160303_000101.csv
+End: 00:01:11
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9023
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160303_010101.csv
+End: 01:01:05
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9027
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160303_090101.csv
+End: 09:01:21
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9038
+Файлов для квантования: 11
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160303_120101.csv
+End: 12:01:47
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9077
+Файлов для квантования: 39
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160303_150101.csv
+End: 15:02:54
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9108
+Файлов для квантования: 31
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160303_180101.csv
+End: 18:02:34
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9108
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2403
+Файлов для квантования: 0
+End: 00:01:08
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9108
+Файлов для квантования: 0
+End: 01:01:02
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9108
+Файлов для квантования: 0
+End: 09:01:08
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9108
+Файлов для квантования: 0
+End: 12:01:02
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9116
+Файлов для квантования: 8
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160304_150101.csv
+End: 15:01:23
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9124
+Файлов для квантования: 8
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160304_180101.csv
+End: 18:01:33
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9125
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160304_210101.csv
+End: 21:01:06
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160305_000101.csv
+End: 00:01:17
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9130
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160305_010101.csv
+End: 01:01:10
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9130
+Файлов для квантования: 0
+End: 09:01:10
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9130
+Файлов для квантования: 0
+End: 12:01:01
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9135
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160305_150101.csv
+End: 15:01:11
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9139
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160305_180101.csv
+End: 18:01:15
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9140
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160305_210101.csv
+End: 21:01:06
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:17
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9143
+Файлов для квантования: 3
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160306_010101.csv
+End: 01:01:13
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9144
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160306_090101.csv
+End: 09:01:15
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9144
+Файлов для квантования: 0
+End: 12:01:02
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9144
+Файлов для квантования: 0
+End: 15:01:02
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9153
+Файлов для квантования: 9
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160306_180101.csv
+End: 18:01:25
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9153
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:05
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9155
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160307_010101.csv
+End: 01:01:12
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9160
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160307_090101.csv
+End: 09:01:30
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9160
+Файлов для квантования: 0
+End: 12:01:01
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9160
+Файлов для квантования: 0
+End: 15:01:02
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9161
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160307_180101.csv
+End: 18:01:05
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9162
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160307_210101.csv
+End: 21:01:05
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:08
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9164
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160308_010101.csv
+End: 01:01:09
+
+Start: 09:01:02
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9169
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160308_090102.csv
+End: 09:01:23
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9170
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160308_120101.csv
+End: 12:01:06
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9173
+Файлов для квантования: 3
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160308_150101.csv
+End: 15:01:14
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9174
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160308_180101.csv
+End: 18:01:04
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9175
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160308_210101.csv
+End: 21:01:05
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:04
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9177
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160309_010101.csv
+End: 01:01:09
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9179
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160309_090101.csv
+End: 09:01:17
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9180
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160309_120101.csv
+End: 12:01:07
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9182
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160309_150101.csv
+End: 15:01:09
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9193
+Файлов для квантования: 11
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160309_180101.csv
+End: 18:02:02
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9194
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160309_210101.csv
+End: 21:01:07
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:05
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9194
+Файлов для квантования: 0
+End: 01:01:01
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9195
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160310_090101.csv
+End: 09:01:17
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9195
+Файлов для квантования: 0
+End: 12:01:01
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9197
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160310_150101.csv
+End: 15:01:10
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9197
+Файлов для квантования: 0
+End: 18:01:02
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9197
+Файлов для квантования: 0
+End: 21:01:02
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:04
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9197
+Файлов для квантования: 0
+End: 01:01:02
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9199
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160311_090101.csv
+End: 09:01:25
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9199
+Файлов для квантования: 0
+End: 12:01:01
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9200
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160311_150101.csv
+End: 15:01:07
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9201
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160311_180101.csv
+End: 18:01:06
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9210
+Файлов для квантования: 9
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160311_210101.csv
+End: 21:01:29
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:04
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9212
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160312_010101.csv
+End: 01:01:09
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9213
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160312_090101.csv
+End: 09:01:18
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9214
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160312_120101.csv
+End: 12:01:06
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9215
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160312_150101.csv
+End: 15:01:05
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9229
+Файлов для квантования: 14
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160312_180101.csv
+End: 18:01:42
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9229
+Файлов для квантования: 0
+End: 21:01:01
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2407
+Файлов для квантования: 0
+End: 00:01:11
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9229
+Файлов для квантования: 0
+End: 01:01:01
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9231
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160313_090101.csv
+End: 09:01:16
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9232
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160313_120101.csv
+End: 12:01:05
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9234
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160313_150101.csv
+End: 15:01:10
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9234
+Файлов для квантования: 0
+End: 18:01:01
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9235
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160313_210101.csv
+End: 21:01:05
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2412
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160314_000101.csv
+End: 00:01:19
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9240
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160314_010101.csv
+End: 01:01:15
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9242
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160314_090101.csv
+End: 09:01:20
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9243
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160314_120101.csv
+End: 12:01:05
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9252
+Файлов для квантования: 9
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160314_150101.csv
+End: 15:01:32
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9254
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160314_210101.csv
+End: 21:01:11
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2412
+Файлов для квантования: 0
+End: 00:01:07
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9264
+Файлов для квантования: 10
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160315_010101.csv
+End: 01:01:24
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9268
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160315_090101.csv
+End: 09:01:27
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9268
+Файлов для квантования: 0
+End: 12:01:02
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9268
+Файлов для квантования: 0
+End: 15:01:02
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9269
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160315_180101.csv
+End: 18:01:07
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9271
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160315_210101.csv
+End: 21:01:11
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2412
+Файлов для квантования: 0
+End: 00:01:05
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9271
+Файлов для квантования: 0
+End: 01:01:02
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9272
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160316_090101.csv
+End: 09:01:25
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9274
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160316_120101.csv
+End: 12:01:07
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9274
+Файлов для квантования: 0
+End: 15:01:02
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9279
+Файлов для квантования: 5
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160316_180101.csv
+End: 18:01:24
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9280
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160316_210101.csv
+End: 21:01:05
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2412
+Файлов для квантования: 0
+End: 00:01:10
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9280
+Файлов для квантования: 0
+End: 01:01:01
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9284
+Файлов для квантования: 4
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160317_090101.csv
+End: 09:01:24
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9286
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160317_120101.csv
+End: 12:01:13
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9374
+Файлов для квантования: 88
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160317_150101.csv
+End: 15:03:13
+
+Start: 18:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9532
+Файлов для квантования: 158
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160317_180101.csv
+End: 18:06:11
+
+Start: 21:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9534
+Файлов для квантования: 2
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160317_210101.csv
+End: 21:01:09
+
+Start: 00:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/originals
+Найдено изображений в каталоге: 2445
+Файлов для квантования: 33
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160318_000101.csv
+End: 00:02:29
+
+Start: 01:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9545
+Файлов для квантования: 11
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160318_010101.csv
+End: 01:01:36
+
+Start: 09:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9546
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160318_090101.csv
+End: 09:01:20
+
+Start: 12:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9547
+Файлов для квантования: 1
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160318_120101.csv
+End: 12:01:09
+
+Start: 15:01:01
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9606
+Файлов для квантования: 59
+Лог работы можно посмотреть в файле: /var/www/p345450/data/www/kupi.watch/TinyPNG/log_20160318_150101.csv
+End: 15:02:27
+
+Start: 15:04:03
+/var/www/p345450/data/www/kupi.watch/TinyPNG/../files/products
+Найдено изображений в каталоге: 9606
+Файлов для квантования: 0
+End: 15:04:03
