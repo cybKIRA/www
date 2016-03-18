@@ -1177,3 +1177,24 @@ $(window).resize(function () {
     }
 });
 
+
+	$(function(){
+		var a_text_hide = true;
+		var a_text_height = '';
+		
+		$('#a_text').click(function() {
+			if( a_text_hide ){
+				a_text_height = $('.text-main').css("height");
+				$('.text-main').css("height","auto");
+				$('#a_text').text("Показать кратко");
+				a_text_hide = false;
+			} else {
+				$('.text-main').css("height",a_text_height);
+				$('#a_text').text("Показать текст полностью");
+				a_text_hide = true;
+			}			
+			
+		});
+	});
+
+

@@ -16,34 +16,13 @@
 	{if isset($canonical)}<link rel="canonical" href="{$config->root_url}{$canonical}"/>{/if}
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700%7COpen+Sans:400italic,300,400,600,700">
-	<link rel="stylesheet" href="design/{$settings->theme}/styles/font-awesome.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/owl.carousel.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/owl.theme.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/slit-slider-style.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/slit-slider-custom.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/idangerous.swiper.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/yamm.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/animate.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/prettyPhoto.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/bootstrap-slider.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/device-mockups2.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/bootstrap.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/main.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/main-responsive.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/scripts/magnific-popup/magnific-popup.css">
-
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/themes/theme_tangerine.css">
-    
-    <noscript>
-		<link rel="stylesheet" href="design/{$settings->theme}/styles/styleNoJs.css">
-    </noscript>
-
 	<link href="design/{$settings->theme}/images/favicon.ico" rel="icon"          type="image/x-icon"/>
 	<link href="design/{$settings->theme}/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-	
-	<script src="design/{$settings->theme}/scripts/vendor/modernizr.js"></script>
-	<script src="design/{$settings->theme}/scripts/vendor/jquery.js"></script>
+
+	<link rel="stylesheet" href="design/{$settings->theme}/styles/bootstrap.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/main.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/main-responsive.css">
+
 </head>
 
 <body class="bg22">
@@ -60,10 +39,31 @@
 
 		<div id="back_to_top"><a href="#" class="fa fa-arrow-up fa-lg"></a></div>		
     </div>
-
 	
 
 </body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700%7COpen+Sans:400italic,300,400,600,700">
+	<link rel="stylesheet" href="design/{$settings->theme}/styles/font-awesome.min.css">
+	<link rel="stylesheet" href="design/{$settings->theme}/styles/owl.carousel.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/owl.theme.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/slit-slider-style.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/slit-slider-custom.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/idangerous.swiper.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/yamm.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/animate.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/prettyPhoto.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/bootstrap-slider.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/device-mockups2.css">
+	
+    <link rel="stylesheet" href="design/{$settings->theme}/scripts/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="design/{$settings->theme}/styles/themes/theme_tangerine.css">
+    
+    <noscript>
+		<link rel="stylesheet" href="design/{$settings->theme}/styles/styleNoJs.css">
+    </noscript>
+
+	<script src="design/{$settings->theme}/scripts/vendor/modernizr.js"></script>
+	<script src="design/{$settings->theme}/scripts/vendor/jquery.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/queryloader2.min.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/owl.carousel.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/jquery.ba-cond.min.js"></script>

@@ -2,7 +2,7 @@
 
 <a href="products/{$product->url}" class="product-image">
 	{if $product->image}
-		<img src="{$product->image->filename|resize:510:600}" alt="{$product->name|escape}" class="img-responsive">
+		<img src="{$product->image->filename|resize:255:300}" alt="{$product->name|escape}" class="img-responsive">
 	{else}
 		<img src="design/{$settings->theme}/images/no_image_510x600.jpg" alt="{$product->name|escape}" class="img-responsive">
 	{/if}
