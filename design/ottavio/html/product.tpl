@@ -6,6 +6,7 @@
 <section itemscope itemtype="http://schema.org/Product">
 
 <section class="header-section fading-title parallax">
+
 	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">
 			<div class="section-title light">
@@ -30,7 +31,7 @@
 						<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти в каталог</a>
 					</div>
 					<div class="col-sm-6">
-						<h4 class="small-space">100% оригинальные часы</h3>
+						<h3 class="small-space">100% оригинальные часы</h3>
 						<ul class="text-left">
 							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
 							<li>На вторую покупку часов даем скидку 10%.</li>
@@ -40,6 +41,7 @@
 				
 				</div>
 		</div>
+	</div>
 	</div>
 </section>
 
@@ -142,7 +144,9 @@
 												data-price="{$v->price|convert}" 
 												{if $v->name}data-name="{$v->name}"{/if}
 												{if $v->compare_price} data-compare="{$v->compare_price|convert} {$currency->sign|escape}"{/if}
-												{if $product->variant->id==$v->id}selected="selected"{/if}>{$v->name}</option>
+												{if $product->variant->id==$v->id}selected="selected"{/if}>{$v->name}
+												&nbsp;
+										</option>
 									{/foreach}
 								</select>
 							</div>
@@ -166,7 +170,7 @@
 	</div>
 </section>
 
-
+<section>
 <div id="comments" class="container">
 	<div class="row">
 		<div class="col-md-12 sep-top-lg">
@@ -461,3 +465,5 @@
 	</div>
 </div>
 {/if}
+
+</section>

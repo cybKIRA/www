@@ -51,4 +51,5 @@
 		<nav id="nav-arrows" class="nav-arrows"><span class="nav-arrow-prev">Назад</span><span class="nav-arrow-next">Далее</span></nav>
 		<nav id="nav-dots" class="nav-dots"><span class="nav-dot-current"></span><span></span></nav>
 	</div>
+	</div>
 </section>

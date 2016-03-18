@@ -99,7 +99,7 @@
 			        <div style="text-align:center;" class="col-lg-3 col-md-4 col-sm-4 col-xs-6 {*wow bounceInUp*} item sep-bottom-xs">
 				        <a class="outline-outward category-banner" href="/catalog/{$b->url}/{$b->url_brand}">
 					        {if $b->image}
-						        <img style="" src="{$config->brands_images_dir}{$b->image}" alt="{$b->name|escape}" class="img-responsive" style="max-width:300px">
+						        <img src="{$config->brands_images_dir}{$b->image}" alt="{$b->name|escape}" class="img-responsive" style="max-width:300px">
 					        {else}
 						        {$b->name}
 					        {/if}

@@ -21,8 +21,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
-			<footer role="contentinfo" class="post-info sep-top-md">
-				<time datetime="{$post->date|date_format:'%Y-%m-%d'}" itemprop="datePublished">{$post->date|date_format:"%d %m, %Y":"":"rus"}</time>
+			<footer class="post-info sep-top-md">
+				<time datetime="{$post->date|date_format:'%Y-%m-%d'}" data-itemprop="datePublished">{$post->date|date_format:"%d %m, %Y":"":"rus"}</time>
 			
 				<ul class="social-icon pull-right">
 					<li><span class="cursor-default" title="{if $post->views > 0}{$post->views} {$post->views|plural:'просмотр':'просмотров':'просмотра'}{else}Нет просмотров{/if}"><i class="fa fa-eye"></i><small>&nbsp;{$post->views}</small></span></li>
@@ -31,14 +31,14 @@
 			</footer>
 			
 			{if $post->image}
-				<div class="post-image sep-top-md"><img alt="" src="files/posts/{$post->image}" itemprop="thumbnailUrl" class="img-responsive"></div>
+				<div class="post-image sep-top-md"><img alt="" src="files/posts/{$post->image}" data-itemprop="thumbnailUrl" class="img-responsive"></div>
 			{/if}
 					
-			<div itemprop="articleBody" class="post-text sep-top-md">
+			<div data-itemprop="articleBody" class="post-text sep-top-md">
 				{$post->text}
 			</div>
 			
-			<footer role="contentinfo" class="post-info sep-top-md">
+			<footer class="post-info sep-top-md">
 				<ul class="social-icon">
 					<li><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-lg"></i></a></li>
 					<li><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-lg"></i> </a> </li>
@@ -54,12 +54,12 @@
 					
 					{foreach $comments as $comment}
 					<a name="comment_{$comment->id}"></a>
-					<article itemprop="comment" itemscope itemtype="http://schema.org/UserComments" class="sep-top-xs media media-bordered">
+					<article data-itemprop="comment" itemscope itemtype="http://schema.org/UserComments" class="sep-top-xs media media-bordered">
 						<div class="media-body">
 							<footer>
 								<h5 class="media-heading">{$comment->name|escape}</h5>
 								<div class="small">
-									<time itemprop="commentTime" datetime="{$comment->date|date_format:'%Y-%m-%d'}">{$comment->date|date}, {$comment->date|time}</time>
+									<time data-itemprop="commentTime" datetime="{$comment->date|date_format:'%Y-%m-%d'}">{$comment->date|date}, {$comment->date|time}</time>
 								</div>
 							</footer>
 						
@@ -114,7 +114,7 @@
 			<!-- end Comment Form-->
 		</div>
 		
-		<aside id="sidebar" role="complementary" class="col-md-3 sep-top-md sidebar">
+		<aside id="sidebar" class="col-md-3 sep-top-md sidebar">
 			{if $prev_post || $next_post}
 			<h5 class="widget-title  sep-bottom-xs">Соседние записи</h5>
 			

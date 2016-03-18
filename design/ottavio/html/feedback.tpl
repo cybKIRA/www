@@ -68,7 +68,7 @@
 						<div class="icon-content img-circle"><i class="fa fa-clock-o"></i></div>
 						<div class="icon-box-content">
 							<h3>Работаем</h3>
-							<p>Пн-Пт: <br>10:00 - 20:00</p>
+							<p>Пн-Пт: <br>11:00 - 20:00</p>
 						</div>
 					</div>
 				</div>
@@ -141,7 +141,7 @@
 							<div class="col-md-12 sep-top-xs">
 								<div class="form-group">
 									<label for="comment" >Сообщение</label>
-									<textarea id="comment" value="{$message|escape}" rows="9" name="message" class="form-control input-lg" required>{$message|escape}</textarea>
+									<textarea id="comment" rows="9" name="message" class="form-control input-lg" required>{$message|escape}</textarea>
 								</div>
 							</div>
 						</div>

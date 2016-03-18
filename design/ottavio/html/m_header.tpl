@@ -1,4 +1,4 @@
-<nav id="main-navigation" role="navigation" class="navbar navbar-fixed-top navbar-standard">
+<nav id="main-navigation" class="navbar navbar-fixed-top navbar-standard">
 	<a href="javascript:void(0)" class="search_button"><i class="fa fa-search"></i></a>
 	
 	<form action="products" role="search" class="h_search_form">
@@ -32,7 +32,7 @@
 			<ul class="nav navbar-nav navbar-right service-nav">
 			<li>
 				<a href="tel:+74994040996" id="nav-phone">8 (499) 40 40 996</a>
-				<small id="nav-phone-bottom">Звоните! пн-пт: с 10:00 до 20:00</small>
+				<small id="nav-phone-bottom">Звоните! пн-пт: с 11:00 до 20:00</small>
 			</li>
 				<li>
 					{if $user}

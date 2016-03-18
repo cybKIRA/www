@@ -36,7 +36,7 @@
 						<time datetime="{$post->date|date_format:'%Y-%m-%d'}" itemprop="datePublished"></time>
 					</header>
 
-					<footer role="contentinfo" class="post-info sep-top-xs">
+					<footer class="post-info sep-top-xs">
 						<ul class="social-icon pull-right">
 							<li><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-lg"></i></a></li>							
 							<li><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-lg"></i> </a> </li>
