@@ -1,5 +1,5 @@
 User-agent: *
-Host: kupi.watch
+Host: https://kupi.watch
 Disallow: /sections/404
 Disallow: /simpla/
 Disallow: /order/

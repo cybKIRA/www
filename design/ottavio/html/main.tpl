@@ -51,7 +51,7 @@
 						{if $c->parent_id == 26}
 						<div class="col-md-4 col-sm-4 col-xs-6 sep-bottom-lg" style="text-align:center;">
 							
-							<a href="catalog/{$c->url}" class="outline-outward category-banner">
+							<a href="catalog/{$c->url}" class="outline-outward category-banner product-image">
 								{if $c->thumb}
 									<img src="{$config->categories_thumbs_dir}{$c->thumb}" alt="{$c->name}" class="img-responsive" style="">
 								{else}
@@ -97,7 +97,7 @@
 			        {foreach $all_brands as $b}	
 
 			        <div style="text-align:center;" class="col-lg-3 col-md-4 col-sm-4 col-xs-6 {*wow bounceInUp*} item sep-bottom-xs">
-				        <a class="outline-outward category-banner" href="/catalog/{$b->url}/{$b->url_brand}">
+				        <a class="outline-outward category-banner product-image" href="/catalog/{$b->url}/{$b->url_brand}">
 					        {if $b->image}
 						        <img src="{$config->brands_images_dir}{$b->image}" alt="{$b->name|escape}" class="img-responsive" style="max-width:300px">
 					        {else}
@@ -434,23 +434,3 @@
 *}
 
 <br>
-
-<script type="text/javascript">
-	$(function(){
-		var a_text_hide = true;
-		var a_text_height = '';
-		$('#a_text').click(function() {
-			if( a_text_hide ){
-				a_text_height = $('.text-main').css("height");
-				$('.text-main').css("height","auto");
-				$('#a_text').text("Показать кратко");
-				a_text_hide = false;
-			} else {
-				$('.text-main').css("height",a_text_height);
-				$('#a_text').text("Показать текст полностью");
-				a_text_hide = true;
-			}			
-			
-		});
-	});
-</script>
