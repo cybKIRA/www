@@ -60,9 +60,7 @@
 						{section name=rate start=1 loop=6 step=1}<img src="design/images/star{if $comment->rate < $smarty.section.rate.index}_gray{/if}.png" alt="">{/section}
 					</div>
 					{/if}
-					<div class="comment_text">
-					{$comment->text|escape|nl2br}
-					</div>
+					<div {if !$comment->approved}contenteditable="true"{/if} id=comment_text class="comment_text">{$comment->text|escape}</div>
 					<div class="comment_info">
 					Комментарий оставлен <span class="date">{$comment->date|date} {$comment->date|time}</span>
 					{if $comment->type == 'product'}
@@ -166,12 +164,13 @@ $(function() {
 		
 		var date = line.find('[name="date"]').val();
 		var time = line.find('[name="time"]').val();
+		var comment = line.find('#comment_text').html();
 		
 		var date = date + " " + time;
 		$.ajax({
 			type: 'POST',
 			url: 'ajax/update_object.php',
-			data: {'object': 'comment', 'id': id, 'values': {'approved': 1,'date':date}, 'session_id': '{/literal}{$smarty.session.id}{literal}'},
+			data: {'object': 'comment', 'id': id, 'values': {'approved': 1,'date':date,'text':comment}, 'session_id': '{/literal}{$smarty.session.id}{literal}'},
 			success: function(data){
 				line.removeClass('unapproved');
 				

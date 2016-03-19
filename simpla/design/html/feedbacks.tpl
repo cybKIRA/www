@@ -1,4 +1,4 @@
-{* Вкладки *}
+{* Вкладки  *}
 {capture name=tabs}
 		{if in_array('comments', $manager->permissions)}<li><a href="index.php?module=CommentsAdmin">Комментарии</a></li>{/if}
 		<li class="active"><a href="index.php?module=FeedbacksAdmin">Обратная связь</a></li>
