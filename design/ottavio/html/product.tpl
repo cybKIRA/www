@@ -266,7 +266,7 @@
 							{include file = 'm_modal_login.tpl'}
 						{/if}
 						
-						{if true}
+						{if !$comment_name || $error}
 						{*if $user && !$user->comment*}
 							<section id="comment-form" class="sep-top-sm ">
 								{if $error}
@@ -322,12 +322,12 @@
 												
 													<div class="form-group">
 														<label for="post_name">Имя</label>
-														<input id="post_name" type="text" name="name" value="{$comment_name|escape}" class="form-control input-lg" >
+														<input id="post_name" type="text" name="name" value="{$comment_name|escape}" class="form-control input-lg" required >
 													</div>
 													
 													<div class="form-group">
 														<label for="post_comment">Отзыв</label>
-														<textarea id="post_comment" rows="9" name="text" class="form-control input-lg">{if !$comment_text}{/if}</textarea>
+														<textarea id="post_comment" rows="9" name="text" class="form-control input-lg" required>{$comment_text|escape}</textarea>
 													</div>
 													
 													<div class="form-group sep-top-xs">
@@ -341,7 +341,11 @@
 								</div>
 							</section>
 						{else}
-							<div class="sep-bottom-lg"></div>
+							<div class="sep-bottom-lg">
+								<div role="alert" class="alert alert-success alert-dismissible">
+									<strong>{$comment_name|escape}</strong>,&nbsp;Ваш отзыв отправлен! И проверяется модерацией!
+								</div>
+							</div>
 						{/if}
 					</div>
 				</div>

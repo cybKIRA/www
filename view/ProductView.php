@@ -75,7 +75,7 @@ class ProductView extends View
 			$this->design->assign('comment_name', $comment->name);
 			
 			// Проверяем заполнение формы
-			/*if (empty($comment->name))
+			if (empty($comment->name))
 			{
 				$this->design->assign('error', 'empty_name');
 			}
@@ -83,7 +83,7 @@ class ProductView extends View
 			{
 				$this->design->assign('error', 'empty_comment');
 			}
-			else убираем проверку для того что бы можно было пустые добавлять*/
+			else 
 			{
 				// Создаем комментарий
 				$comment->object_id = $product->id;
@@ -98,7 +98,7 @@ class ProductView extends View
 				
 				// Приберем сохраненную капчу, иначе можно отключить загрузку рисунков и постить старую
 				unset($_SESSION['captcha_code']);
-				header('location: '.$_SERVER['REQUEST_URI'].'#comments');
+				//header('location: '.$_SERVER['REQUEST_URI'].'#comments');
 			}			
 		}
 		
