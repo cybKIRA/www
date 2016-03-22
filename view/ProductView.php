@@ -233,6 +233,8 @@ class ProductView extends View
 		$this->design->assign('meta_keywords', $product->meta_keywords);
 		$this->design->assign('meta_description', $product->meta_description);
 		
+		$this->design->assign('my_brand', $this->brands->get_brands_catalog_url(array('category_id'=>intval($product->brand_id))));
+		
 		return $this->design->fetch('product.tpl');
 	}
 	

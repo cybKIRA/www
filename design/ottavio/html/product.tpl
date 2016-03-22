@@ -18,8 +18,10 @@
 						<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>
 					{/foreach}
 					
-					{if $brand}
-						<li>{$brand->name|escape}</li>
+					{if $my_brand}
+					<li>
+						<a href="/catalog/{$my_brand->url}/{$my_brand->url_brand}">{$my_brand->name|escape}</a>
+					</li>
 					{/if}
 				</ol>
 				
