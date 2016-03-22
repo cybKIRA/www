@@ -5,14 +5,16 @@ RewriteEngine on
 
 RewriteCond %{HTTPS} off
 RewriteCond %{REQUEST_URI} !^/robots.*
+RewriteCond %{REQUEST_URI} !^/favicon.*
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+RewriteCond %{HTTP_HOST} ^www\.kupi\.watch$ [NC]
+RewriteRule ^(.*)$ https://kupi.watch/$1 [R=301,L]
 
 #RewriteCond %{HTTPS}  off  
 #RewriteRule ^(.*)$ https://kupi.watch/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^www\.kupi\.watch$ [NC]
-#RewriteCond %{REQUEST_URI} !^/robots.*
-RewriteRule ^(.*)$ https://kupi.watch/$1 [R=301,L]
+
 
 # Админка теперь по адресу /simpla
 RewriteRule	^admin/?$  simpla [L]

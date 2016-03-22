@@ -36,7 +36,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<div class="col-md-3 icon-gradient sep-top-lg">
+				<div class="col-sm-3 col-md-3 icon-gradient sep-top-lg">
 					<div class="icon-box icon-horizontal icon-sm">
 						<div class="icon-content img-circle"><i class="fa fa-map-marker"></i></div>
 						<div class="icon-box-content">
@@ -45,7 +45,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 icon-gradient sep-top-lg">
+				<div class="col-sm-3 col-md-3 icon-gradient sep-top-lg">
 					<div class="icon-box icon-horizontal icon-sm">
 						<div class="icon-content img-circle"><i class="fa fa-phone"></i></div>
 						<div class="icon-box-content">
@@ -54,7 +54,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 icon-gradient sep-top-lg">
+				<div class="col-sm-3 col-md-3 icon-gradient sep-top-lg">
 					<div class="icon-box icon-horizontal icon-sm">
 						<div class="icon-content img-circle"><i class="fa fa-envelope"></i></div>
 						<div class="icon-box-content">
