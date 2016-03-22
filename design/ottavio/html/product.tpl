@@ -45,6 +45,16 @@
 	</div>
 </section>
 
+{if $comment_name && !$error}
+	<div class="row">
+		<br>
+		<div role="alert" class="col-sm-8 col-sm-offset-1 alert alert-success alert-dismissible">
+			<strong>{$comment_name|escape}</strong>,&nbsp;Ваш отзыв отправлен! И проверяется модерацией!
+		</div>
+	</div>
+{/if}
+						
+
 <section>
 	<div class="container">
 		<div class="row">
@@ -266,6 +276,7 @@
 							{include file = 'm_modal_login.tpl'}
 						{/if}
 						
+						
 						{if !$comment_name || $error}
 						{*if $user && !$user->comment*}
 							<section id="comment-form" class="sep-top-sm ">
@@ -341,11 +352,7 @@
 								</div>
 							</section>
 						{else}
-							<div class="sep-bottom-lg">
-								<div role="alert" class="alert alert-success alert-dismissible">
-									<strong>{$comment_name|escape}</strong>,&nbsp;Ваш отзыв отправлен! И проверяется модерацией!
-								</div>
-							</div>
+
 						{/if}
 					</div>
 				</div>
