@@ -338,7 +338,7 @@
 												
 													<div class="form-group">
 														<label for="post_name">Имя</label>
-														<input id="post_name" type="text" name="name" value="{$comment_name|escape}" class="form-control input-lg" >
+														<input id="post_name" type="text" name="name" value="{$comment_name|escape}" class="form-control input-lg" required>
 													</div>
 													
 													<div class="form-group">
