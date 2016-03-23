@@ -154,7 +154,7 @@ class Comments extends Simpla
 		if(!empty($id))
 		{
 			$comment = $this->comments->get_comment($id);
-			if ($comment->type == 'product')
+			if ($comment->type == 'product' && $comment->approved==1)
 				$this->products->decrease_rate_product(intval($comment->object_id), intval($comment->rate));
 				
 			$query = $this->db->placehold("DELETE FROM __comments WHERE id=? LIMIT 1", intval($id));
