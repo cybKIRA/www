@@ -103,11 +103,11 @@
 				{if $brand->description && $current_page_num == 1}
 					<div class="sep-bottom-md">{$brand->description}</div>
 					<hr class="sep-bottom-xs">
-				{else}
-				{*
+				{elseif $current_page_num == 1}
+				
 					<div class="sep-bottom-xs">{$category->description}</div>
 					<hr class="sep-bottom-xs">
-				*}
+				
 				{/if}
 				
 				{* тут выводился дескриптион, теперь он выше
