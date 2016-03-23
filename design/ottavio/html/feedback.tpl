@@ -146,6 +146,16 @@
 							</div>
 						</div>
 						<div class="row">
+							<div class="col-md-6 sep-top-xs">
+								<div class="form-group text-center">
+								<img class="img-thumbnail" src="captcha/image.php?{math equation='rand(10,10000)'}"/>
+									<label for="comment_captcha" >Введите число с картинки</label>
+									
+									<input  class="form-control input-lg" id="comment_captcha" type="text" name="captcha_code" value="" data-format="\d\d\d\d" data-notice="Введите капчу"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-md-12 sep-top-xs">
 								<div id="contactResult"></div>
 								

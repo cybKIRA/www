@@ -9,6 +9,7 @@
 	$feedback->name         = $_POST['name'];
 	$feedback->email        = $_POST['email'];
 	$feedback->message      = $_POST['message'];
+	$captcha_code           = $_POST['captcha_code'];
 	
 	$simpla->design->assign('name',  $feedback->name);
 	$simpla->design->assign('email', $feedback->email);
@@ -19,7 +20,11 @@
 	elseif(empty($feedback->email))
 		$result = array('status'=>'error', 'data'=>'Введите email');		
 	elseif(empty($feedback->message))
-		$result = array('status'=>'error', 'data'=>'Введите сообщение');		
+		$result = array('status'=>'error', 'data'=>'Введите сообщение');	
+	elseif(empty($captcha_code))
+			$result = array('status'=>'error', 'data'=>'Введите число с картинки');
+	elseif(empty($_SESSION['captcha_code']) || $_SESSION['captcha_code'] != $captcha_code || empty($captcha_code))
+			$result = array('status'=>'error', 'data'=>'Число с картинки введено неверно');
 	else
 	{
 		$feedback->ip = $_SERVER['REMOTE_ADDR'];
