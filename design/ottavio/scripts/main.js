@@ -987,6 +987,28 @@ $("#commentProductForm").submit(function() {
 		.popover('show')
 		return false
     }
+	
+	$.ajax({
+		type: "POST",
+		url: "ajax/ottavio_comment.php",
+		data: $("#commentProductForm").serialize(),
+		success: function(data) {
+			if(data.status == 'success') {
+				$('#commentProductForm').html('<div class="alert alert-success in fade"><strong>' + data.data + '</strong>,&nbsp;комментарий отправлен на модерацию.</div>')
+				$('html, body').animate({
+					scrollTop: $("#comment-form").offset().top
+				}, 1000);
+			} else {
+				$('#commentResult').html('<div class="alert alert-danger in fade" style="margin-bottom: 30px">' + data.data + '</div>')
+			}
+		},
+		error: function(data){
+			alert('Произошла ошибка, повторите попытку позже.')
+		}
+	});
+
+	return false;
+	
 });
 
 // Products Sort

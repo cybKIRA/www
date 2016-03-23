@@ -319,7 +319,8 @@
 									
 										<div class="sep-top-sm">
 											<div class="contact-form">
-												<form id="commentProductForm" method="post" class="validate">
+												<form id="commentProductForm" method="post" class="form-gray-fields">
+												<input name="object_id" type="hidden" value="{$product->id}" >
 													<div class="form-group">
 														<label for="post_rating">Ваша оценка</label>
 														
@@ -337,7 +338,7 @@
 												
 													<div class="form-group">
 														<label for="post_name">Имя</label>
-														<input id="post_name" type="text" name="name" value="{$comment_name|escape}" class="form-control input-lg" required >
+														<input id="post_name" type="text" name="name" value="{$comment_name|escape}" class="form-control input-lg" >
 													</div>
 													
 													<div class="form-group">
@@ -351,7 +352,7 @@
 																	
 														<input  class="form-control input-lg" id="comment_captcha" type="text" name="captcha_code" value="" data-format="\d\d\d\d" data-notice="Введите капчу"/>
 													</div>
-
+														<div id="commentResult"></div>
 													<div class="form-group sep-top-xs">
 														<input type="hidden" name="comment_add" value="input_for_submit_form">
 														<button type="submit" class="btn btn-primary" id="commentProductFormSubmit"><i class="fa fa-comment"></i>&nbsp;Опубликовать</button>

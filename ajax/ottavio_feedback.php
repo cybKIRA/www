@@ -32,7 +32,9 @@
 		
 		// Отправляем email
 		$simpla->notify->email_feedback_admin($feedback_id);	
-
+		// Приберем сохраненную капчу, иначе можно отключить загрузку рисунков и постить старую
+		unset($_SESSION['captcha_code']);
+		
 		$result = array('status'=>'success', 'data'=>$feedback->name);		
 	}
 
