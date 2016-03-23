@@ -67,6 +67,7 @@ class ProductView extends View
 			$comment->rate 	  = $this->request->post('rate');
 			$comment->name 	  = $this->request->post('name');
 			$comment->text 	  = $this->request->post('text');
+			$captcha_code =  $this->request->post('captcha_code', 'string');
 			$comment->user_id = $this->user->id;
 			
 			// Передадим комментарий обратно в шаблон - при ошибке нужно будет заполнить форму
@@ -75,7 +76,11 @@ class ProductView extends View
 			$this->design->assign('comment_name', $comment->name);
 			
 			// Проверяем заполнение формы
-			if (empty($comment->name))
+			if ($_SESSION['captcha_code'] != $captcha_code || empty($captcha_code))
+			{
+				$this->design->assign('error', 'captcha');
+			}
+			elseif (empty($comment->name))
 			{
 				$this->design->assign('error', 'empty_name');
 			}

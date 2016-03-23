@@ -284,7 +284,9 @@
 							<section id="comment-form" class="sep-top-sm ">
 								{if $error}
 									<div role="alert" class="alert alert-danger alert-dismissible">
-										{if $error=='empty_name'}
+										{if $error=='captcha'}
+											Неверно введена капча
+										{elseif $error=='empty_name'}
 											Введите имя
 										{elseif $error=='empty_comment'}
 											Введите отзыв
@@ -343,6 +345,13 @@
 														<textarea id="post_comment" rows="9" name="text" class="form-control input-lg" required>{$comment_text|escape}</textarea>
 													</div>
 													
+													<div class="form-group">
+														<img class="img-thumbnail" src="captcha/image.php?{math equation='rand(10,10000)'}"/>
+															<label for="comment_captcha" >Введите число с картинки</label>
+																	
+														<input  class="form-control input-lg" id="comment_captcha" type="text" name="captcha_code" value="" data-format="\d\d\d\d" data-notice="Введите капчу"/>
+													</div>
+
 													<div class="form-group sep-top-xs">
 														<input type="hidden" name="comment_add" value="input_for_submit_form">
 														<button type="submit" class="btn btn-primary" id="commentProductFormSubmit"><i class="fa fa-comment"></i>&nbsp;Опубликовать</button>
