@@ -49,7 +49,10 @@ class FeedbackView extends View
 				$feedback_id = $this->feedbacks->add_feedback($feedback);
 				
 				// Отправляем email
-				$this->notify->email_feedback_admin($feedback_id);				
+				$this->notify->email_feedback_admin($feedback_id);	
+
+			    // Приберем сохраненную капчу, иначе можно отключить загрузку рисунков и постить старую
+				unset($_SESSION['captcha_code']);
 			}
 		}
 
