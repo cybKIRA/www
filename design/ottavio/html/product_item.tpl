@@ -50,12 +50,16 @@
 					{*<i class="fa fa-star-o"></i>*}
 					<i class="fa"></i>
 				{/if}
+			{sectionelse}
+				&nbsp;
 			{/section}
 		{/strip}
 	</div>
 	
 	{if $product->comments_count > 0}
 		<a href="products/{$product->url}/#comments">{$product->comments_count} {$product->comments_count|plural:'отзыв':'отзывов':'отзыва'}</a>
+	{else}
+		&nbsp;
 	{/if}
 </div>
 
