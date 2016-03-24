@@ -12,7 +12,7 @@
 			<div class="section-title light">
 				<ol class="breadcrumb">
 					<li><a href="./">Главная</a></li>
-					<li><a href="products">Каталог</a></li>
+					<li><a href="/catalog/vse-chasy">Каталог</a></li>
 					
 					{foreach from=$category->path item=cat}
 						<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>

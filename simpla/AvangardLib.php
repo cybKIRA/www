@@ -278,7 +278,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['images_av'] = $array_str[4]; //url картинки от поставщика
 		//$product['name_post'] = $array_str[2];
 		
-		if ($product['price'] <= 12000) {
+		if ($product['price'] <= 15000) {
 			$products[$i] = $product;
 			$i++;
 		}
