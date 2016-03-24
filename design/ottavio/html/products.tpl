@@ -75,16 +75,20 @@
 					<div class="row">
 						{foreach $products as $product}
 						{if $product->visible}
-							{if $category || $keyword}
-								<div class="col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+						<div class="col-xs-4 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+						
+						
+							{*if $category || $keyword}
+								<div class="col-xs-4 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
 								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
 								{if $product@iteration is div by 3}<div class="clearfix hidden-xs"></div>{/if}
 							{else}
-								<div class="col-md-3 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+								<div class="col-xs-4 col-md-3 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
 								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
 								{if $product@iteration is div by 3}<div class="clearfix visible-sm"></div>{/if}
 								{if $product@iteration is div by 4}<div class="clearfix hidden-xs hidden-sm"></div>{/if}
-							{/if}
+							{/if*}
+							
 						{/if}
 						{/foreach}
 					</div>

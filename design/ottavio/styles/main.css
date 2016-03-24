@@ -70,7 +70,7 @@ h4 {
 }
 h5,
 blockquote .bold-quote {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 h6 {
   font-size: 1.1em;
@@ -1709,11 +1709,7 @@ dl.metadata dt {
   display: block;
   font-size: 1em;
 }
-.price-shop ins {
-  font-size: 1.4em;
-  text-decoration: none;
-  white-space: nowrap;
-}
+
 .bubble {
   position: relative;
 }
@@ -1818,6 +1814,8 @@ dl.metadata dt {
   filter: alpha(opacity=90);
 }
 .product-title {
+  font-size: 1.1em;
+  font-weight: 500;
   margin-top: 15px;
 }
 .product-title p {
@@ -2586,21 +2584,39 @@ margin: 0 0 15px
 	border-top: 0px;
 	}
 
+.price-shop ins {
+	  font-size: 1.3em;
+	  font-size: 1.3em;
+	  text-decoration: none;
+	  white-space: nowrap;
+	}
+	
 @media (max-width: 1200px) {
 .footer-text-big {
 	font-size:11em;
 	}
+
 }
 
 @media (max-width: 992px) {
 .footer-text-big {
 	font-size:8em;
 	}
+.price-shop ins {
+	  font-size: 1.2em;
+	  text-decoration: none;
+	  white-space: nowrap;
+	}
 }
 
 @media (max-width: 767px) {
 .footer-text-big {
-	font-size:5em;
+		font-size:5em;
+	}
+.price-shop ins {
+	  font-size: 1.0em;
+	  text-decoration: none;
+	  white-space: nowrap;
 	}
 }
 
