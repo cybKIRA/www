@@ -16,8 +16,8 @@
 	{if isset($canonical)}<link rel="canonical" href="{$config->root_url}{$canonical}"/>{/if}
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
-	<link href="/favicon.ico" rel="icon"          type="image/x-icon"/>
-	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link href="favicon.ico" rel="icon"          type="image/x-icon"/>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
 	<link rel="stylesheet" href="design/{$settings->theme}/styles/bootstrap.css">
     <link rel="stylesheet" href="design/{$settings->theme}/styles/main.css">
