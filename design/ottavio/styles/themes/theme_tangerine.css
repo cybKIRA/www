@@ -18,6 +18,7 @@ a.dark:hover {
 .text-primary,
 .text-primary:hover {
   color: #f28500;
+  -webkit-text-stroke: 0px black;
 }
 h1,
 h2,
@@ -100,7 +101,12 @@ p strong {
 .demo-1 .sl-slide .main-title,
 .demo-2 .sl-slide .main-title {
   color: #ffffff;
+  -webkit-text-stroke: 1px #a0a0a0;
 }
+.sl-slide .main-title h2{
+	
+}
+
 .demo-1 .sl-slide blockquote p,
 .demo-2 .sl-slide blockquote p {
   color: #ffffff;
