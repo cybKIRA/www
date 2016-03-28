@@ -113,6 +113,12 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['id_brand'] = 31;
 		}
 		
+		if ($product['brand'] == 'SLAVA') {
+			$product['brand'] = 'Slava';
+			$product['categories'][0] = 17;
+			$product['id_brand'] = 42;
+		}
+		
         $product['brand_s'] = strtoupper($brand[2]); //Серия
 	
 		
@@ -181,6 +187,11 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['brand'] = 'Восток'; //mb_convert_encoding('Восток', 'utf-8', 'windows-1251');
 			$product['name'] = str_ireplace("Vostok",$product['brand'],$product['name']);
 		}
+		
+	   /*if ( $product['brand'] == 'Slava'){
+			$product['brand'] = 'Слава';
+			$product['name'] = str_ireplace("\"Слава\"",$product['brand'],$product['name']);
+		}*/
 		
 		//$product['url'] = $product['name_pars']; //ЧПУ	
 		
