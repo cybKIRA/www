@@ -19,6 +19,8 @@ class AvangardAdmin extends Simpla
 		$output = mb_convert_encoding($output, 'utf-8', 'windows-1251');
 		
 		//какие нужны каталоги
+		//$list_cat = array("naruchnie_chasi/slava");
+		$list_cat = array("naruchnie_chasi/q_amp_q","naruchnie_chasi/orient","naruchnie_chasi/vostok","naruchnie_chasi/casio","naruchnie_chasi/slava");
 
 		$products = avangard_filter_and_pars($output,$list_cat);
 		
