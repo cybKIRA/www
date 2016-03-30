@@ -101,26 +101,42 @@ function avangard_filter_and_pars($output,$list_cat) {
 		
 		$product['id_post'] = ltrim($array_str[0], '0');; //id поставщика
 		$product['brand'] = strtoupper($brand[1]); //Бренд
+		$product['name'] = ''; //Обнулим
 		// фикс Q&Q
 		if ($product['brand'] == 'Q_AMP_Q') {
 			$product['categories'][0] = 16;
 			$product['brand'] = 'Q&Q';
 			$product['id_brand'] = 33;
-			}
+			
+			$str_arr = explode(" ",$array_str[2]);
+			array_pop($str_arr);
+			array_unshift($str_arr,$product['brand']);
+			$product['name'] = implode(' ',$str_arr);
+		}
+			
 		if ($product['brand'] == 'VOSTOK') {
 			$product['brand'] = 'Vostok';
 			$product['categories'][0] = 17;
 			$product['id_brand'] = 31;
+			
+			$str_arr = explode(" ",$array_str[2]);
+			array_pop($str_arr);
+			array_unshift($str_arr,$product['brand']);
+			$product['name'] = implode(' ',$str_arr);
 		}
 		
 		if ($product['brand'] == 'SLAVA') {
 			$product['brand'] = 'Slava';
 			$product['categories'][0] = 17;
 			$product['id_brand'] = 42;
+			
+			$str_arr = explode(" ",$array_str[2]);
+			$product['name'] = $product['brand'] . " " . $str_arr[0];
 		}
 		
         $product['brand_s'] = strtoupper($brand[2]); //Серия
 	
+		
 		
 		if  ($product['brand'] == "CASIO") {
 			$product['categories'][0] = 16; //Все Касио в категории Япоснкие часы
@@ -150,18 +166,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 				$product['brand'] = 'Casio Pro Trek';
 				$product['id_brand'] = 40;
 			}
-		}
-		
-		$product['name_post'] = $array_str[2];
-		
-		if ($product['brand'] == "ORIENT") {
-			$product['categories'][0] = 16;
-			$product['brand'] = 'Orient';
-			$product['id_brand'] = 34;
-			$str_arr = explode(" ",$array_str[2]);
-			$product['name'] = $product['brand'] . " " . $str_arr[0];
-		} else
-		{
+			
 			$iskl = array('GMA','GMD'); //Для фикса где в конце не стоит Бренд
 			
 			if (!in_array($product['brand_s'],array('GMA','GMD') ) ) {
@@ -176,6 +181,18 @@ function avangard_filter_and_pars($output,$list_cat) {
 			}
 		}
 		
+		
+		
+		$product['name_post'] = $array_str[2];
+		
+		if ($product['brand'] == "ORIENT") {
+			$product['categories'][0] = 16;
+			$product['brand'] = 'Orient';
+			$product['id_brand'] = 34;
+			$str_arr = explode(" ",$array_str[2]);
+			$product['name'] = $product['brand'] . " " . $str_arr[0];
+		}
+		
 		//$name_pars = str_ireplace("&","",$product['name']);
 		
 		$name_pars = preg_replace("/[&()]+/ui", '', $product['name']);	
@@ -188,10 +205,10 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['name'] = str_ireplace("Vostok",$product['brand'],$product['name']);
 		}
 		
-	   /*if ( $product['brand'] == 'Slava'){
+	   if ( $product['brand'] == 'Slava'){
 			$product['brand'] = 'Слава';
-			$product['name'] = str_ireplace("\"Слава\"",$product['brand'],$product['name']);
-		}*/
+			$product['name'] = str_ireplace("Slava",$product['brand'],$product['name']);
+		}
 		
 		//$product['url'] = $product['name_pars']; //ЧПУ	
 		
