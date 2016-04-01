@@ -30,13 +30,12 @@
 					<div class="col-sm-6">
 						<h2 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">{$product->name|escape}</h2>
 						<br>
-						<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти в каталог</a>
+						<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>
 					</div>
 					<div class="col-sm-6">
-						<h3 class="small-space">100% оригинальные часы</h3>
+						<h3 class="small-space">Оригинальные часы</h3>
 						<ul class="text-left">
 							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
-							<li>На вторую покупку часов даем скидку 10%.</li>
 							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
 						</ul>
 					</div>

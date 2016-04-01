@@ -75,7 +75,7 @@
 					<div class="row">
 						{foreach $products as $product}
 						{if $product->visible}
-						<div class="col-xs-4 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+						<div class="col-xs-6 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
 						
 						
 							{*if $category || $keyword}
