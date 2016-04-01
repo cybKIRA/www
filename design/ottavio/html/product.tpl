@@ -28,7 +28,7 @@
 				
 				<div class="row">
 					<div class="col-sm-6">
-						<h2 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">{$product->name|escape}</h2>
+						<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы {$product->name|escape}</h1>
 						<br>
 						<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>
 					</div>

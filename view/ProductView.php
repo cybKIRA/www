@@ -234,9 +234,11 @@ class ProductView extends View
 		$cookie_val = implode(',', array_slice($browsed_products, -$max_visited_products, $max_visited_products));
 		setcookie("browsed_products", $cookie_val, $expire, "/");
 		
-		$this->design->assign('meta_title', $product->meta_title);
+		$meta_title = 'Часы ' . $product->name . ' - купить часы в Интернет магазине Kupi.watch с доставкой по России. Цена, отзывы, характеристики, описание.';
+		$this->design->assign('meta_title', $meta_title);
 		$this->design->assign('meta_keywords', $product->meta_keywords);
-		$this->design->assign('meta_description', $product->meta_description);
+		$meta_description = 'Интернет-магазин Kupi.watch (Купи Вотч) предлагает купить наручные часы ' . $product->name . ' по выгодной цене. Наш магазин осуществляет доставку в любой регион России!';
+		$this->design->assign('meta_description', $meta_description);
 		
 		$this->design->assign('my_brand', $this->brands->get_brands_catalog_url(array('category_id'=>intval($product->brand_id))));
 		
