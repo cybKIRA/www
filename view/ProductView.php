@@ -215,7 +215,8 @@ class ProductView extends View
 		
 		// Категория и бренд товара
 		$product->categories = $this->categories->get_categories(array('product_id'=>$product->id));
-		$this->design->assign('brand', $this->brands->get_brand(intval($product->brand_id)));		
+		$brand = $this->brands->get_brand(intval($product->brand_id));
+		$this->design->assign('brand', $brand);		
 		$this->design->assign('category', reset($product->categories));		
 		
 
@@ -234,11 +235,14 @@ class ProductView extends View
 		$cookie_val = implode(',', array_slice($browsed_products, -$max_visited_products, $max_visited_products));
 		setcookie("browsed_products", $cookie_val, $expire, "/");
 		
-		$meta_title = 'Часы ' . $product->name . ' - купить часы в Интернет магазине Kupi.watch с доставкой по России. Цена, отзывы, характеристики, описание.';
+		$meta_title = 'Часы ' . $product->name . ' - купить часы ' . (isset($brand->name_ru) ? $brand->name_ru : '') .' в Интернет магазине Kupi.watch с доставкой по России. Цена, отзывы, характеристики, описание.';
 		$this->design->assign('meta_title', $meta_title);
-		$this->design->assign('meta_keywords', $product->meta_keywords);
-		$meta_description = 'Интернет-магазин Kupi.watch (Купи Вотч) предлагает купить наручные часы ' . $product->name . ' по выгодной цене. Наш магазин осуществляет доставку в любой регион России!';
+		$product_name = $product->name;
+		if (isset($brand->name_ru)) $product_name = str_replace($brand->name,$brand->name.' ('.$brand->name_ru.')',$product_name);
+		$meta_description = 'Интернет-магазин Kupi.watch (Купи Вотч) предлагает купить наручные часы '  .  $product_name . ' по выгодной цене. Наш магазин осуществляет доставку в любой регион России!';
 		$this->design->assign('meta_description', $meta_description);
+	    $meta_keywords = $brand->name.', '.(isset($brand->name_ru) ? $brand->name_ru .', ' : '').$product->name.', '.'купить, мужские, наручные, часы, цена, характеристики, отзывы, описание, доставка';
+		$this->design->assign('meta_keywords', $meta_keywords);
 		
 		$this->design->assign('my_brand', $this->brands->get_brands_catalog_url(array('category_id'=>intval($product->brand_id))));
 		

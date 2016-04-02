@@ -31,7 +31,7 @@ class Brands extends Simpla
 			$category_id_filter = $this->db->placehold("LEFT JOIN __products p ON p.brand_id=b.id LEFT JOIN __products_categories pc ON p.id = pc.product_id WHERE pc.category_id in(?@) $visible_filter", (array)$filter['category_id']);
 
 		// Выбираем все бренды
-		$query = $this->db->placehold("SELECT DISTINCT b.id, b.name, b.url, b.meta_title, b.meta_keywords, b.meta_description, b.description, b.image
+		$query = $this->db->placehold("SELECT DISTINCT b.id, b.name, b.name_ru, b.url, b.meta_title, b.meta_keywords, b.meta_description, b.description, b.image
 								 		FROM __brands b $category_id_filter ORDER BY b.name");
 		$this->db->query($query);
 
@@ -63,7 +63,7 @@ class Brands extends Simpla
 		// Выбираем все бренды
 		//$query = $this->db->placehold("SELECT DISTINCT b.id, b.name, b.url, b.meta_title, b.meta_keywords, b.meta_description, b.description, b.image
 								 		//FROM __brands b $category_id_filter ORDER BY b.name");
-		$query = $this->db->placehold("SELECT DISTINCT b.id, b.name, b.url as url_brand, c.url, 
+		$query = $this->db->placehold("SELECT DISTINCT b.id, b.name,  b.name_ru, b.url as url_brand, c.url, 
    (select url from s_categories s where s.id = c.parent_id) url_cat,
     b.meta_description, b.description, b.image
     FROM (select * from s_brands $category_id_filter) b
@@ -94,7 +94,7 @@ class Brands extends Simpla
 			$filter = $this->db->placehold('b.id = ?', $id);
 		else
 			$filter = $this->db->placehold('b.url = ?', $id);
-		$query = "SELECT b.id, b.name, b.url, b.meta_title, b.meta_keywords, b.meta_description, b.description, b.image
+		$query = "SELECT b.id, b.name,  b.name_ru, b.url, b.meta_title, b.meta_keywords, b.meta_description, b.description, b.image
 								 FROM __brands b WHERE $filter LIMIT 1";
 		$this->db->query($query);
 		return $this->db->result();
