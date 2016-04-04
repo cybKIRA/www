@@ -99,7 +99,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 	
 	if ($insert) {
 		
-		$product['id_post'] = ltrim($array_str[0], '0');; //id поставщика
+		$product['id_post'] = ltrim($array_str[0], '0'); //id поставщика
 		$product['brand'] = strtoupper($brand[1]); //Бренд
 		$product['name'] = ''; //Обнулим
 		// фикс Q&Q
@@ -132,6 +132,15 @@ function avangard_filter_and_pars($output,$list_cat) {
 			
 			$str_arr = explode(" ",$array_str[2]);
 			$product['name'] = $product['brand'] . " " . $str_arr[0];
+		}
+		
+		if ($product['brand'] == 'SEVER') {
+			$product['brand'] = 'Sever';
+			$product['categories'][0] = 17;
+			$product['id_brand'] = 43;
+			
+			$str_arr = explode(" ",$array_str[2]);
+			$product['name'] = $product['brand'] . " " . $str_arr[0] . " (" . $product['id_post'] . ")";
 		}
 		
         $product['brand_s'] = strtoupper($brand[2]); //Серия
@@ -208,6 +217,11 @@ function avangard_filter_and_pars($output,$list_cat) {
 	   if ( $product['brand'] == 'Slava'){
 			$product['brand'] = 'Слава';
 			$product['name'] = str_ireplace("Slava",$product['brand'],$product['name']);
+		}
+		
+		if ( $product['brand'] == 'Sever'){ 
+			$product['brand'] = 'Север';
+			$product['name'] = str_ireplace("Sever",$product['brand'],$product['name']);
 		}
 		
 		//$product['url'] = $product['name_pars']; //ЧПУ	
