@@ -1,5 +1,8 @@
 User-agent: *
+
 Host: https://kupi.watch
+Sitemap: kupi.watch/sitemap.xml
+
 Disallow: /sections/404
 Disallow: /simpla/
 Disallow: /order/
@@ -13,3 +16,7 @@ Disallow: /compiled/
 Disallow: /cart/
 Disallow: /resize/
 Disallow: /password.php
+
+Disallow: *?sort=*
+Disallow: *?page=*
+Disallow: *?keyword=*
