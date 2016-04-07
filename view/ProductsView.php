@@ -253,6 +253,8 @@ class ProductsView extends View
 		}
 		elseif(isset($category))
 		{
+			//$meta_title = $category->meta_title  . ' - часы мужские наручные в Интернет магазине Kupi.watch с доставкой по России. Цена, отзывы, характеристики, описание.';
+			//$this->design->assign('meta_title', $meta_title);
 			$this->design->assign('meta_title', $category->meta_title);
 			$this->design->assign('meta_keywords', $category->meta_keywords);
 			$this->design->assign('meta_description', $category->meta_description);

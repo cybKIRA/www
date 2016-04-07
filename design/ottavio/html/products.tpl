@@ -30,7 +30,7 @@
 					{/if}
 				</ol>
 				
-				<h2 class="small-space">
+				<h1 class="small-space">
 					{if $keyword}
 						Поиск {$keyword|escape}
 					{elseif $page}
@@ -38,7 +38,7 @@
 					{else}
 						{$category->name|escape} {$brand->name|escape} {$keyword|escape}
 					{/if}
-				</h2>
+				</h1>
 			</div>
 		</div>
 	</div>
