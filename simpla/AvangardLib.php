@@ -143,6 +143,24 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['name'] = $product['brand'] . " " . $str_arr[0] . " (" . $product['id_post'] . ")";
 		}
 		
+		if ($product['brand'] == 'SPETSNAZ') {
+			$product['brand'] = 'Spetsnaz';
+			$product['categories'][0] = 17;
+			$product['id_brand'] = 45;
+			
+			$str_arr = explode(" ",$array_str[2]);
+			$product['name'] = $product['brand'] . " " . $str_arr[0];
+		}
+		
+		if ($product['brand'] == 'ZARYA') {
+			$product['brand'] = 'Zarya';
+			$product['categories'][0] = 17;
+			$product['id_brand'] = 44;
+			
+			$str_arr = explode(" ",$array_str[2]);
+			$product['name'] = $product['brand'] . " " . $str_arr[0];
+		}
+		
         $product['brand_s'] = strtoupper($brand[2]); //Серия
 	
 		
@@ -224,6 +242,16 @@ function avangard_filter_and_pars($output,$list_cat) {
 			$product['name'] = str_ireplace("Sever",$product['brand'],$product['name']);
 		}
 		
+		if ( $product['brand'] == 'Spetsnaz'){ 
+			$product['brand'] = 'Спецназ';
+			$product['name'] = str_ireplace("Spetsnaz",$product['brand'],$product['name']);
+		}
+		
+		if ( $product['brand'] == 'Zarya'){ 
+			$product['brand'] = 'Заря';
+			$product['name'] = str_ireplace("Zarya",$product['brand'],$product['name']);
+		}
+		
 		//$product['url'] = $product['name_pars']; //ЧПУ	
 		
 		$product['images'] = $product['name_pars'].'.jpg'; //имя файла картинки
@@ -277,25 +305,26 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['diving'] = $array_str[24]; //Для дайвинга и рыбалки
 		//$product['options'][174] = $product['diving'];
 		
-		$product['mechanism'] = $array_str[27]; //Тип механизма
+		$product['mechanism'] = $array_str[29]; //Тип механизма
 		$product['options'][160] = $product['mechanism'];
 		
-		$product['bracelet'] = $array_str[28]; //Ремешок/Браслет
+		
+		$product['bracelet'] = $array_str[30]; //Ремешок/Браслет 
         $product['options'][176] = $product['bracelet'];
 		
-		$product['material_case'] = $array_str[29]; //Материал корпуса
+		$product['material_case'] = $array_str[31]; //Материал корпуса
 		$product['options'][166] = $product['material_case'];
 		
-		$product['water_resist'] = $array_str[30]; //Водозащита
+		$product['water_resist'] = $array_str[32]; //Водозащита
 		$product['options'][161] = $product['water_resist'];
 		
-		$product['glass'] = $array_str[31]; //Стекло
+		$product['glass'] = $array_str[33]; //Стекло
 		$product['options'][162] = $product['glass'];
 		
-		$product['hod'] = $array_str[32]; //Ход
+		$product['hod'] = $array_str[34]; //Ход
 		$product['options'][177] = $product['hod'];
 		
-		$product['sex'] = $array_str[35]; //Пол
+		$product['sex'] = $array_str[37]; //Пол
 		$product['options'][159] = $product['sex'];
 
 		$str = $product['sex'];
@@ -314,7 +343,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 				break;
 			}
 		
-		$product['country'] = $array_str[36]; //Страна
+		$product['country'] = $array_str[38]; //Страна
 		$product['options'][165] = $product['country'];
 		
 		$product['images_av'] = $array_str[4]; //url картинки от поставщика

@@ -20,7 +20,7 @@ class AvangardAdmin extends Simpla
 		
 		//какие нужны каталоги
 		//$list_cat = array("naruchnie_chasi/slava");
-		$list_cat = array("naruchnie_chasi/q_amp_q","naruchnie_chasi/orient","naruchnie_chasi/vostok","naruchnie_chasi/casio","naruchnie_chasi/slava","naruchnie_chasi/sever");
+		$list_cat = array("naruchnie_chasi/q_amp_q","naruchnie_chasi/orient","naruchnie_chasi/vostok","naruchnie_chasi/casio","naruchnie_chasi/slava","naruchnie_chasi/sever","naruchnie_chasi/zarya","naruchnie_chasi/spetsnaz"); 
 
 		$products = avangard_filter_and_pars($output,$list_cat);
 		
