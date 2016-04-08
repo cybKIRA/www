@@ -202,7 +202,7 @@ class ProductsView extends View
 			foreach($properties as $property)
 				$products[$property->product_id]->options[] = $property;
 			*/
-	
+			
 			$this->design->assign('products', $products);
  		}
 		

@@ -21,10 +21,13 @@
 		<span class="">{$product->category->name}</span>
 	{/if}
 	
+	{if $brand}
 	{assign "brand_name_br" ""}
 	{$brand_name_br = $brand->name|cat:"<br>"}
 	<a href="products/{$product->url}" data-product="{$product->id}">{$product->name|replace:$brand->name:$brand_name_br}</a>
-		
+	{else}
+	<a href="/products/{$product->url}" data-product="{$product->id}">{$product->name|escape}</a>
+	{/if}	
 	
 </div>
 
