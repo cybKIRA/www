@@ -1,7 +1,7 @@
 User-agent: *
 
 Host: https://kupi.watch
-Sitemap: kupi.watch/sitemap.xml
+Sitemap: https://kupi.watch/sitemap.xml
 
 Disallow: /sections/404
 Disallow: /simpla/
