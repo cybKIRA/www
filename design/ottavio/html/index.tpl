@@ -90,7 +90,7 @@
 	<script src="design/{$settings->theme}/scripts/vendor/bootstrap-slider.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/bootstrap-rating-input.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/bootstrap-hover-dropdown.min.js"></script>
-	<script src="design/{$settings->theme}/scripts/jquery.gmap.min.js"></script>
+	{*<script src="design/{$settings->theme}/scripts/jquery.gmap.min.js"></script>*}
 	<script src="design/{$settings->theme}/scripts/circle_diagram.js"></script>
 	<script src="design/{$settings->theme}/scripts/magnific-popup/magnific-popup.js"></script>
 
