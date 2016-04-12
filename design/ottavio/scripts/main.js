@@ -407,6 +407,7 @@ Ottavio.events.push(Ottavio.isotope);
 
 
 // google maps module
+/*
 Ottavio.gmaps = function(){
     var
         $elem = $('#map-canvas'),
@@ -436,6 +437,7 @@ Ottavio.gmaps = function(){
     };
 };
 Ottavio.events.push(Ottavio.gmaps);
+*/
 // end google maps module
 
 
