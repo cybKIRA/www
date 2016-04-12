@@ -2390,10 +2390,19 @@ label.error {
 	background: none;
 }
 */
+
+.header-section-product {
+	
+}
+
 .breadcrumb{
 	background: none;
-	padding: 0;
+	padding: 3px;
 	margin-bottom: 5px;
+
+}
+.breadcrumb_product {
+	background-color:#1a1a1a;
 }
 .breadcrumb > li + li:before {
 	font-family: "FontAwesome";
@@ -2634,4 +2643,14 @@ margin: 0 0 15px
 #a_text {
 	border-bottom-style: dashed;
 	border-bottom-width: 1px;
+}
+
+.outline-product {
+
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-bottom: 4px;
+  border-color: #f28500;
+  border-style: solid;  
 }

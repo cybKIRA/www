@@ -5,32 +5,34 @@
 
 <section itemscope itemtype="http://schema.org/Product">
 
-<section class="header-section fading-title parallax">
+<section class="header-section fading-title parallax header-section-product outline-product">
 
 	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">
 			<div class="section-title light">
-				<ol class="breadcrumb">
-					<li><a href="./">Главная</a></li>
-					<li><a href="/catalog/vse-chasy">Каталог</a></li>
-					
-					{foreach from=$category->path item=cat}
-						<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>
-					{/foreach}
-					
-					{if $my_brand}
-					<li>
-						<a href="/catalog/{$my_brand->url}/{$my_brand->url_brand}">{$my_brand->name|escape}</a>
-					</li>
-					{/if}
-				</ol>
+
 				
 				
 				<div class="row">
 					<div class="col-sm-6">
+						{*<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>*}
 						<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы <br> {$product->name|escape}</h1>
 						<br>
-						<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>
+						<ol class="breadcrumb breadcrumb_product">
+							<li><a href="./">Главная</a></li>
+							<li><a href="/catalog/vse-chasy">Каталог</a></li>
+							
+							{foreach from=$category->path item=cat}
+								<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>
+							{/foreach}
+							
+							{if $my_brand}
+							<li>
+								<a href="/catalog/{$my_brand->url}/{$my_brand->url_brand}">{$my_brand->name|escape}</a>
+							</li>
+							{/if}
+						</ol>
+						
 					</div>
 					<div class="col-sm-6">
 						<h3 class="small-space">Оригинальные часы</h3>
@@ -83,55 +85,10 @@
 
 			<div class="col-md-7 sep-top-lg">
 				<div class="clearfix">
-					<div content="3" class="rate pull-left sep-bottom-xs">
-						{*
-						<meta itemprop="worstRating" content="1">
-						<meta itemprop="ratingValue" content="{$product->rating}">
-						<meta itemprop="bestRating" content="5">
-						*}
 
-						{strip}
-							{section name=rate start=0 loop=5 step=1}
-								{if $product->votes > 0}
-									{if $smarty.section.rate.index < $product->rating / $product->votes && $product->votes > 0}
-										{if ($smarty.section.rate.index + 1) > $product->rating / $product->votes}
-											<i class="fa fa-star-half-o fa-lg"></i>
-										{else}
-											<i class="fa fa-star fa-lg"></i>
-										{/if}
-									{else}
-										<i class="fa fa-star-o fa-lg"></i>
-									{/if}
-								{else}
-									<i class="fa fa-star-o fa-lg"></i>
-								{/if}
-							{/section}
-						{/strip}
-						
-						<small>
-							<a href="#comments" class="scroll-to-product-comments">
-								{if $comments}
-									<span itemprop="ratingCount">{$comments|count}</span> {$comments|count|plural:'отзыв':'отзывов':'отзыва'}
-								{else}
-									{*Нет отзывов*}
-								{/if}
-							</a>
-						</small>
-						
-						{if $product->featured==1}
-						<br>
-						<small>
-							Рекомендуемый товар
-						</small>
-						{/if}
-					</div>
+					{*include file='product_rate.tpl'*}
 					
-					<ul class="social-icon pull-right sep-bottom-xs">
-						<li><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-lg"></i></a></li>
-						<li><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-lg"></i> </a> </li>
-						<li><a href="https://ok.ru/kupi.watch"><i class="fa fa-odnoklassniki fa-lg"></i></a> </li>
-						<li><a href="https://instagram.com/kupi.watch/"><i class="fa fa-instagram fa-lg"></i></a> </li>
-					</ul>
+
 				</div>
 				
 				<div itemprop="description">
@@ -171,6 +128,17 @@
 							<div class="col-md-9 col-sm-6 sep-top-md">
 								<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> В корзину</button>
 							</div>
+							
+						</div>
+						<div class="row sep-top-md">
+							<div class="col-sm-6">
+								<ul class="social-icon pull-left sep-bottom-xs">
+									<li><a href="https://vk.com/kupi.watch"><i class="fa fa-vk fa-lg"></i></a></li>
+									<li><a href="https://facebook.com/kupi.watch"><i class="fa fa-facebook fa-lg"></i> </a> </li>
+									<li><a href="https://ok.ru/kupi.watch"><i class="fa fa-odnoklassniki fa-lg"></i></a> </li>
+									<li><a href="https://instagram.com/kupi.watch/"><i class="fa fa-instagram fa-lg"></i></a> </li>
+								</ul>
+							</div>
 						</div>
 					</form>
 				{else}
@@ -195,7 +163,7 @@
 						<li role="presentation" {if !$product->body}class="active"{/if}><a href="#features-tab" aria-controls="features-tab" role="tab" data-toggle="tab">Характеристики</a></li>
 					{/if}
 					
-					<li role="presentation" {if !$product->body && !$product->features}class="active"{/if}><a href="#comments-tab" aria-controls="comments-tab" role="tab" data-toggle="tab">Отзывы ({$comments|count})</a></li>
+					<li role="presentation" {if !$product->body && !$product->features}class="active"{/if}><a href="#comments-tab" aria-controls="comments-tab" role="tab" data-toggle="tab">Отзывы ({$comments|count}) {include file='product_rate_min.tpl'}</a></li>
 				</ul>
 
 				<div class="tab-content sep-top-md ">
