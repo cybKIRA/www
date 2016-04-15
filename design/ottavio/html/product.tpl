@@ -3,11 +3,17 @@
 {* Канонический адрес страницы *}
 {$canonical="/products/{$product->url}" scope=parent}
 
+
+	{if $brand}
+	{assign "brand_name" ""}
+	{$brand_name = $brand->name}
+	{/if}
+
 <section itemscope itemtype="http://schema.org/Product">
 
 <section class="header-section fading-title parallax header-section-product outline-product">
 
-	<div class="section-shade sep-top-2x sep-bottom-md">
+	<div class="section-shade sep-top-lg sep-bottom-xs">
 		<div class="container">
 			<div class="section-title light">
 
@@ -16,7 +22,7 @@
 				<div class="row">
 					<div class="col-sm-6">
 						{*<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>*}
-						<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы <br> {$product->name|escape}</h1>
+						{*<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы <br> {$brand_name|escape}</h1>*}
 						<br>
 						<ol class="breadcrumb breadcrumb_product">
 							<li><a href="./">Главная</a></li>
@@ -35,11 +41,7 @@
 						
 					</div>
 					<div class="col-sm-6">
-						<h3 class="small-space">Оригинальные часы</h3>
-						<ul class="text-left">
-							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
-							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
-						</ul>
+
 					</div>
 				
 				</div>
@@ -61,7 +63,7 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-5 sep-top-lg mfp-gallery">
+			<div class="col-md-5 sep-top-xs mfp-gallery">
 				<div class="product-images">
 					{if $product->image}
 					<a href="{$product->image->filename|resize:960:600}" title="{$product->name|escape}">
@@ -83,7 +85,7 @@
 				{/if}
 			</div>
 
-			<div class="col-md-7 sep-top-lg">
+			<div class="col-md-7 sep-top-xs">
 				<div class="clearfix">
 
 					{*include file='product_rate.tpl'*}
@@ -96,11 +98,21 @@
 					&nbsp;
 				</div>
 				
-				{if $product->variants|count > 0}
+				
 					<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="price-shop sep-top-xs">
-						<meta itemprop="priceCurrency" content="{$currency->code|escape}">
-						<del id="product-compare">{if $product->variant->compare_price}{$product->variant->compare_price|convert} {$currency->sign|escape}{/if}</del>
-						<ins><span id="product-price" itemprop="price">{$product->variant->price|convert}</span> {$currency->sign|escape}</ins>
+						<div>
+							<h1>Наручные часы {$product->name}</h1>
+ 						</div>
+						<div>
+							Наличие: <span class="nal">{if $product->variants|count > 0} Есть в наличии {else} Нет в наличии {/if}<span>
+						</div>
+						{if $product->variants|count > 0}
+						<div>
+							<meta itemprop="priceCurrency" content="{$currency->code|escape}">
+							<del id="product-compare">{if $product->variant->compare_price}{$product->variant->compare_price|convert} {$currency->sign|escape}{/if}</del>
+							Цена: <ins><span id="product-price" itemprop="price">{$product->variant->price|convert}</span> {$currency->sign|escape}</ins>
+						</div>
+						{/if}
 					</div>
 					
 					<form class="variants" action="/cart" data-name="{$product->name|escape}">
@@ -120,6 +132,7 @@
 							</div>
 						</div>
 						
+						{if $product->variants|count > 0}
 						<div class="row">
 							<div class="col-md-3 col-sm-6 sep-top-md">
 								<input type="text" value="1" name="amount" class="qty">
@@ -130,6 +143,15 @@
 							</div>
 							
 						</div>
+						{else}
+						<div class="sep-top-md">
+							&nbsp;
+						</div>
+						
+						<a class="btn btn-primary btn-lg" href="catalog/{$cat->url}/{$brand->url}" >Посмотреть еще часы</a>
+							
+						{/if}
+						
 						<div class="row sep-top-md">
 							<div class="col-sm-6">
 								<ul class="social-icon pull-left sep-bottom-xs">
@@ -141,9 +163,14 @@
 							</div>
 						</div>
 					</form>
-				{else}
-					<p class="lead sep-top-xs text-danger">Нет в наличии</p>
-				{/if}
+
+					<div>
+						{*<h3 class="small-space">Оригинальные часы</h3>*}
+						<ul class="text-left">
+							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
+							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
+						</ul>
+					</div>
 			</div>
 		</div>
 	</div>

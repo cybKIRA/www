@@ -59,11 +59,11 @@ h1 {
   font-size: 2.5em;
 }
 h2 {
-  font-size: 2.5em;
+  font-size: 2.0em;
   line-height: 1em;
 }
 h3 {
-  font-size: 2.0em;
+  font-size: 1.8em;
 }
 h4 {
   font-size: 1.8em;
@@ -1702,9 +1702,10 @@ dl.metadata dt {
   cursor: pointer;
 }
 .price-shop {
-  font-size: 2em;
-  line-height: 1.3em;
+  font-size: 1.2em;
+  line-height: 3em;
 }
+
 .price-shop del {
   display: block;
   font-size: 1em;
@@ -2594,12 +2595,21 @@ margin: 0 0 15px
 	}
 
 .price-shop ins {
-	  font-size: 1.3em;
-	  font-size: 1.3em;
 	  text-decoration: none;
 	  white-space: nowrap;
+	  font-size: 1.5em;
 	}
-	
+
+.price-shop h1 {
+	color: #f28500;
+    font-size: 1.5em;
+	display:inline-block;
+	}
+
+.price-shop .nal {
+	font-size: 1em;
+	color: #222222;
+}
 @media (max-width: 1200px) {
 .footer-text-big {
 	font-size:11em;
