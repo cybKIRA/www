@@ -13,11 +13,11 @@
 	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">
 			<div class="section-title light">
-				<h2 class="small-space">Оригинальные часы</h2>
-				<ul class="text-left">
+				<h1 class="small-space">Удивите окружающих новым образом уже завтра – закажите стильные наручные часы в нашем Интернет магазине! </h1>
+				{*<ul class="text-left">
 					<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
 					<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
-				</ul>
+				</ul>*}
 			</div>
 		</div>
 	</div>
