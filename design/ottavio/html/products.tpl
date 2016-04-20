@@ -47,83 +47,9 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-{if ($category && $minprice) || $keyword}9 col-md-push-3 sep-bottom-lg{else}12 sep-bottom-5x{/if} sep-top-lg">
-				{if $page->body}
-					<div class="sep-bottom-md">{$page->body}</div>
-					<hr class="sep-bottom-xs">
-				{/if}
-
-
-				{if $products}			
-					<div class=" filter-prod">
-						{* Сортировка *}
-						{*if $product->variants|count > 0*}
-						<div class="form-group pull-left">
-							<select id="products_sort" class="form-control input-lg rounded">
-								<option {if $sort=='position'}	selected="selected"{/if} value="{url sort=position page=null}">Сортировать по новинкам</option>
-								<option {if $sort=='price'} 	selected="selected"{/if} value="{url sort=price page=null}">Сортировать по цене</option>
-								<option {if $sort=='name'}		selected="selected"{/if} value="{url sort=name page=null}">Сортировать по названию</option>
-							</select>
-						</div>
-						{*/if*}
-						
-						{include file='pagination_counter.tpl'}
-					</div>
-					<div class="sep-top-xs sep-bottom-xs">
-						{include file='pagination_circle.tpl'}
-					</div>
-					<div class="row">
-						{foreach $products as $product}
-						{if $product->visible}
-						<div class="col-xs-6 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
-						
-						
-							{*if $category || $keyword}
-								<div class="col-xs-4 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
-								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
-								{if $product@iteration is div by 3}<div class="clearfix hidden-xs"></div>{/if}
-							{else}
-								<div class="col-xs-4 col-md-3 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
-								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
-								{if $product@iteration is div by 3}<div class="clearfix visible-sm"></div>{/if}
-								{if $product@iteration is div by 4}<div class="clearfix hidden-xs hidden-sm"></div>{/if}
-							{/if*}
-							
-						{/if}
-						{/foreach}
-					</div>
-					
-					<div class="sep-top-sm">
-						{include file='pagination_circle.tpl'}
-					</div>
-				{else}
-					<div role="alert" class="alert alert-warning alert-dismissible">
-						Товары не найдены.
-					</div>
-				{/if}
-				<br>
-				<hr class="sep-top-xs">
-				
-				{if $brand->description && $current_page_num == 1}
-					<div class="sep-bottom-md">{$brand->description}</div>
-					<hr class="sep-bottom-xs">
-				{elseif $current_page_num == 1}
-				
-					<div class="sep-bottom-xs">{$category->description}</div>
-					<hr class="sep-bottom-xs">
-				
-				{/if}
-				
-				{* тут выводился дескриптион, теперь он выше
-				{if $category->description && $current_page_num == 1}
-					
-				{/if}
-				*}
-				
-			</div>
-
-			{if ($category && $minprice) || $keyword}
-			<div class="col-md-3 col-md-pull-9 sep-top-lg">
+		
+		{if ($category && $minprice) || $keyword}
+			<div class="col-md-3 {*col-md-pull-9*} sep-top-lg">
 				{if $category->subcategories}
 				{$sub_count = 0}
 				{foreach $category->subcategories as $c}
@@ -146,6 +72,7 @@
 					</ul>
 				{/if}
 				
+				{*
 				{if $category->brands}
 					<h5 class="widget-title sep-bottom-xs">Бренд</h5>
 					
@@ -169,7 +96,47 @@
 						{/foreach}
 					</ul>
 				{/if}
-
+				*}
+				
+				{if $category->brands}
+					
+						<div class="panel panel-naked sep-bottom-xs">
+							<div class="panel-heading">
+								<h5 class="widget-title ">
+									<a data-toggle="collapse" href="#brond_group" class="collapsed">Бренд</a>
+								</h5>
+								
+							</div>
+							
+							<div class="panel-collapse collapse {if $smarty.get.$key} in{/if}" id="brond_group">
+								<div class="panel-body">
+									<ul class="widget widget-cat sep-bottom-xs">
+									
+										<li class="cat-item">
+											{if !$brand->id}
+												<a href="catalog/{$category->url}"><span class="text-primary">Все бренды</span></a>
+											{else}
+												<a href="catalog/{$category->url}">Все бренды</a>
+											{/if}
+										</li>
+									
+										{foreach name=brands item=b from=$category->brands}
+										<li class="cat-item">
+											{if $b->id == $brand->id}
+												<a data-brand="{$b->id}" href="catalog/{$category->url}/{$b->url}"><span class="text-primary">{$b->name|escape}</span></a>
+											{else}
+												<a data-brand="{$b->id}" href="catalog/{$category->url}/{$b->url}">{$b->name|escape}</a>
+											{/if}
+								
+										</li>
+										{/foreach}
+									</ul>
+								</div>
+							</div>
+						</div>
+					
+				{/if}
+				
 				{if $features}
 					{foreach $features as $key=>$f}
 						<div class="panel panel-naked sep-bottom-xs">
@@ -256,6 +223,85 @@
 				{/if}
 			</div>
 			{/if}
+		
+		
+		
+			<div class="col-md-9 {*col-md-push-3*} sep-bottom-2x sep-top-lg">
+				{if $page->body}
+					<div class="sep-bottom-md">{$page->body}</div>
+					<hr class="sep-bottom-xs">
+				{/if}
+
+
+				{if $products}			
+					<div class=" filter-prod">
+						{* Сортировка *}
+						{*if $product->variants|count > 0*}
+						<div class="form-group pull-left">
+							<select id="products_sort" class="form-control input-lg rounded">
+								<option {if $sort=='position'}	selected="selected"{/if} value="{url sort=position page=null}">Сортировать по новинкам</option>
+								<option {if $sort=='price'} 	selected="selected"{/if} value="{url sort=price page=null}">Сортировать по цене</option>
+								<option {if $sort=='name'}		selected="selected"{/if} value="{url sort=name page=null}">Сортировать по названию</option>
+							</select>
+						</div>
+						{*/if*}
+						
+						{include file='pagination_counter.tpl'}
+					</div>
+					<div class="sep-top-xs sep-bottom-xs">
+						{include file='pagination_circle.tpl'}
+					</div>
+					<div class="row">
+						{foreach $products as $product}
+						{if $product->visible}
+						<div class="col-xs-6 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+						
+						
+							{*if $category || $keyword}
+								<div class="col-xs-4 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
+								{if $product@iteration is div by 3}<div class="clearfix hidden-xs"></div>{/if}
+							{else}
+								<div class="col-xs-4 col-md-3 col-sm-4 sep-bottom-lg">{include file='product_item.tpl'}</div>
+								{if $product@iteration is div by 2}<div class="clearfix visible-xs"></div>{/if}
+								{if $product@iteration is div by 3}<div class="clearfix visible-sm"></div>{/if}
+								{if $product@iteration is div by 4}<div class="clearfix hidden-xs hidden-sm"></div>{/if}
+							{/if*}
+							
+						{/if}
+						{/foreach}
+					</div>
+					
+					<div class="sep-top-sm">
+						{include file='pagination_circle.tpl'}
+					</div>
+				{else}
+					<div role="alert" class="alert alert-warning alert-dismissible">
+						Товары не найдены.
+					</div>
+				{/if}
+				<br>
+				<hr class="sep-top-xs">
+				
+				{if $brand->description && $current_page_num == 1}
+					<div class="sep-bottom-md">{$brand->description}</div>
+					<hr class="sep-bottom-xs">
+				{elseif $current_page_num == 1}
+				
+					<div class="sep-bottom-xs">{$category->description}</div>
+					<hr class="sep-bottom-xs">
+				
+				{/if}
+				
+				{* тут выводился дескриптион, теперь он выше
+				{if $category->description && $current_page_num == 1}
+					
+				{/if}
+				*}
+				
+			</div>
+
+			
 		</div>
 	</div>
 </section>
