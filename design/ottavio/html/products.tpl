@@ -14,19 +14,15 @@
 {/if}
 
 <section {if $category->image}style="background-image: url('{$config->categories_images_dir}{$category->image}');"{/if} class="header-section fading-title parallax">
-	<div class="section-shade sep-top-3x sep-bottom-md">
+	<div class="section-shade sep-top-1x sep-bottom-xs">
 		<div class="container">
 			<div class="section-title light">
-				<ol class="breadcrumb">
-					<li><a href="./">Главная</a></li>
-					{*<li><a href="products">Каталог</a></li>*}
-					
+				<ol class="breadcrumb">				
 					{if $category}
 						{foreach from=$category->path item=cat}
 						{if !$cat@last}<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>{/if}
 						{/foreach}	
-					{elseif $keyword}
-						<li>Поиск</li>
+						
 					{/if}
 				</ol>
 				
