@@ -13,7 +13,7 @@
 
 <section class="header-section fading-title parallax header-section-product outline-product">
 
-	<div class="section-shade sep-top-lg sep-bottom-xs">
+	<div class="section-shade sep-top-2x sep-bottom-xs">
 		<div class="container">
 			<div class="section-title light">
 
@@ -23,7 +23,7 @@
 					<div class="col-sm-6">
 						{*<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>*}
 						{*<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы <br> {$brand_name|escape}</h1>*}
-						<br>
+
 						<ol class="breadcrumb breadcrumb_product">
 							<li><a href="./">Главная</a></li>
 							<li><a href="/catalog/vse-chasy">Каталог</a></li>
@@ -333,6 +333,14 @@
 													</div>
 													
 													<div class="form-group">
+													<label for="post_image">Картинка</label>
+													<span class="btn btn-default btn-file">
+														Выбрать фотографию <input type="file" id="files" name="image" />										  
+													</span>
+													<span id="list"></span>	
+													</div>
+													
+													<div class="form-group">
 														<img class="img-thumbnail" src="captcha/image.php?{math equation='rand(10,10000)'}"/>
 															<label for="comment_captcha" >Введите число с картинки</label>
 																	
@@ -476,3 +484,37 @@
 {/if}
 
 </section>
+
+
+<script type="text/javascript">
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', theFile.name, '"/>'].join('');
+          document.getElementById('list').insertBefore(span, null);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>

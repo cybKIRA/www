@@ -50,7 +50,16 @@
 				
 		// Приберем сохраненную капчу, иначе можно отключить загрузку рисунков и постить старую
 		unset($_SESSION['captcha_code']);	
-
+		
+		// Загрузка изображения
+  	    $image = $_POST['image'];
+  	    if(!empty($image['name']) && in_array(strtolower(pathinfo($image['name'], PATHINFO_EXTENSION)), $simpla->allowed_image_extentions))
+  	    	{
+  	    		//$this->brands->delete_image($brand->id);   	    			
+  	    		//move_uploaded_file($image['tmp_name'], $this->root_dir.$this->config->brands_images_dir.$image['name']);
+  	    		//$this->brands->update_brand($brand->id, array('image'=>$image['name']));
+  	    	}
+		
 		$result = array('status'=>'success', 'data'=>$comment->name);		
 	}
 
