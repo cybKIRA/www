@@ -17,9 +17,9 @@
 </a>
 
 <div class="product-title">
-	{if $category->subcategories || $smarty.get.module == 'MainView'}
+	{*if $category->subcategories || $smarty.get.module == 'MainView'}
 		<span class="">{$product->category->name}</span>
-	{/if}
+	{/if*}
 	
 	{if $brand}
 	{assign "brand_name_br" ""}
