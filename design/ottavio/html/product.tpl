@@ -28,7 +28,7 @@
 							<li><a href="/catalog/vse-chasy">Каталог</a></li>
 							
 							{foreach from=$category->path item=cat}
-								<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>
+								<li><a href="/catalog/{$cat->url}">{$cat->name|escape}</a></li>
 							{/foreach}
 							
 							{if $my_brand}
@@ -39,8 +39,8 @@
 						</ol>						
 					</div>
 					
-					<div class="col-sm-4">
-
+					<div class="col-sm-4 breadcrumb_url">
+						<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
 					</div>
 				
 				</div>

@@ -8,7 +8,6 @@
 {$canonical="" scope=parent}
 
 
-
 <section style="background-image: url('design/{$settings->theme}/images/parallax/feedback.jpg');" class="header-section fading-title parallax">
 	<div class="section-shade sep-top-2x sep-bottom-md">
 		<div class="container">

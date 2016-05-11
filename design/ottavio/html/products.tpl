@@ -14,27 +14,40 @@
 {/if}
 
 <section {if $category->image}style="background-image: url('{$config->categories_images_dir}{$category->image}');"{/if} class="header-section fading-title parallax">
-	<div class="section-shade sep-top-1x sep-bottom-xs">
+	<div class="section-shade section-shade sep-breadcrumb-products">
 		<div class="container">
 			<div class="section-title light">
-				<ol class="breadcrumb">				
-					{if $category}
-						{foreach from=$category->path item=cat}
-						{if !$cat@last}<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>{/if}
-						{/foreach}	
-						
-					{/if}
-				</ol>
+				<div class="row">
 				
-				<h1 class="small-space">
-					{if $keyword}
-						Поиск {$keyword|escape}
-					{elseif $page}
-						{$page->name|escape}
-					{else}
-						{$category->name|escape} {$brand->name|escape} {$keyword|escape}
-					{/if}
-				</h1>
+					<div class="col-sm-8">
+				
+						<ol class="breadcrumb">				
+							{if $category}
+								{foreach from=$category->path item=cat}
+								{if !$cat@last}<li><a href="catalog/{$cat->url}">{$cat->name|escape}</a></li>{/if}
+								{/foreach}	
+								
+							{/if}
+						</ol>
+						
+						<h1 class="small-space">
+							{if $keyword}
+								Поиск {$keyword|escape}
+							{elseif $page}
+								{$page->name|escape}
+							{else}
+								{$category->name|escape} {$brand->name|escape} {$keyword|escape}
+							{/if}
+						</h1>
+						
+					</div>
+					
+					<div class="col-sm-4 breadcrumb_url sep-top-xs sep-bottom-xs">
+					
+						<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
+					</div>
+					
+				</div>
 			</div>
 		</div>
 	</div>

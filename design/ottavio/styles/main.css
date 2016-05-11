@@ -2619,6 +2619,11 @@ margin: 0 0 15px
 	padding-bottom: 0.5em;
 }
 
+.sep-breadcrumb-products {
+	padding-top: 4.5em;
+	padding-bottom: 0em;
+}
+
 @media (max-width: 1200px) {
 .footer-text-big {
 	font-size:11em;
@@ -2725,4 +2730,16 @@ margin: 0 0 15px
   bottom: -6px;
   left: -6px;
   opacity: 1;
+}
+
+.breadcrumb_url a{
+	color: #f28500;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+	text-decoration: underline;
+}
+
+.breadcrumb_url {
+	color: #777;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+	
 }
