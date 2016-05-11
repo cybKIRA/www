@@ -2406,7 +2406,7 @@ label.error {
 
 }
 .breadcrumb_product {
-	background-color:#1a1a1a;
+	/*background-color:#1a1a1a;*/
 }
 .breadcrumb > li + li:before {
 	font-family: "FontAwesome";
@@ -2613,6 +2613,12 @@ margin: 0 0 15px
 	font-size: 1em;
 	color: #222222;
 }
+
+.sep-breadcrumb-product {
+	padding-top: 5.0em;
+	padding-bottom: 0.5em;
+}
+
 @media (max-width: 1200px) {
 .footer-text-big {
 	font-size:11em;

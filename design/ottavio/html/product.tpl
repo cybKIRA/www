@@ -13,14 +13,13 @@
 
 <section class="header-section fading-title parallax header-section-product outline-product">
 
-	<div class="section-shade sep-top-2x sep-bottom-xs">
+	<div class="section-shade sep-breadcrumb-product">
 		<div class="container">
 			<div class="section-title light">
-
-				
-				
+			
 				<div class="row">
-					<div class="col-sm-6">
+				
+					<div class="col-sm-8">
 						{*<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>*}
 						{*<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы <br> {$brand_name|escape}</h1>*}
 
@@ -37,16 +36,17 @@
 								<a href="/catalog/{$my_brand->url}/{$my_brand->url_brand}">{$my_brand->name|escape}</a>
 							</li>
 							{/if}
-						</ol>
-						
+						</ol>						
 					</div>
-					<div class="col-sm-6">
+					
+					<div class="col-sm-4">
 
 					</div>
 				
 				</div>
+				
+			</div>
 		</div>
-	</div>
 	</div>
 </section>
 
