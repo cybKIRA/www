@@ -717,6 +717,11 @@ $(document).ready(function() {
     });
 	*/
 	
+    $('.slider_slick').slick({
+			slidesToShow: 4,
+			slidesToScroll: 4
+	  });
+	
     $('#load').fadeOut().remove();
 	
     $('.dropdown-menu').click(function(e) {
@@ -1216,9 +1221,13 @@ $(window).resize(function () {
 				$('.text-main').css("height",a_text_height);
 				$('#a_text').text("Показать текст полностью");
 				a_text_hide = true;
-			}			
+			}
+
 			
 		});
 	});
+	
+	
+
 
 

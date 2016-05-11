@@ -65,6 +65,7 @@
 
 	<script src="design/{$settings->theme}/scripts/vendor/modernizr.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/jquery.js"></script>
+	
 	<script src="design/{$settings->theme}/scripts/vendor/queryloader2.min.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/owl.carousel.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/jquery.ba-cond.min.js"></script>
@@ -72,6 +73,13 @@
 	<script src="design/{$settings->theme}/scripts/vendor/idangerous.swiper.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/jquery.fitvids.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/jquery.countTo.js"></script>
+	
+			{* Слайдер *}
+	<script type="text/javascript" src="design/{$settings->theme}/plugins/slick/slick.min.js"></script>
+	<link   href="design/{$settings->theme}/plugins/slick/slick.css" rel="stylesheet" type="text/css" />
+	<link   href="design/{$settings->theme}/plugins/slick/slick-theme.css" rel="stylesheet" type="text/css" /> 
+	 
+	
 	<script src="design/{$settings->theme}/scripts/vendor/TweenMax.min.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/ScrollToPlugin.min.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/jquery.scrollmagic.min.js"></script>

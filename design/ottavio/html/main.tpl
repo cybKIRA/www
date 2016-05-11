@@ -249,6 +249,7 @@
 </div>
         *}
 
+
 		
 <section class="shop-content">
 	<div class="container">
@@ -264,9 +265,9 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row slider_slick">
 			{foreach $featured_products as $product}
-				<div class="col-xs-6 col-sm-3 col-lg-2 sep-bottom-xs">
+				<div class="">
 					{include file='product_item.tpl'}
 				</div>				
 			{/foreach}
@@ -274,6 +275,8 @@
 		{/if}
 	</div>
 </section>
+
+
 
 <section class="shop-content">
 	<div class="container">
@@ -288,9 +291,9 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row slider_slick">
 			{foreach $new_products as $product}
-				<div class="col-xs-6 col-sm-3 col-lg-2 sep-bottom-xs">
+				<div>
 					{include file='product_item.tpl'}
 				</div>				
 			{/foreach}
@@ -433,3 +436,4 @@
 *}
 
 <br>
+
