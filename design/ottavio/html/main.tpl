@@ -9,14 +9,27 @@
 
 
 <section style="background-image: url('design/{$settings->theme}/images/parallax/feedback.jpg');" class="header-section fading-title parallax">
-	<div class="section-shade sep-top-2x sep-bottom-md">
+	<div class="section-shade sep-top-2x">
 		<div class="container">
-			<div class="section-title light">
-				<h1 class="small-space">Интернет магазин оригинальных наручных часов</h1>
-				{*<ul class="text-left">
-					<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
-					<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
-				</ul>*}
+		
+			<div class="row">
+				
+				<div class="col-sm-12 text-center">
+					
+					<div class="section-title light">
+						<h1 class="small-space">Интернет магазин оригинальных наручных часов</h1>
+						{*<ul class="text-left">
+							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
+							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
+						</ul>*}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center breadcrumb_url sep-top-xs sep-bottom-xs">
+						<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
+				</div>
+				
 			</div>
 		</div>
 	</div>
