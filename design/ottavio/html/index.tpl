@@ -11,6 +11,7 @@
 	<meta name="description" content="{$meta_description|escape}" />
 	<meta name="keywords"    content="{$meta_keywords|escape}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 	<meta name='yandex-verification' content='4f7b618ad390439f' />
 	
 	{* Канонический адрес страницы *}
 	{if isset($canonical)}<link rel="canonical" href="{$config->root_url}{$canonical}"/>{/if}

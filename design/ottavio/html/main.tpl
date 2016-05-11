@@ -33,8 +33,8 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="section-title text-center sep-bottom-lg sep-top-md">
-					<h2 class="upper">Каталог по всем часам</h2>
-					<p class="lead">Найдите часы своей мечты!</p>
+					<h2 class="upper">Каталог часов</h2>
+					<p class="lead">Купите часы своей мечты!</p>
 				</div>
 			</div>
 		</div>
