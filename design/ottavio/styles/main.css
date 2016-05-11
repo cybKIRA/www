@@ -2694,3 +2694,29 @@ margin: 0 0 15px
     border: 1px solid #000;
     margin: 10px 5px 0 0;
   }
+
+.outline-outward-products {
+  position: relative;
+  overflow: visible !important;
+}
+.outline-outward-products:before {
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  content: '';
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: linear;*/
+}
+.outline-outward-products:hover:before,
+.outline-outward-products:focus:before,
+.outline-outward-products:active:before {
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  opacity: 1;
+}

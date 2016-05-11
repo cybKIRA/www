@@ -1,4 +1,4 @@
-<div class="product-item-border outline-outward">
+<div class="product-item-border outline-outward-products">
 
 <a href="products/{$product->url}" class="product-image">
 	{if $product->image}
@@ -24,7 +24,7 @@
 	{if $brand}
 	{assign "brand_name_br" ""}
 	{$brand_name_br = $brand->name|cat:"<br>"}
-	<a href="products/{$product->url}" data-product="{$product->id}">{$product->name|replace:$brand->name:$brand_name_br}</a>
+	<a href="/products/{$product->url}" data-product="{$product->id}">{$product->name|replace:$brand->name:$brand_name_br}</a>
 	{else}
 	<a href="/products/{$product->url}" data-product="{$product->id}">{$product->name|escape}</a>
 	{/if}	
