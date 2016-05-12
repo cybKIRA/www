@@ -29,30 +29,27 @@
 		</div>
 	</div>
 {else}
-	<div class="sep-top-5x sep-bottom-3x error-404">
+	<div class="sep-top-2x sep-bottom-3x {*error-404*}" style='background-color: #222222'>
 		<div class="container">
-			<div class="sep-bottom-lg">
-				<div class="text-center">
-					<h3 class=""><small>ошибка 404</small></h3>
-					<h1 class="">Страница не найдена</h1>
+			<div class=row>
+				<div class=col-sm-4>
+					<div class='text-center'>
+						<img alt='Страница не найдена' src="/design/ottavio/images/chasy.png" >
+					</div>
+				</div>
+				<div class=col-sm-6>
+					<div class="sep-bottom-lg">
+						<div class="text-center sep-top-2x" >
+							<h1 style="color:#fff;">Такой страницы не существует (</h1>
+						</div>
+						<div class="text-center sep-top-sm">
+							<a href="/" class="btn btn-primary btn-lg">Перейти на главную</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6 col-md-push-3 text-center">
-					<p class="lead">Страницы которую вы ищите, не существует. Попробуйте воспользоваться поиском:</p>
-					<!-- start search form-->
-					<form action="products" role="search" class="input-group theme-form-group">
-						<span class="input-group-btn">
-							<button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-search fa-2x"></i></button>
-						</span>
-						
-						<input type="text" name="keyword" placeholder="Поиск по сайту" class="form-control input-lg" autocomplete="off">
-					</form>
-					<!-- end search form-->
-				</div>
-			</div>
+
 		</div>
 	</div>
 
-	{include file = 'm_call_to_action.tpl'}
 {/if}
