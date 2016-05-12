@@ -135,7 +135,7 @@
 			{$product.url}
 		</td>
 		<td>
-			<input name="id_del[]" value="{$product.id_post}" checked="checked" type="checkbox" />
+			<input name="id_del[]" value="{$product.id_post}" {*checked="checked"*} type="checkbox" />
 		</td>
 	</tr>
 {/foreach}
@@ -178,7 +178,7 @@
 </table>
 
 <hr>
-<h2>Изменения цены/имени (изменить) [{count($products_change)}]</h2>
+<h2>Изменения (изменить) [{count($products_change)}]</h2>
 <table style='width:100%'>
 <tr>
  <td>ID Симпла</td><td>ID пост.</td><td>Название</td> <td>Цена поставщика</td> <td>Цена</td> <td>Бренд</td> <td>ЧПУ</td> <td>Применить</td>
