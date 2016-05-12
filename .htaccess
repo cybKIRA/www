@@ -65,6 +65,9 @@ RewriteRule ^yandex.xml?$	yandex.php  [L,QSA]
 # feedback
 RewriteRule ^contact/?$	index.php?module=FeedbackView  [L,QSA]
 
+# GLOOBUS - выгрузка каталога
+RewriteRule ^export/([^/]+)/([^/]+)/?$	export.php?url=$1&hash=$2  [L,QSA]
+
 #downloads
 RewriteRule ^order/([^/]+)/([^/]+)/?$	index.php?module=OrderView&url=$1&file=$2  [L,QSA]
 
