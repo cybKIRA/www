@@ -869,6 +869,7 @@ $('form.variants').on('submit', function(e) {
 		success: function(data){
 			$('#dropdownMenuCart').html('<i class="fa fa-shopping-cart fa-lg"></i>&nbsp;<span class="badge">' + data.count + '</span>');
 			$('#cart_informer').html(data.products);
+			console.log('"<strong>' + name + '</strong>' + v_name + '" добавлен в корзину.');
 			$('#cart_informer_notify .notify-content').html('"<strong>' + name + '</strong>' + v_name + '" добавлен в корзину.').parent().addClass('showed');
 
 			clearTimeout(hide_notify);
