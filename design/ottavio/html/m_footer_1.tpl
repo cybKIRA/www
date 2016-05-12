@@ -48,13 +48,13 @@
 						<ul class="widget-address sep-top-xs">
 							<li><i class="fa fa-phone fa-lg"></i><small>+7 (499) 40 40 996</small></li>
 							<li><i class="fa fa-envelope fa-lg"></i><small><a href="#">info@kupi.watch</a></small></li>
-							<li><i class="fa fa-clock-o fa-lg"></i><small>Обработка заказов: <br>пн-пт c 10:00 до 20.00</small></li>
+							<li><i class="fa fa-clock-o fa-lg"></i><small>Обработка заказов: <br>пн-пт c 11:00 до 20.00</small></li>
 							<li><i class=""></i><small>Прием заказов: круглосуточно!</small></li>
 							<li><i class=""></i><small>&nbsp;</small></li>
 						</ul>
 						<strong>Отдел доставки:</strong>
 						<ul class="widget-address sep-top-xs">
-							<li><i class="fa fa-phone fa-lg"></i><small>+7 (926) 462 07 37</small></li>
+							<li><i class="fa fa-phone fa-lg"></i><small>+7 (499) 40 40 996 доб. 12</small></li>
 							<li><i class="fa fa-envelope fa-lg"></i><small><a href="#">dostavka@kupi.watch</a></small></li>
 
 						</ul>

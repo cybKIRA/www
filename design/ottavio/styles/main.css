@@ -2734,7 +2734,8 @@ margin: 0 0 15px
 }
 
 .breadcrumb_url a{
-	color: #f28500;
+	/*color: #f28500;*/
+	color: #ccc;
 	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
 	text-decoration: underline;
 }
