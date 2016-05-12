@@ -21,6 +21,7 @@ RewriteRule ^(.*)$ https://kupi.watch/$1 [R=301,L]
 # Админка теперь по адресу /simpla
 RewriteRule	^admin/?$  simpla [L]
 
+Redirect 301 /catalog/vse-chasy /catalog/naruchnye-chasy 
 
 # Каталог товаров
 RewriteRule ^catalog/([^/]+)/?$	index.php?module=ProductsView&category=$1 [L,QSA]
