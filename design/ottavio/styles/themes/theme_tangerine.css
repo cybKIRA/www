@@ -2211,3 +2211,7 @@ p.browsehappy a {
   border-color: #f28500;
   border-style: solid;  
 }
+
+.btn-success a {
+	color:#fff;
+}

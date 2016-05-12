@@ -854,6 +854,8 @@ $('form.variants').on('submit', function(e) {
 		var v_name = ', ' + $(this).find('option:selected').data('name')
 		
 	var button = $(this).find('button[type="submit"]');
+	var button_add = $(this).find('#button_add');
+	var amount_add = $(this).find('#amount_add');
 	
 	if($(this).find('input[name=variant]:checked').size()>0)
 		var variant = $(this).find('input[name=variant]:checked').val();
@@ -878,6 +880,8 @@ $('form.variants').on('submit', function(e) {
 			}, 2500);
 
 			button.html('<i class="fa fa-shopping-cart"></i> Добавлено')
+			button_add.html('<span class="btn btn-success btn-lg"><a href="/cart">Перейти в корзину</a></span>');
+			amount_add.html('<div class="added_cart">Добавлено!</div>');
 		}
 	});
 

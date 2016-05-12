@@ -133,13 +133,17 @@
 						</div>
 						
 						{if $product->variants|count > 0}
-						<div class="row">
+						<div  class="row">
 							<div class="col-md-3 col-sm-6 sep-top-md">
-								<input type="text" value="1" name="amount" class="qty">
+								<div id=amount_add>
+									<input type="text" value="1" name="amount" class="qty">
+								</div>
 							</div>
 							
 							<div class="col-md-9 col-sm-6 sep-top-md">
-								<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> В корзину</button>
+								<span id=button_add>
+									<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> В корзину</button>
+								</span>
 							</div>
 							
 						</div>
@@ -148,7 +152,7 @@
 							&nbsp;
 						</div>
 						
-						<a class="btn btn-primary btn-lg" href="catalog/{$cat->url}/{$brand->url}" >Посмотреть еще часы</a>
+						<a class="btn btn-default btn-lg" href="catalog/{$cat->url}/{$brand->url}" >Посмотреть еще часы</a>
 							
 						{/if}
 						
