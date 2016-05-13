@@ -78,7 +78,7 @@
 				</li>
 				
 				<li>
-					<a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>{if $cart->total_products > 0}&nbsp;<span class="badge">{$cart->total_products}</span>{/if}</a>
+					<a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-2x"></i>{if $cart->total_products > 0}&nbsp;<span class="badge">{$cart->total_products}</span>{/if}</a>
 					
 					<div id="cart_informer" class="dropdown-menu widget-box" aria-labelledby="dropdownMenuCart">
 						{include file='cart_informer.tpl'}

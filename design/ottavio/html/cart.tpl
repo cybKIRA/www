@@ -3,15 +3,16 @@
 {$meta_title = "Корзина" scope=parent}
 
 <section class="header-section fading-title parallax">
-	<div class="section-shade sep-top-3x sep-bottom-md">
-		<div class="container">
-			<div class="section-title light">
-				<ol class="breadcrumb">
-					<li><a href="./">Главная</a></li>
-					<li><a href="cart">Корзина</a></li>
-				</ol>
-				
-				<h2 id="cart_title" class="small-space">{include file="cart_title.tpl"}</h2>
+	<div class="section-shade sep-top-xs">
+		<div class="container section-title light sep-top-1x">
+			<div class=row>
+				<div class="col-sm-6">			
+							<h1>Корзина</h1>
+						
+				</div>
+				<div class="col-sm-6">
+					<h2 id="cart_title" class="small-space">{include file="cart_title.tpl"}</h2>
+				</div>
 			</div>
 		</div>
 	</div>

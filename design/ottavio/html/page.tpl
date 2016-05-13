@@ -4,6 +4,7 @@
 {$canonical="/{$page->url}" scope=parent}
 
 {if $page->url != '404'}
+
 	<section style="background-image: url('design/{$settings->theme}/images/parallax/page.jpg');" class="header-section fading-title parallax">
 		<div class="section-shade sep-top-3x sep-bottom-md">
 			<div class="container">
