@@ -235,13 +235,16 @@ class ProductView extends View
 		$cookie_val = implode(',', array_slice($browsed_products, -$max_visited_products, $max_visited_products));
 		setcookie("browsed_products", $cookie_val, $expire, "/");
 		
-		$meta_title = 'Часы ' . $product->name . ' - купить часы ' . (isset($brand->name_ru) ? $brand->name_ru : '') .' в Интернет магазине Kupi.watch с доставкой по России. Цена, отзывы, характеристики, описание.';
+		$sex = $product->features[0]->value;
+		$meta_title = 'Часы ' . $product->name . ' - купить оригинальные ' . $sex . ' наручные часы ' . (isset($brand->name_ru) ? $brand->name_ru : '') .' в Интернет магазине Kupi.watch с доставкой по России. Цена, отзывы, характеристики, описание.';
 		$this->design->assign('meta_title', $meta_title);
+		
 		$product_name = $product->name;
 		if (isset($brand->name_ru)) $product_name = str_replace($brand->name,$brand->name.' ('.$brand->name_ru.')',$product_name);
-		$meta_description = 'Интернет-магазин Kupi.watch (Купи Вотч) предлагает купить наручные часы '  .  $product_name . ' по выгодной цене. Наш магазин осуществляет доставку в любой регион России!';
+		$meta_description = 'Купить часы '  .  $product_name . ' оригинал недорого Вы можете в нашем Интернет-магазине наручных часов Kupi.watch (Купи Вотч). Наш магазин осуществляет доставку в любой регион России!';
+		
 		$this->design->assign('meta_description', $meta_description);
-	    $meta_keywords = $brand->name.', '.(isset($brand->name_ru) ? $brand->name_ru .', ' : '').$product->name.', '.'купить, мужские, наручные, часы, цена, характеристики, отзывы, описание, доставка';
+	    $meta_keywords = $brand->name.', '.(isset($brand->name_ru) ? $brand->name_ru .', ' : '').$product->name.', '.'купить, мужские, женские, наручные, оригинальные, недорого, часы, цена, характеристики, отзывы, описание, доставка';
 		$this->design->assign('meta_keywords', $meta_keywords);
 		
 		$this->design->assign('my_brand', $this->brands->get_brands_catalog_url(array('category_id'=>intval($product->brand_id))));
