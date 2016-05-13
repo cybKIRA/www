@@ -19,7 +19,7 @@
 			<div class="section-title light">
 				<div class="row">
 				
-					<div class="col-sm-8">
+					<div class="col-sm-7">
 				
 						<ol class="breadcrumb">				
 							{if $category}
@@ -41,12 +41,11 @@
 						</h1>
 						
 					</div>
-					
-					<div class="col-sm-4 breadcrumb_url sep-top-xs sep-bottom-xs">
-					
-						<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
+					<div class="col-sm-5">
+						<div class="breadcrumb_url_cat">
+							<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
+						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>

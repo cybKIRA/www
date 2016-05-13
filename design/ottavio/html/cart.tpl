@@ -18,12 +18,17 @@
 	</div>
 </section>
 
-<section class="sep-top-lg sep-bottom-lg">
+<section class="sep-top-1x">
 	{if $cart->purchases}
 	<form method="post" name="cart" id="purchases">
-		<div class="container">
+		<div class="container cart_section">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-xs-1">
+					<ul class="pager circle">
+						<li><span class="current">1</span></li>
+					</ul>
+				</div>
+				<div class="col-xs-11 sep-top-lg">
 					{if $error || $coupon_error}
 					<div class="sep-bottom-xs">
 						<div role="alert" class="alert alert-danger ">
@@ -77,10 +82,10 @@
 			</div>
 			
 			{if $coupon_request}
-			<div class="row">
-				<div class="col-md-12 sep-top-md">
+			<div class="row sep-top-lg">
+				<div class="col-xs-offset-1 col-xs-11">
 					<div class="coupon-code form-group pull-left">
-						<input type="text" placeholder="Код купона" value="{$cart->coupon->code|escape}" name="coupon_code" class="form-control input-lg" id="coupon_code">
+						<input type="text" placeholder="Код купона, если есть..." value="{$cart->coupon->code|escape}" name="coupon_code" class="form-control input-lg" id="coupon_code">
 					</div>
 
 					<button type="button" class="btn btn-dark btn-bordered" id="coupon_apply">Применить купон</button>
@@ -91,13 +96,20 @@
 			{/if}
 		</div>
 		
-		<div class="container">
-			<div class="row">
-				<div id="deliveries" class="col-md-6">
+		
+		<div class="container sep-top-sm">
+			<div class="row cart_section">
+				<div class="col-xs-1">
+					<ul class="pager circle">
+						<li><span class="current">2</span></li>
+					</ul>
+				</div>
+			
+				<div id="deliveries" class="col-sm-6">
 					{include file="delivery.tpl"}
 				</div>
 				
-				<div class="col-md-6">
+				<div class="col-sm-5">
 					<div class="cart_totals sep-top-lg">
 						<h5 class="">Итого</h5>
 						<div class="sep-top-sm">
@@ -138,6 +150,18 @@
 						</div>
 					</div>
 					
+				</div>
+			</div>
+		</div>
+		
+		<div class="container sep-top-sm sep-bottom-lg">
+			<div class="row cart_section">
+				<div class="col-xs-1">
+					<ul class="pager circle">
+						<li><span class="current">3</span></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
 					<div class="sep-top-lg">
 						<h5 class="">Адрес получателя</h5>
 						
@@ -181,6 +205,7 @@
 				</div>
 			</div>
 		</div>
+
 	</form>		
 	{else}
 	<div class="container sep-bottom-5x">
