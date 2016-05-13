@@ -19,7 +19,7 @@
 			
 				<div class="row">
 				
-					<div class="col-sm-8">
+					<div class="col-sm-7">
 						{*<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>*}
 						{*<h1 id="name_product" itemprop="name" class="small-space name" data-product="{$product->id}">Наручные часы <br> {$brand_name|escape}</h1>*}
 
@@ -39,8 +39,10 @@
 						</ol>						
 					</div>
 					
-					<div class="col-sm-4 breadcrumb_url">
-						<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
+					<div class="col-sm-5">
+						<div class="breadcrumb_url">
+							<a href="/catalog/yaponskie-chasy">Японские часы</a> | <a href="/catalog/rossijskie-chasy">Российские часы</a>
+						</div>
 					</div>
 				
 				</div>
