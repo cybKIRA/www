@@ -16,12 +16,15 @@ RewriteRule ^(.*)$ https://kupi.watch/$1 [R=301,L]
 #RewriteCond %{HTTPS}  off  
 #RewriteRule ^(.*)$ https://kupi.watch/$1 [R=301,L]
 
-
+php_value session.gc_maxlifetime 172800
+php_value session.cookie_lifetime 172800
 
 # Админка теперь по адресу /simpla
 RewriteRule	^admin/?$  simpla [L]
 
-Redirect 301 /catalog/vse-chasy /catalog/naruchnye-chasy 
+Redirect 301 /catalog/vse-chasy /catalog/naruchnye-chasy
+Redirect 301 /insta https://kupi.watch?utm_source=instagram&utm_medium=referral&utm_campaign=official_group
+Redirect 301 /vk https://kupi.watch?utm_source=vk&utm_medium=referral&utm_campaign=official_group 
 
 # Каталог товаров
 RewriteRule ^catalog/([^/]+)/?$	index.php?module=ProductsView&category=$1 [L,QSA]

@@ -2781,9 +2781,23 @@ margin: 0 0 15px
 
 .cart_section {
 	border: 1px solid #ddd;
-	padding-top:10px;
-	padding-bottom:20px;
+	padding-top:25px;
+	padding-bottom:25px;
 	border-radius: 5px;
-	background-color: #faf5f5;
+	background-color: #fff;
 	box-shadow: 5px 5px 10px -5px #a2a4a8;
+}
+
+.cart_cont {
+	background-color: #f9f9f9;
+}
+
+table.cart_table > thead > tr > th,
+table.cart_table > tbody > tr > th,
+table.cart_table > tfoot > tr > th,
+table.cart_table > thead > tr > td,
+table.cart_table > tbody > tr > td,
+table.cart_table > tfoot > tr > td {
+	border: 1px solid dadada;
+	background-color: #fafafa;
 }

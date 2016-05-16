@@ -135,7 +135,7 @@
 			{$product.url}
 		</td>
 		<td>
-			<input name="id_del[]" value="{$product.id_post}" {*checked="checked"*} type="checkbox" />
+			<input name="id_del[]" value="{$product.id_post}" checked="checked" type="checkbox" />
 		</td>
 	</tr>
 {/foreach}
