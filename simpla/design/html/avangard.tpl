@@ -28,7 +28,7 @@
 <input type=hidden name="session_id" value="{$smarty.session.id}">
 
 
-<h2>Всего в импорте [{count($products)}]</h2>
+<h2>Всего {$output_count}, в импорте [{count($products)}]</h2>
 {*
 <table style='width:100%'>
 <tr>

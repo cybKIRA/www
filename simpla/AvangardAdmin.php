@@ -21,7 +21,9 @@ class AvangardAdmin extends Simpla
 		//какие нужны каталоги
 		//$list_cat = array("naruchnie_chasi/slava");
 		$list_cat = array("naruchnie_chasi/q_amp_q","naruchnie_chasi/orient","naruchnie_chasi/vostok","naruchnie_chasi/casio","naruchnie_chasi/slava","naruchnie_chasi/sever","naruchnie_chasi/zarya","naruchnie_chasi/spetsnaz"); 
-
+		
+		$output_count = count(str_getcsv($output,"\n"));
+		
 		$products = avangard_filter_and_pars($output,$list_cat);
 		
 		function cmp($a, $b) //функция сортировки
@@ -528,6 +530,7 @@ class AvangardAdmin extends Simpla
 			$this->design->assign('products_vis', $products_vis );
 			$this->design->assign('products_del', $products_del );
 			$this->design->assign('products_change', $products_change );
+			$this->design->assign('output_count', $output_count );			
 		}
 		
 /*

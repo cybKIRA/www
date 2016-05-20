@@ -12,7 +12,7 @@
 	<meta name="keywords"    content="{$meta_keywords|escape}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  	<meta name='yandex-verification' content='4f7b618ad390439f' />
-	
+	<link rel="image_src" href="https://kupi.watch/design/ottavio/images/kw_logo.jpg" />
 	{* Канонический адрес страницы *}
 	{if isset($canonical)}<link rel="canonical" href="{$config->root_url}{$canonical}"/>{/if}
 	
@@ -21,8 +21,9 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
 	<link rel="stylesheet" href="design/{$settings->theme}/styles/bootstrap.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/main.css">
-    <link rel="stylesheet" href="design/{$settings->theme}/styles/main-responsive.css">
+
+	<link rel="stylesheet" href="design/{$settings->theme}/styles/main.css">
+	<link rel="stylesheet" href="design/{$settings->theme}/styles/main-responsive.css">
 
 </head>
 

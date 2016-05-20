@@ -68,7 +68,7 @@
 						<div class="icon-content img-circle"><i class="fa fa-clock-o"></i></div>
 						<div class="icon-box-content">
 							<h3>Работаем</h3>
-							<p>Пн-Пт: <br>11:00 - 20:00</p>
+							<p><br>9:00 - 23:00</p>
 						</div>
 					</div>
 				</div>

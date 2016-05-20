@@ -32,7 +32,7 @@
 			<ul class="nav navbar-nav navbar-right service-nav">
 			<li>
 				<a href="tel:+74994040996" id="nav-phone">8 (499) 40 40 996</a>
-				<small id="nav-phone-bottom">Звоните! пн-пт: с 11:00 до 20:00</small>
+				<small id="nav-phone-bottom">Звоните! с 9:00 до 23:00</small>
 			</li>
 				<li>
 					{if $user}
