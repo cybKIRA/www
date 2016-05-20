@@ -89,6 +89,10 @@ class View extends Simpla
 			
 			$this->design->assign('config',		$this->config);
 			$this->design->assign('settings',	$this->settings);
+			
+			// GLOOBUS 2016-05-20 определяем мобильный девайс
+			$deviceType = ($this->mobiledetect->isMobile() ? ($this->mobiledetect->isTablet() ? 'tablet' : 'phone') : 'computer');
+			$this->design->assign('device', $deviceType);			
 
 			// Настраиваем плагины для смарти
 			$this->design->smarty->registerPlugin("function", "get_posts",               array($this, 'get_posts_plugin'));

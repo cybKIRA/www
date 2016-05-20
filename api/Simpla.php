@@ -36,7 +36,8 @@ class Simpla
 		'comments'   => 'Comments',
 		'feedbacks'  => 'Feedbacks',
 		'notify'     => 'Notify',
-		'managers'   => 'Managers'
+		'managers'   => 'Managers',
+		'mobiledetect' => 'MobileDetect' // GLOOBUS 2016-05-20 определение мобильных девайсов
 	);
 	
 	// Созданные объекты
