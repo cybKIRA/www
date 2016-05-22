@@ -71,11 +71,14 @@
 					</div>
 					<div class="approve">
 				     Изменить дату на  <input name=date type="date" value="{$comment->date|date_format:"%Y-%m-%d"}" />  <input name="time" type="time" value="{$comment->date|time}" />
-					{*<a class="save_a" href="#save">Сохранить</a>*}
 					</div>
 				</div>
 				<div class="icons cell">
+					{if $comment->image}
+						<a href={$image_dir}{$comment->image} target="_blank">Есть картинка</a>
+					{/if}
 					<a class="delete" title="Удалить" href="#"></a>
+
 				</div>
 				<div class="clear"></div>
 			</div>

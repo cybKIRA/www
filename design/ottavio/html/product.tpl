@@ -173,7 +173,6 @@
 					<div>
 						{*<h3 class="small-space">Оригинальные часы</h3>*}
 						<ul class="text-left">
-							<li>Доставим лично в руки или до почты по всей России за 50% от стоимости доставки.</li>
 							<li>1 год официальной гарантии от производителя. Обменяем, починим или вернем деньги.</li>
 						</ul>
 					</div>
@@ -258,6 +257,13 @@
 											<h5 itemprop="author" class="media-heading">{$comment->name|escape}</h5>
 											<p itemprop="reviewBody">{$comment->text|escape|nl2br}</p>
 											
+											{if $comment->image}
+												<img style="max-width:300px" src="{$config->comments_images_dir}{$comment->image}">
+												{*<a href="{$image->filename|resize:960:600}"	title="{$product->name|escape}">
+													<img alt="{$product->name|escape}" src="{$image->filename|resize:510:600}" class="img-responsive">
+												</a>*}
+											{/if}
+											
 											{if !$comment->approved}<p class="text-danger">ожидает модерации</p>{/if}
 										</footer>
 									</div>
@@ -341,7 +347,7 @@
 													<div class="form-group">
 													<label for="post_image">Картинка</label>
 													<span class="btn btn-default btn-file">
-														Выбрать фотографию <input type="file" id="files" name="image" />										  
+														Выбрать фотографию <input type="file" id="files" name="image" accept="image/*,image/jpeg" />										  
 													</span>
 													<span id="list"></span>	
 													</div>
@@ -513,6 +519,9 @@
           var span = document.createElement('span');
           span.innerHTML = ['<img class="thumb" src="', e.target.result,
                             '" title="', theFile.name, '"/>'].join('');
+		  //подчистим перед выводом
+		  document.getElementById('list').innerHTML = '';
+		  
           document.getElementById('list').insertBefore(span, null);
         };
       })(f);

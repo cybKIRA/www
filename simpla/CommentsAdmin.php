@@ -102,6 +102,9 @@ class CommentsAdmin extends Simpla
 
  	$this->design->assign('comments', $comments);
  	$this->design->assign('comments_count', $comments_count);
+	
+	// MCBRONX 2016-05-22 Вывод каталога к картинке
+	$this->design->assign('image_dir', "/".$this->config->comments_images_dir);
 
 	return $this->design->fetch('comments.tpl');
   }

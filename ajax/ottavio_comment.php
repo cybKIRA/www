@@ -25,6 +25,9 @@
 	$simpla->design->assign('comment_text', $comment->text);
 	$simpla->design->assign('comment_name', $comment->name);
 	
+	// MCBRONX 2016-05-22 Типы картинок
+	$allowed_image_extentions = array('png', 'gif', 'jpg', 'jpeg', 'ico');
+
 	if(empty($comment->name))
 		$result = array('status'=>'error', 'data'=>'Введите имя');		
 	elseif(empty($comment->rate))
@@ -37,6 +40,7 @@
 			$result = array('status'=>'error', 'data'=>'Число с картинки введено неверно');
 	else
 	{
+		
 		// Создаем комментарий
 		//$comment->object_id = $product->id;
 		$comment->type      = 'product';
@@ -44,6 +48,20 @@
 				
 		// Добавляем комментарий в базу
 		$comment_id = $simpla->comments->add_comment($comment);
+		
+		// MCBRONX 2016-05-22 Загрузка изображения и добавления имени в базу
+  	    	$image = $simpla->request->files('image');
+  	    	if(!empty($image['name']) && in_array(strtolower(pathinfo($image['name'], PATHINFO_EXTENSION)), $allowed_image_extentions))
+  	    	{	
+				//получим уникальное имя файла добавив к нему размер
+				$extension = strtolower(substr(strrchr($image['name'], '.'), 1));
+				$pos = strpos($image['name'], ".");
+				$file_name = substr($image['name'], 0, $pos);
+				$file_name = $file_name."_".$image['size'].".".$extension;
+					    			
+  	    		move_uploaded_file($image['tmp_name'], $simpla->root_dir.$simpla->config->comments_images_dir.$file_name );
+  	    		$simpla->comments->update_comment($comment_id, array('image'=>$file_name));
+  	    	}
 			
 		// Отправляем email
 		$simpla->notify->email_comment_admin($comment_id);				

@@ -78,8 +78,8 @@ class Comments extends Simpla
 
 			
 		$sort='DESC';
-		
-		$query = $this->db->placehold("SELECT c.id, c.object_id, c.ip, c.name, c.text, c.type, c.date, c.approved, c.rate, c.user_id
+		// MCBRONX 2016-05-22 Плюс вывод поля картинки
+		$query = $this->db->placehold("SELECT c.id, c.object_id, c.ip, c.name, c.text, c.type, c.date, c.approved, c.rate, c.user_id, c.image
 										FROM __comments c WHERE 1 $object_id_filter $type_filter $keyword_filter $approved_filter ORDER BY id $sort $sql_limit");
 	
 		$this->db->query($query);
@@ -153,6 +153,7 @@ class Comments extends Simpla
 	{
 		if(!empty($id))
 		{
+			$this->delete_image($id);
 			$comment = $this->comments->get_comment($id);
 			if ($comment->type == 'product' && $comment->approved==1)
 				$this->products->decrease_rate_product(intval($comment->object_id), intval($comment->rate));
@@ -160,5 +161,31 @@ class Comments extends Simpla
 			$query = $this->db->placehold("DELETE FROM __comments WHERE id=? LIMIT 1", intval($id));
 			$this->db->query($query);
 		}
-	}	
+	}
+
+	/*
+	* MCBRONX 2016-05-22
+	* Удаление изображения комментария
+	* @param $id
+	*
+	*/
+	public function delete_image($id)
+	{
+		$query = $this->db->placehold("SELECT image FROM __comments WHERE id=?", intval($id));
+		$this->db->query($query);
+		$filename = $this->db->result('image');
+		if(!empty($filename))
+		{
+			$query = $this->db->placehold("UPDATE __comments SET image=NULL WHERE id=?", $id);
+			$this->db->query($query);
+			$query = $this->db->placehold("SELECT count(*) as count FROM __comments WHERE image=? LIMIT 1", $filename);
+			$this->db->query($query);
+			$count = $this->db->result('count');
+			if($count == 0)
+			{			
+				@unlink($this->config->root_dir.$this->config->comments_images_dir.$filename);		
+			}
+		}
+	}
+	
 }
