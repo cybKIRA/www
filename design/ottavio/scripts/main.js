@@ -988,22 +988,14 @@ $("#contactFormFooter").submit(function() {
 });
 // Feedback form
 $("#commentProductForm").submit(function() {
-	if( !$('#post_rating').val() ) {
-		$('#commentProductFormSubmit').popover({
-			trigger: 'manual',
-			html : true ,
-			content: 'Пожалуйста, оцените товар.<br>Отзывы без оценки не принимаются.',
-			placement: 'right',
-			//template: '<div class="popover fadeInDown" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content">asd</div></div>',
-		})
-		.popover('show')
-		return false
-    }
-	
+
+	var formData = new FormData($('#commentProductForm')[0]);
 	$.ajax({
 		type: "POST",
 		url: "ajax/ottavio_comment.php",
-		data: $("#commentProductForm").serialize(),
+		processData: false,
+		contentType: false,
+		data: formData, //$("#commentProductForm").serialize(),
 		success: function(data) {
 			if(data.status == 'success') {
 				$('#commentProductForm').html('<div class="alert alert-success in fade"><strong>' + data.data + '</strong>,&nbsp;комментарий отправлен на модерацию.</div>')
@@ -1018,7 +1010,8 @@ $("#commentProductForm").submit(function() {
 			alert('Произошла ошибка, повторите попытку позже.')
 		}
 	});
-
+	
+	
 	return false;
 	
 });
