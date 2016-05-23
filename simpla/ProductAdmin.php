@@ -242,12 +242,16 @@ class ProductAdmin extends Simpla
 					foreach($this->features->get_features(array('category_id'=>$product_categories[0])) as $f)
 						$category_features[] = $f->id;
 	
-	  	    		if(is_array($options))
-					foreach($options as $option)
-					{
-						if(in_array($option->feature_id, $category_features))
-							$this->features->update_option($product->id, $option->feature_id, $option->value);
-					}
+					if(is_array($options))
+					   foreach($options as $option)
+					   {
+							   if(in_array($option->feature_id, $category_features))
+								   if(is_array($option->value))
+									   foreach($option->value as $value)
+										   $this->features->update_option($product->id, $option->feature_id, $value);
+								   else
+									  $this->features->update_option($product->id, $option->feature_id, $option->value);
+					   }
 					
 					// Новые характеристики
 					$new_features_names = $this->request->post('new_features_names');
@@ -350,13 +354,21 @@ class ProductAdmin extends Simpla
 			}
 		}
 			
-		if(is_array($options))
-		{
-			$temp_options = array();
-			foreach($options as $option)
-				$temp_options[$option->feature_id] = $option;
-			$options = $temp_options;
-		}
+        if(is_array($options))
+            {
+                   $temp_options = array();
+                   foreach($options as $option) {
+                    if(empty($temp_options[$option->feature_id]))
+                        $temp_options[$option->feature_id] = new stdClass;                  
+                           $temp_options[$option->feature_id]->feature_id = $option->feature_id;
+                           if(is_array($option->value))  
+                                   $temp_options[$option->feature_id]->values = $option->value;  
+                           else
+                                   $temp_options[$option->feature_id]->values[] = $option->value;  
+                   }
+                       
+                   $options = $temp_options;
+            }    
 			
 
 		$this->design->assign('product', $product);

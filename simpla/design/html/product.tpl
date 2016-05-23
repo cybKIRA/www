@@ -172,7 +172,7 @@ $(function() {
 				{
 					feature = data[i];
 					
-					line = $("<li><label class=property></label><input class='simpla_inp' type='text'/></li>");
+					line = $("<li><label class=property></label><span><input class='simpla_inp' type='text'/> <span class='add'></span></span></li>");
 					var new_line = line.clone(true);
 					new_line.find("label.property").text(feature.name);
 					new_line.find("input").attr('name', "options["+feature.id+"]").val(feature.value);
@@ -205,6 +205,15 @@ $(function() {
 		});
 	}); 	
 	
+	//Добавление нового значения свойства
+	$('.prop_ul .add').live('click', function() {
+	  $($(this).prev()).clone().val('').after(' <span class="delete"></span>').insertAfter($(this));
+	});
+	//Удаление значения свойства
+	$('.prop_ul .delete').live('click', function() {
+			$(this).prev().remove();
+			$(this).remove();    
+	});
 	// Добавление нового свойства товара
 	var new_feature = $('#new_feature').clone(true);
 	$('#new_feature').remove().removeAttr('id');
@@ -640,12 +649,24 @@ overflow-y: auto;
 			<a href="#" id=properties_wizard><img src="design/images/wand.png" alt="Подобрать автоматически" title="Подобрать автоматически"/></a>
 			</h2>
 			
-			<ul class="prop_ul">
-				{foreach $features as $feature}
-					{assign var=feature_id value=$feature->id}
-					<li feature_id={$feature_id}><label class=property>{$feature->name}</label><input class="simpla_inp" type="text" name=options[{$feature_id}] value="{$options.$feature_id->value|escape}" /></li>
-				{/foreach}
-			</ul>
+            <ul class="prop_ul">
+                {foreach $features as $feature}
+                {assign var=i value=0}
+                <li feature_id={$feature->id}>
+                    <label class=property>{$feature->name}</label>
+                    <span>
+                    {if $options[$feature->id]->values}
+                    {foreach $options[$feature->id]->values as $value}
+                    <input class="simpla_inp" type="text" name="options[{$feature->id}][]" value="{$value|escape}" /> <span class="{if $i>0}delete{else}add{/if}"></span>
+                    {assign var=i value=$i+1}
+                    {/foreach}
+                    {else}{*if $options[$feature->id->values*}
+                    <input class="simpla_inp properties" type="text" name="options[{$feature->id}][]" value="" /> <span class="add"></span>
+                    {/if}
+                    </span>
+                </li>
+                {/foreach}
+            </ul>  
 			<!-- Новые свойства -->
 			<ul class=new_features>
 				<li id=new_feature><label class=property><input type=text name=new_features_names[]></label><input class="simpla_inp" type="text" name=new_features_values[] /></li>

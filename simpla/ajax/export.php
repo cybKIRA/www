@@ -75,7 +75,9 @@ class ExportAjax extends Simpla
 	 		foreach($options as $option)
 	 		{
 	 			if(!isset($products[$option->product_id][$option->name]))
-					$products[$option->product_id][$option->name] = str_replace(',', '.', trim($option->value));
+                    $products[$option->product_id][$option->name] = $option->value;
+                else
+                    $products[$option->product_id][$option->name] .= ','.$option->value;  
 	 		}
 
  			

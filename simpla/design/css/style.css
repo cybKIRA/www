@@ -1483,3 +1483,10 @@ div.upload_image input{
 #list .unapproved .comment_text:hover{
 	background-color:#efedd5;
 }
+
+#product .prop_ul li { border-bottom: solid 1px #d0d0d0; width: auto; }
+#product .prop_ul li span { }
+#product .prop_ul input[type=text] {width: 250px!important; float: left; margin-bottom: 4px;}
+#product .prop_ul li>span:not(:first-child) { margin-left: 170px; display: block; width: 276px; }
+#product .prop_ul span.add, #product .prop_ul span.delete { display: inline-block; width: 16px; height: 16px; margin: 4px 2px 6px; background: url(../images/plus-circle.png) no-repeat; padding: 0; cursor: pointer; }
+#product .prop_ul span.delete { background-image: url(../images/cross-circle-frame.png);}

@@ -301,7 +301,10 @@ class ImportAjax extends Simpla
 							$feature_id = $this->features->add_feature(array('name'=>$feature_name));
 							
 						$this->features->add_feature_category($feature_id, $category_id);				
-						$this->features->update_option($product_id, $feature_id, $feature_value);
+                    
+					$this->features->delete_option($product_id, $feature_id);
+                    foreach(explode(',', $feature_value) as $f_value)        
+                        $this->features->update_option($product_id, $feature_id, $f_value);
 					}
 					
 	 			}
