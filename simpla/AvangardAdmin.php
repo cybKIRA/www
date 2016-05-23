@@ -363,7 +363,7 @@ class AvangardAdmin extends Simpla
 					$opt = array();
 					foreach ($options as $option) {
 						if($option->feature_id == 169 ) $opt['show_time'] = $option->value;
-						if($option->feature_id == 164 ) $opt['style'] = $option->value;
+						//if($option->feature_id == 164 ) $opt['style'] = $option->value;
 						if($option->feature_id == 170 ) $opt['backlight'] = $option->value;
 						if($option->feature_id == 163 ) $opt['shockproof'] = $option->value;
 						if($option->feature_id == 171 ) $opt['case'] = $option->value;

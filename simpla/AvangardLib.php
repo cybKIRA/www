@@ -266,8 +266,9 @@ function avangard_filter_and_pars($output,$list_cat) {
 		//Добавляем ID элемента из БД симплы + значение. Делается под Симплу.
 		$product['options'][169] = $product['show_time'];
 		
-		$product['style'] = $array_str[11];
-		$product['options'][164] = $product['style'];
+		//Стиль у нас свой будет
+		//$product['style'] = $array_str[11];
+		//$product['options'][164] = $product['style'];
 		
 		$product['backlight'] = $array_str[12]; //Подсветка
 		$product['options'][170] = $product['backlight'];
