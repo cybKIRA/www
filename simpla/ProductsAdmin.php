@@ -48,7 +48,7 @@ class ProductsAdmin extends Simpla
 			elseif($f == 'outofstock')
 				$filter['in_stock'] = 0;
 			elseif($f == 'inofstock')
-				$filter['in_stock'] = 1; 
+				$filter['in_stock'] = 1;
 			$this->design->assign('filter', $f);
 		}
 	
@@ -241,6 +241,8 @@ class ProductsAdmin extends Simpla
 				$product->variants = array();
 				$product->images = array();
 				$product->properties = array();
+				// mcbronx 24.05.2016 Добавим вывод свойств
+				$product->options = array();
 			}
 		
 			$variants = $this->variants->get_variants(array('product_id'=>$products_ids));
@@ -254,6 +256,14 @@ class ProductsAdmin extends Simpla
 			$images = $this->products->get_images(array('product_id'=>$products_ids));
 			foreach($images as $image)
 				$products[$image->product_id]->images[$image->id] = $image;
+			
+			// mcbronx 24.05.2016 Добавим вывод свойств Стиль ID 164
+			$options = $this->features->get_product_options($products_ids);
+			
+			foreach($options as &$option)
+			{
+				$products[$option->product_id]->options[] = $option;
+			}
 		}
 	 
 		$this->design->assign('products', $products);

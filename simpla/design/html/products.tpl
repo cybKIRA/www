@@ -71,8 +71,18 @@
 				<a href="{url module=ProductAdmin id=$product->id return=$smarty.server.REQUEST_URI}"><img src="{$image->filename|escape|resize:35:35}" /></a>
 				{/if}
 			</div>
+			
+			
 			<div class="name product_name cell">
-			 	
+			 	<div class="panel_style{foreach $product->options as $option}{if $option->feature_id == 164}{if $option->value == "классический"} styleEnable_kl{/if}{if $option->value == "спортивный"}	styleEnable_sp{/if}	{if $option->value == "дизайнерский"} styleEnable_dz{/if}{if $option->value == "повседневный"} styleEnable_pv{/if}{if $option->value == "камуфляжный"} styleEnable_km{/if}{if $option->value == "вечерний"} styleEnable_vch{/if}{/if}{/foreach}">
+						<span data-styleID=kl data-style="классический">кл</span>
+						<span data-styleID=sp data-style="спортивный">сп</span>
+						<span data-styleID=dz data-style="дизайнерский">дз</span>
+						<span data-styleID=pv data-style="повседневный">пв</span>
+						<span data-styleID=km data-style="камуфляжный">км</span>
+						<span data-styleID=vch data-style="вечерний">вч</span>
+				</div>
+				
 			 	<div class="variants">
 			 	<ul>
 				{foreach $product->variants as $variant}
@@ -81,7 +91,7 @@
 					<input class="price {if $variant->compare_price>0}compare_price{/if}" type="text" name="price[{$variant->id}]" value="{$variant->price}" {if $variant->compare_price>0}title="Старая цена &mdash; {$variant->compare_price} {$currency->sign}"{/if} />{$currency->sign}  
 					<input class="stock" type="text" name="stock[{$variant->id}]" value="{if $variant->infinity}∞{else}{$variant->stock}{/if}" />{$settings->units}
 				</li>
-				{/foreach}
+				{/foreach}				
 				</ul>
 	
 				{$variants_num = $product->variants|count}
@@ -96,6 +106,8 @@
 				<a href="{url module=ProductAdmin id=$product->id return=$smarty.server.REQUEST_URI}">{$product->name|escape}</a>
 	 			
 			</div>
+			
+
 			<div class="icons cell">
 				<a class="preview"   title="Предпросмотр в новом окне" href="../products/{$product->url}" target="_blank"></a>			
 				<a class="enable"    title="Активен"                 href="#"></a>
@@ -103,6 +115,7 @@
 				<a class="duplicate" title="Дублировать"             href="#"></a>
 				<a class="delete"    title="Удалить"                 href="#"></a>
 			</div>
+
 			
 			<div class="clear"></div>
 		</div>
@@ -408,6 +421,37 @@ $(function() {
 		$(this).closest("div.row").find('input[type="checkbox"][name*="check"]').attr('checked', true);
 		$(this).closest("form").find('select[name="action"] option[value=duplicate]').attr('selected', true);
 		$(this).closest("form").submit();
+	});
+	
+	/*$(".panel_style").each(function() {
+		$(this + ' ')
+	});*/
+	
+    // Стили
+	$(".panel_style > span").click(function() {
+		var icon        = $(this);
+		var data = icon.data('style');
+
+		
+		/*var line        = icon.closest("div.row");
+		var id          = line.find('input[type="checkbox"][name*="check"]').val();
+		var state       = line.hasClass('invisible')?1:0;*/
+		
+		icon.addClass('loading_icon');
+		$.ajax({
+			type: 'POST',
+			url: 'ajax/update_object.php',
+			data: {},
+			success: function(data){
+				icon.removeClass('loading_icon');
+				if(state)
+					line.removeClass('invisible');
+				else
+					line.addClass('invisible');				
+			},
+			dataType: 'json'
+		});	
+		return false;	
 	});
 	
 	// Показать товар

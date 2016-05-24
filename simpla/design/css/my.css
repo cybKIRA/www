@@ -1,0 +1,26 @@
+.panel_style {
+	margin-right: 15px;
+	margin-left:150px;
+}
+.panel_style > span {
+	margin-left: 5px;
+	padding: 2px;
+	background-color: #ededed;
+	border: 1px solid #efefef;
+	cursor: pointer;
+	color:#bbb;
+}
+
+.panel_style.styleEnable_kl > [data-styleID="kl"],
+.panel_style.styleEnable_sp  > [data-styleID="sp"],
+.panel_style.styleEnable_dz  > [data-styleID="dz"],
+.panel_style.styleEnable_pv  > [data-styleID="pv"],
+.panel_style.styleEnable_km  > [data-styleID="km"],
+.panel_style.styleEnable_vch  > [data-styleID="vch"]
+{
+	
+	background-color: #ddd;
+	border: 1px solid #c5c5c5;
+	color:black;
+
+}
