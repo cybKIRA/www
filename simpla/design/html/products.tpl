@@ -427,27 +427,37 @@ $(function() {
 		$(this + ' ')
 	});*/
 	
-    // Стили
+    // mcbronx 24.05.2016 Отправка значений "стиль" по аджаксу
 	$(".panel_style > span").click(function() {
 		var icon        = $(this);
-		var data = icon.data('style');
+		var dataID = icon.data('styleid');
+		var dataName = icon.data('style');
 
+		//Проверим есть ли у родителя класс, который показывает активность
+		var classID = "styleEnable_"+dataID;
+		var line1 = icon.parents("div");
+		var state = icon.parents("div").hasClass(classID);
 		
-		/*var line        = icon.closest("div.row");
+		var line        = icon.closest("div.row");
 		var id          = line.find('input[type="checkbox"][name*="check"]').val();
-		var state       = line.hasClass('invisible')?1:0;*/
+		
+		//var line        = icon.closest(".panel_style");
+		
+		//var id          = line.find('input[type="checkbox"][name*="check"]').val();
+		//var state       = line.hasClass('invisible')?1:0;
 		
 		icon.addClass('loading_icon');
+		
 		$.ajax({
 			type: 'POST',
-			url: 'ajax/update_object.php',
-			data: {},
+			url: 'ajax/update_object_option.php',
+			data: {'object': 'option_style', 'id': id, 'value': dataName,'state':state, 'session_id': '{/literal}{$smarty.session.id}{literal}'},
 			success: function(data){
 				icon.removeClass('loading_icon');
 				if(state)
-					line.removeClass('invisible');
+					icon.parents("div").removeClass(classID);
 				else
-					line.addClass('invisible');				
+					icon.parents("div").addClass(classID);				
 			},
 			dataType: 'json'
 		});	

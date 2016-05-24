@@ -24,3 +24,5 @@
 	color:black;
 
 }
+
+.panel_style > .loading_icon { background-image: url(../images/loader.gif);
