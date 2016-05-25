@@ -108,9 +108,6 @@
 	<script src="design/{$settings->theme}/scripts/main.js"></script>
 	<script src="design/{$settings->theme}/scripts/smoothscroll.js"></script>
 	
-	{*Зум*}
-	<script src="design/{$settings->theme}/plugins/elevatezoom-plus-master/jquery.ez-plus.js" type="text/javascript"></script>
-
 	<!-- Chatra {literal} -->
 <script>
     ChatraID = 'JXyzZcKDnST7noHgb';

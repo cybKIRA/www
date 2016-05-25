@@ -49,6 +49,8 @@ class ProductsAdmin extends Simpla
 				$filter['in_stock'] = 0;
 			elseif($f == 'inofstock')
 				$filter['in_stock'] = 1;
+			elseif($f == 'nostyle')
+				$filter['in_stock'] = 1;
 			$this->design->assign('filter', $f);
 		}
 	
