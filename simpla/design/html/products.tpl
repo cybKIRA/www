@@ -200,6 +200,7 @@
 		<li {if $filter=='hidden'}class="selected"{/if}><a href="{url keyword=null brand_id=null category_id=null page=null filter='hidden'}">Неактивные</a></li>
 		<li {if $filter=='outofstock'}class="selected"{/if}><a href="{url keyword=null brand_id=null category_id=null page=null filter='outofstock'}">Отсутствующие</a></li>
 		<li {if $filter=='inofstock'}class="selected"{/if}><a href="{url keyword=null brand_id=null category_id=null page=null filter='inofstock'}">Есть на складе</a></li>
+		<li {if $filter=='nostyle'}class="selected"{/if}><a href="{url keyword=null brand_id=null category_id=null page=null filter='nostyle'}">Нет стиля</a></li>
 	</ul>
 	<!-- Фильтры -->
 
