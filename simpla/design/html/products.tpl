@@ -68,7 +68,10 @@
 			<div class="image cell">
 				{$image = $product->images|@first}
 				{if $image}
-				<a href="{url module=ProductAdmin id=$product->id return=$smarty.server.REQUEST_URI}"><img src="{$image->filename|escape|resize:35:35}" /></a>
+				
+				<img class="img_01" src="{$image->filename|resize:35:35}" class="img-responsive" itemprop="image" data-zoom-image="{$image->filename|resize:600:600}">
+				{*<a href="{url module=ProductAdmin id=$product->id return=$smarty.server.REQUEST_URI}"><img class="img_01" src="{$image->filename|escape|resize:35:35}" data-zoom-image="{$product->image->filename|resize:960:600}/></a>*}
+				
 				{/if}
 			</div>
 			
@@ -528,7 +531,22 @@ $(function() {
 		if($(this).val() == '')
 			$(this).val('∞');
 	});
+	
+	//McBronx 25/05/2016 Добавим зум
+	$('.img_01').ezPlus({
+        zoomWindowFadeIn: 100,
+        zoomLensFadeIn: 100,
+        imageCrossfade: true,
+		zoomWindowWidth:600, zoomWindowHeight:600,
+        zoomWindowOffsetX: 10,
+		zoomWindowOffsetY: -130,
+        scrollZoom: true,
+        cursor: 'pointer'
+    });
 });
 
 </script>
 {/literal}
+
+
+<script src="/js/elevatezoom-plus-master/jquery.ez-plus.js" type="text/javascript"></script>

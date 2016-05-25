@@ -25,6 +25,8 @@
 	<link rel="stylesheet" href="design/{$settings->theme}/styles/main.css">
 	<link rel="stylesheet" href="design/{$settings->theme}/styles/main-responsive.css">
 
+    <script src="design/{$settings->theme}/scripts/vendor/modernizr.js"></script>
+	<script src="design/{$settings->theme}/scripts/vendor/jquery.js"></script>
 </head>
 
 <body class="bg22">
@@ -64,8 +66,7 @@
 		<link rel="stylesheet" href="design/{$settings->theme}/styles/styleNoJs.css">
     </noscript>
 
-	<script src="design/{$settings->theme}/scripts/vendor/modernizr.js"></script>
-	<script src="design/{$settings->theme}/scripts/vendor/jquery.js"></script>
+{*jQuery*}
 	
 	<script src="design/{$settings->theme}/scripts/vendor/queryloader2.min.js"></script>
 	<script src="design/{$settings->theme}/scripts/vendor/owl.carousel.js"></script>
@@ -106,6 +107,9 @@
 
 	<script src="design/{$settings->theme}/scripts/main.js"></script>
 	<script src="design/{$settings->theme}/scripts/smoothscroll.js"></script>
+	
+	{*Зум*}
+	<script src="design/{$settings->theme}/plugins/elevatezoom-plus-master/jquery.ez-plus.js" type="text/javascript"></script>
 
 	<!-- Chatra {literal} -->
 <script>
