@@ -1062,10 +1062,16 @@ function apply_coupon(){
 				$('#cart_total').html(data.cart_total);
 				$('#coupon_result').html(data.coupon_result);
 				if ( data.coupon_status == 'success' ) {
-					$('#cart_coupon').parent().removeAttr('class')
+					$('#coupon_result').removeAttr('class');
+					$('#coupon_result').addClass('alert  alert-success');
+					$('#cart_coupon').parent().removeAttr('class');
 				} else if ( data.coupon_status == 'empty' ) {
+				    $('#coupon_result').removeAttr('class');
+					$('#coupon_result').addClass('alert alert-danger');
 					$('#coupon_result').html('Введите код купона');
 				} else {
+					$('#coupon_result').removeAttr('class');
+					$('#coupon_result').addClass('alert alert-danger');
 					$('#cart_coupon').parent().addClass('hidden')
 				}
 			}

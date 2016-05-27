@@ -18,7 +18,7 @@
 	</div>
 </section>
 
-<section class="sep-top-1x">
+<section class="sep-top-1x" style="background-color:#fafafa;">
 	{if $cart->purchases}
 	<form method="post" name="cart" id="purchases">
 		<div class="container cart_section">
@@ -34,12 +34,11 @@
 						<div role="alert" class="alert alert-danger ">
 							{if $error == 'empty_name'}Введите имя{/if}
 							{if $error == 'empty_email'}Введите email{/if}
-							{if $coupon_error == 'invalid'}Купон недействителен{/if}
+							{if $coupon_error == 'invalid'}Купон недействителен1{/if}
 						</div>
 					</div>
 					{/if}
-					
-					<table class="table table-bordered table-condensed table-striped shop-table table-responsive">
+					<table class="cart_table  table table-bordered table-condensed table-striped shop-table table-responsive cart_table">
 						<thead>
 							<tr>
 								<th scope="col" class="dark">Товар</th>
@@ -84,13 +83,13 @@
 			{if $coupon_request}
 			<div class="row sep-top-lg">
 				<div class="col-xs-offset-1 col-xs-11">
-					<div class="coupon-code form-group pull-left">
-						<input type="text" placeholder="Код купона, если есть..." value="{$cart->coupon->code|escape}" name="coupon_code" class="form-control input-lg" id="coupon_code">
+					<div class="form-gray-fields coupon-code form-group pull-left">
+						<input type="text" placeholder="Код купона..." value="{$cart->coupon->code|escape}" name="coupon_code" class="form-control input-lg" id="coupon_code">
 					</div>
 
 					<button type="button" class="btn btn-dark btn-bordered" id="coupon_apply">Применить купон</button>
 
-					<span id="coupon_result" class="text-danger"></span>
+					<div id="coupon_result"></div>
 				</div>
 			</div>
 			{/if}
@@ -113,7 +112,7 @@
 					<div class="cart_totals sep-top-lg">
 						<h5 class="">Итого</h5>
 						<div class="sep-top-sm">
-							<table class="table table-bordered table-condensed table-responsive">
+							<table class="cart_table table table-bordered table-condensed table-responsive">
 								<tbody>
 									<tr>
 										<td>Стоимость заказа</td>

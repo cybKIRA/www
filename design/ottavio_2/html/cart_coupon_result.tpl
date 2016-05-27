@@ -2,6 +2,4 @@
 	Купон {$cart->coupon->code|escape} действует для заказов от {$cart->coupon->min_order_price|convert} {$currency->sign}
 {elseif $coupon_result == invalid}
 	Купон недействителен!
-{elseif $coupon_result == success}
-	Купон принят!
 {/if}
