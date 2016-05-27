@@ -19,6 +19,9 @@ class CouponAdmin extends Simpla
 			$coupon->type = $this->request->post('type', 'string');
 			$coupon->min_order_price = $this->request->post('min_order_price', 'float');
 			$coupon->single = $this->request->post('single', 'float');
+			
+			// GLOOBUS 2016-05-25 на определенный продукт
+			$coupon->of_product = $this->request->post('of_product', 'float');
 
  			// Не допустить одинаковые URL разделов.
 			if(($a = $this->coupons->get_coupon((string)$coupon->code)) && $a->id!=$coupon->id)

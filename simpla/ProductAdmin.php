@@ -34,6 +34,10 @@ class ProductAdmin extends Simpla
 			$product->annotation = $this->request->post('annotation');
 			$product->body = $this->request->post('body');
 
+			$product->special_offer = $this->request->post('special_offer'); // GLOOBUS 2016-05-25 специальное предложение
+			$product->sale = $this->request->post('sale'); // GLOOBUS 2016-05-25 размер скидки специального предложения
+			
+			
 			// Варианты товара
 			if($this->request->post('variants'))
 			foreach($this->request->post('variants') as $n=>$va)
@@ -396,6 +400,10 @@ class ProductAdmin extends Simpla
 			$features = $this->features->get_features(array('category_id'=>$category->id));
 			$this->design->assign('features', $features);
 		}
+
+		// GLOOBUS 2016-05-25 Купоны для продуктов
+		$coupons = $this->coupons->get_coupons(array('of_product'=>1));
+		$this->design->assign('coupons', $coupons);		
 		
  	  	return $this->design->fetch('product.tpl');
 	}
