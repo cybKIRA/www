@@ -108,6 +108,12 @@
 				
 				<a href="{url module=ProductAdmin id=$product->id return=$smarty.server.REQUEST_URI}">{$product->name|escape}</a>
 	 			
+			    <!-- GLOOBUS 2016-05-25 вывод информации о купоне -->
+				{if $product->sale}
+	 			<div style="color: #707070;font-size: 11px">
+	 				Купон на {$product->sale}
+				</div>
+				{/if}
 			</div>
 			
 

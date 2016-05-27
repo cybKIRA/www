@@ -756,6 +756,25 @@ overflow-y: auto;
 			<input type=text name=related id='related_products' class="input_autocomplete" placeholder='Выберите товар чтобы добавить его'>
 		</div>
 
+		<!-- GLOOBUS 2016-05-25 индивидуальный купон -->
+		<div class="block layer">
+			<h2>Специальное предложение</h2>
+			<p style="margin-bottom:10px;color:#808080;">Если это поле заполненно, в карточке товара будет выводиться данное предложение. 
+			Используйте это для того, что бы предоставить покупателям информацию о действующей акции и промокодах.</p>
+			<ul>
+				<li>
+					<label class=property style="color:#000">Размер скидки</label>
+					<select name="sale">
+						<option value="0">НЕТ</option>
+						{foreach $coupons as $coupon}
+						<option value="{$coupon->value}" {if $coupon->value == $product->sale}selected{/if}>{$coupon->code} [{$coupon->value}]</option>
+						{/foreach}
+					</select>				
+				</li>
+			</ul>			
+			<textarea name="special_offer" style="width:99%;height:100px">{$product->special_offer}</textarea>
+		</div>		
+		
 		<input class="button_green button_save" type="submit" name="" value="Сохранить" />
 		
 	</div>
