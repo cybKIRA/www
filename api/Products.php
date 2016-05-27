@@ -109,6 +109,7 @@ class Products extends Simpla
 		if(!empty($filter['min_price']) && !empty($filter['max_price']))
 			$prices = $this->db->placehold('AND p.id in(SELECT v.product_id FROM __variants v WHERE v.price >= ? AND v.price <= ? AND v.product_id = p.id)', intval($filter['min_price']), intval($filter['max_price']));
 			
+		// GLOOBUS 2016-05-25 выводим sale	
 		$query = "SELECT  
 					p.id,
 					p.url,
@@ -125,8 +126,9 @@ class Products extends Simpla
 					p.meta_title, 
 					p.meta_keywords, 
 					p.meta_description, 
+					p.sale, /* + */
 					b.name as brand,
-					b.url as brand_url
+					b.url as brand_url					
 				FROM __products p		
 				$category_id_filter 
 				LEFT JOIN __brands b ON p.brand_id = b.id
@@ -237,6 +239,7 @@ class Products extends Simpla
 		else
 			$filter = $this->db->placehold('p.url = ?', $id);
 			
+		// GLOOBUS 2016-05-25 выводим special_offer, sale
 		$query = "SELECT DISTINCT
 					p.id,
 					p.url,
@@ -252,7 +255,9 @@ class Products extends Simpla
 					p.votes, 
 					p.meta_title, 
 					p.meta_keywords, 
-					p.meta_description
+					p.meta_description,
+					p.special_offer, /* + */
+					p.sale /* + */					
 				FROM __products AS p
                 LEFT JOIN __brands b ON p.brand_id = b.id
                 WHERE $filter

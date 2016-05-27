@@ -28,7 +28,8 @@ class Coupons extends Simpla
 		else
 			$where = $this->db->placehold('WHERE c.id=? ', $id);
 		
-		$query = $this->db->placehold("SELECT c.id, c.code, c.value, c.type, c.expire, min_order_price, c.single, c.usages,
+		// GLOOBUS 2016-05-25 выводим в запросе of_product
+		$query = $this->db->placehold("SELECT c.id, c.code, c.value, c.type, c.expire, min_order_price, c.single, c.usages, c.of_product, 
 										((DATE(NOW()) <= DATE(c.expire) OR c.expire IS NULL) AND (c.usages=0 OR NOT c.single)) AS valid
 		                               FROM __coupons c $where LIMIT 1");
 		if($this->db->query($query))
@@ -51,6 +52,7 @@ class Coupons extends Simpla
 		$coupon_id_filter = '';
 		$valid_filter = '';
 		$keyword_filter = '';
+		$of_product_filter = ''; // GLOOBUS 2016-05-25 условие фильтра
 		
 		if(isset($filter['limit']))
 			$limit = max(1, intval($filter['limit']));
@@ -60,7 +62,11 @@ class Coupons extends Simpla
 
 		if(!empty($filter['id']))
 			$coupon_id_filter = $this->db->placehold('AND c.id in(?@)', (array)$filter['id']);
-			
+	
+		// GLOOBUS 2016-05-25 фильтр по купонам для товаров
+		if(isset($filter['of_product']))
+			$of_product_filter = $this->db->placehold('AND c.of_product = 1');
+		
 		if(isset($filter['valid']))
 			if($filter['valid'])
 				$valid_filter = $this->db->placehold('AND ((DATE(NOW()) <= DATE(c.expire) OR c.expire IS NULL) AND (c.usages=0 OR NOT c.single))');		
@@ -76,9 +82,10 @@ class Coupons extends Simpla
 
 		$sql_limit = $this->db->placehold(' LIMIT ?, ? ', ($page-1)*$limit, $limit);
 
-		$query = $this->db->placehold("SELECT c.id, c.code, c.value, c.type, c.expire, min_order_price, c.single, c.usages,
+		// GLOOBUS 2016-05-25 выводим в запросе of_product
+		$query = $this->db->placehold("SELECT c.id, c.code, c.value, c.type, c.expire, min_order_price, c.single, c.usages, c.of_product,
 										((DATE(NOW()) <= DATE(c.expire) OR c.expire IS NULL) AND (c.usages=0 OR NOT c.single)) AS valid
-		                                      FROM __coupons c WHERE 1 $coupon_id_filter $valid_filter $keyword_filter
+		                                      FROM __coupons c WHERE 1 $coupon_id_filter $valid_filter $keyword_filter $of_product_filter
 		                                      ORDER BY valid DESC, id DESC $sql_limit",
 		                                      $this->settings->date_format);
 		
