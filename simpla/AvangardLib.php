@@ -350,7 +350,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['images_av'] = $array_str[4]; //url картинки от поставщика
 		//$product['name_post'] = $array_str[2];
 		
-		if ($product['price_post'] <= 8000 and $product['price_post'] >= 500) {
+		if ($product['price_post'] <= 20000 and $product['price_post'] >= 500) {
 			$products[$i] = $product;
 			$i++;
 		}
@@ -366,12 +366,19 @@ function avangard_filter_and_pars($output,$list_cat) {
 
 function kw_good_price($price) {
 	
-	if ($price < 1500) {
-		$price = $price + 1500;
+	if ($price < 1000) {
+		$price = $price + 1000;
 	} else
 	{
 		$price = $price * 2;
 	}
+	
+	/*if ($price < 1200) {
+		$price = $price + 800;
+	} else
+	{
+		$price = $price * 1.67;
+	}*/
 	
 	$price = ceil($price/10) * 10;
 	
