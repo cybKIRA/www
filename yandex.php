@@ -46,13 +46,17 @@ print "</categories>
 
 // Товары
 $simpla->db->query("SET SQL_BIG_SELECTS=1");
+
+//Фото товара
+$images = array();
+foreach($simpla->products->get_images() as $i)
+  $images[$i->product_id][] = $i->filename;
+  
 // Товары
-$simpla->db->query("SELECT v.price, v.id as variant_id, p.name as product_name, v.name as variant_name, v.position as variant_position, p.id as product_id, p.url, p.annotation, pc.category_id, i.filename as image
-					FROM __variants v LEFT JOIN __products p ON v.product_id=p.id
-					
-					LEFT JOIN __products_categories pc ON p.id = pc.product_id AND pc.position=(SELECT MIN(position) FROM __products_categories WHERE product_id=p.id LIMIT 1)	
-					LEFT JOIN __images i ON p.id = i.product_id AND i.position=(SELECT MIN(position) FROM __images WHERE product_id=p.id LIMIT 1)	
-					WHERE p.visible AND (v.stock >0 OR v.stock is NULL) GROUP BY v.id ORDER BY p.id, v.position ");
+$simpla->db->query("SELECT v.price, v.id as variant_id, p.name as product_name, v.name as variant_name, v.position as variant_position, p.id as product_id, p.url, p.annotation, pc.category_id 
+                    FROM s_variants v LEFT JOIN s_products p ON v.product_id=p.id
+                    LEFT JOIN s_products_categories pc ON p.id = pc.product_id AND pc.position=(SELECT MIN(position) FROM s_products_categories WHERE product_id=p.id LIMIT 1)  
+                    WHERE p.visible AND (v.stock >0 OR v.stock is NULL) GROUP BY v.id ORDER BY p.id, v.position ");
 print "<offers>
 ";
  
@@ -81,9 +85,11 @@ print "
 <categoryId>".$p->category_id."</categoryId>
 ";
 
-if($p->image)
-print "<picture>".$simpla->design->resize_modifier($p->image, 200, 200)."</picture>
+if(isset($images[$p->product_id]))
+foreach($images[$p->product_id] as $v)
+print "<picture>".$simpla->design->resize_modifier($v, 200, 200)."</picture>
 ";
+
 
 print "<name>".htmlspecialchars($p->product_name).($p->variant_name?' '.htmlspecialchars($p->variant_name):'')."</name>
 <description>".htmlspecialchars(strip_tags($p->annotation))."</description>
