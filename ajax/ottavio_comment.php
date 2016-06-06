@@ -58,18 +58,30 @@
 				$pos = strpos($image['name'], ".");
 				$file_name = substr($image['name'], 0, $pos);
 				$file_name = $file_name."_".$image['size'].".".$extension;
-					    			
-  	    		move_uploaded_file($image['tmp_name'], $simpla->root_dir.$simpla->config->comments_images_dir.$file_name );
-  	    		$simpla->comments->update_comment($comment_id, array('image'=>$file_name));
-  	    	}
-			
-		// Отправляем email
-		$simpla->notify->email_comment_admin($comment_id);				
-				
-		// Приберем сохраненную капчу, иначе можно отключить загрузку рисунков и постить старую
-		unset($_SESSION['captcha_code']);	
+				if ($image['size'] != 0) {	    			
+					$result_move = move_uploaded_file($image['tmp_name'], $simpla->root_dir.$simpla->config->comments_images_dir.$file_name );
+					if ($result_move) {
+						$simpla->comments->update_comment($comment_id, array('image'=>$file_name));
+					} else 
+					{
+						$result = array('status'=>'error', 'data'=>'Ошибка загрузки файла');
+						//Загрузка не прошла, удаляем коммент
+						$simpla->comments->delete_comment($comment_id);
+					}
+				} else
+				{
+					$result = array('status'=>'error', 'data'=>'Не верный размер файла!');
+					//Загрузка не прошла, удаляем коммент
+					$simpla->comments->delete_comment($comment_id);
+				}
+  	    	} 
 		
-		$result = array('status'=>'success', 'data'=>$comment->name);		
+		
+		if (empty($result) || $result['status']!=='error') {
+			$result = array('status'=>'success', 'data'=>$comment->name);
+			// Приберем сохраненную капчу, иначе можно отключить загрузку рисунков и постить старую
+			unset($_SESSION['captcha_code']);	
+		}		
 	}
 
 	header("Content-type: application/json; charset=UTF-8");
