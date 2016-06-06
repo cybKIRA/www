@@ -257,7 +257,7 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['images'] = $product['name_pars'].'.jpg'; //имя файла картинки
 		$product['price_post'] = $array_str[5]; //цена поставщика
 		
-		$product['price'] = kw_good_price($product['price_post']); //Рекомендуемая цена
+		$product['price'] = kw_good_price($product['price_post'],$product['id_brand']); //Рекомендуемая цена
 		
 		//Свойства товара
 		$product['size'] = $array_str[3];
@@ -364,13 +364,19 @@ function avangard_filter_and_pars($output,$list_cat) {
 }
 
 
-function kw_good_price($price) {
+function kw_good_price($price,$id_brand=0) {
 	
-	if ($price < 1000) {
-		$price = $price + 1000;
-	} else
-	{
-		$price = $price * 2;
+	if ($price < 1200) {
+		$price = $price + 1200;
+	} else { 
+	
+		switch ($id_brand) {
+			case 34: //ORIENT
+				$price = $price * 1.75;
+				break;
+			default:
+				$price = $price * 1.95;
+		}
 	}
 	
 	/*if ($price < 1200) {
