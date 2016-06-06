@@ -605,8 +605,10 @@ overflow-y: auto;
 				</div>
 			
 			</li>
+			<li> {$variant->price_post|escape}</li>
 		</ul>
-		{/foreach}		
+		{/foreach}
+
 		</div>
 		<ul id=new_variant style='display:none;'>
 			<li class="variant_move"><div class="move_zone"></div></li>
