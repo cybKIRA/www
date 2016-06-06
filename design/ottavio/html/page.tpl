@@ -56,7 +56,7 @@
 				<div class=col-sm-6>
 					<div class="sep-bottom-lg">
 						<div class="text-center sep-top-2x" >
-							<h1 style="">Такой страницы не существует (</h1>
+							<h1 style="">Такой страницы не существует :(</h1>
 						</div>
 						<div class="text-center sep-top-sm">
 							<a href="/" class="btn btn-primary btn-lg">Перейти на главную</a>
