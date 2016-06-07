@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="section-title light">
 			
-				<div class="row">
+				<div  class="row">
 				
 					<div class="col-sm-7">
 						{*<a class="btn" href="catalog/{$cat->url}/{$brand->url}" >Перейти обратно в каталог</a>*}
@@ -349,7 +349,8 @@
 													<span class="btn btn-default btn-file">
 														Выбрать фотографию <input type="file" id="files" name="image" accept="image/*,image/jpeg" />										  
 													</span>
-													<span id="list"></span>	
+													<span id="list"><small>Файл jpg, до 7Мб</small></span>
+													
 													</div>
 													
 													<div class="form-group">
