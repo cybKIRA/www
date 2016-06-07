@@ -20,3 +20,4 @@ Disallow: /password.php
 Disallow: *?sort=*
 Disallow: *?page=*
 Disallow: *?keyword=*
+Disallow: *?164=*
