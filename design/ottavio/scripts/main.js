@@ -1,6 +1,6 @@
 'use strict';
 
-// core module
+//  core module
 var Ottavio = (function(){
     var
         events = [],
@@ -988,7 +988,7 @@ $("#contactFormFooter").submit(function() {
 });
 // Feedback form
 $("#commentProductForm").submit(function() {
-
+	$('#commentResult').html('<img src="/design/ottavio/images/loader.gif" >');
 	var formData = new FormData($('#commentProductForm')[0]);
 	$.ajax({
 		type: "POST",
