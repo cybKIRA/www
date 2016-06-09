@@ -284,6 +284,7 @@ class Products extends Simpla
 				'name'=>$prod->name,
 				'price_post'=>$var->price_post,
 				'price'=>$var->price,
+				'compare_price'=>$var->compare_price,
 				'url'=>$prod->url,
 				'brand'=>$this->brands->get_brand((int)$prod ->brand_id)->name,
 				'visible'=>$prod->visible

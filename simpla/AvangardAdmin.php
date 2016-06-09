@@ -19,8 +19,8 @@ class AvangardAdmin extends Simpla
 		$output = mb_convert_encoding($output, 'utf-8', 'windows-1251');
 		
 		//какие нужны каталоги
-		//$list_cat = array("naruchnie_chasi/slava");
-		$list_cat = array("naruchnie_chasi/q_amp_q","naruchnie_chasi/orient","naruchnie_chasi/vostok","naruchnie_chasi/casio","naruchnie_chasi/slava","naruchnie_chasi/sever","naruchnie_chasi/zarya","naruchnie_chasi/spetsnaz"); 
+		$list_cat = array("naruchnie_chasi/orient");
+		//$list_cat = array("naruchnie_chasi/q_amp_q","naruchnie_chasi/orient","naruchnie_chasi/vostok","naruchnie_chasi/casio","naruchnie_chasi/slava","naruchnie_chasi/sever","naruchnie_chasi/zarya","naruchnie_chasi/spetsnaz"); 
 		
 		$output_count = count(str_getcsv($output,"\n"));
 		
@@ -72,6 +72,8 @@ class AvangardAdmin extends Simpla
 						$variants[0]->sku = $part['id_post'];
 						$variants[0]->price = $part['price'];
 						$variants[0]->price_post = $part['price_post'];
+						$variants[0]->compare_price = $part['$compare_price'];
+						
 						$variants[0]->id_post = $part['id_post'];
 						
 						//Собираем Категории товара для дальнейшего использования
@@ -231,7 +233,8 @@ class AvangardAdmin extends Simpla
 							$variants = $this->variants->get_variants(array('id_post'=>$id_post));
 							//пока апдейтим постоянно, потом можно проверку ввести
 							$this->products->update_product($var->product_id, array('name'=>$prod['name']));
-							$this->variants->update_variant($var->id, array('price'=>$prod['price'],'price_post'=>$prod['price_post']));
+							//echo "Udate: " . $prod['price'] . " - " . $prod['compare_price'] . "<br>";
+							$this->variants->update_variant($var->id, array('price'=>$prod['price'],'price_post'=>$prod['price_post'],'compare_price'=>$prod['compare_price']));
 							if ($dop_proverka) {
 								$options = array();
 								
@@ -403,6 +406,12 @@ class AvangardAdmin extends Simpla
 					{
 						$isChange = true;
 						$change_str = $change_str . 'pr|';
+					}
+					
+					if ($prodBd['compare_price'] != $prod['compare_price'] )
+					{
+						$isChange = true;
+						$change_str = $change_str . 'cpr|';
 					}
 					if ($prodBd['name'] != $prod['name'] )
 					{

@@ -257,8 +257,10 @@ function avangard_filter_and_pars($output,$list_cat) {
 		$product['images'] = $product['name_pars'].'.jpg'; //имя файла картинки
 		$product['price_post'] = $array_str[5]; //цена поставщика
 		
-		$product['price'] = kw_good_price($product['price_post'],$product['id_brand']); //Рекомендуемая цена
-		
+		$product['compare_price'] = null;
+
+		kw_good_price($product['price_post'],$product['id_brand'],$product['price'],$product['compare_price'] ); //Рекомендуемая цена
+
 		//Свойства товара
 		$product['size'] = $array_str[3];
 		
@@ -356,26 +358,28 @@ function avangard_filter_and_pars($output,$list_cat) {
 		}
 		//copy($array_str[4],"photos/" . $product['photo'] );
 		
-		//if ($i>100) break; //Ограничитель объема вывода
+		//if ($i>10) break; //Ограничитель объема вывода
 		}
 	}
-	
+
 	return $products;
 }
 
 
-function kw_good_price($price,$id_brand=0) {
-	
-	if ($price < 1200) {
-		$price = $price + 1200;
+function kw_good_price($price_post,$id_brand,&$price,&$compare_price) {
+
+	if ($price_post < 1200) {
+		$price = $price_post+ 1200;		
 	} else { 
 	
 		switch ($id_brand) {
 			case 34: //ORIENT
-				$price = $price * 1.75;
+				
+				$compare_price = ($price_post * 100) / 48;
+				$price  = $compare_price - $compare_price * 0.1;
 				break;
 			default:
-				$price = $price * 1.95;
+				$price = $price_post * 2;
 		}
 	}
 	
@@ -387,8 +391,10 @@ function kw_good_price($price,$id_brand=0) {
 	}*/
 	
 	$price = ceil($price/10) * 10;
+
+	$compare_price = ceil($compare_price/10) * 10;
 	
-	return $price;
+	//return $price;
 }
 
 
